@@ -1,0 +1,45 @@
+TECHSHIFT VIDEO LIBRARY UPDATE FOR V4
+=====================================
+This is an update package, not a replacement website. Apply it to the V4 package already supplied. No GitHub or hosting changes have been made for you.
+
+SOURCE COVERAGE
+166 source rows: 165 marked Public and 1 marked Private.
+93 public entries in AI (display label: AI, Copilot & Technology).
+72 public entries in Excel.
+Every public source video appears exactly once. Copilot-in-Excel demonstrations are in Excel; general Copilot videos are in AI. Non-Excel database, cloud, networking and hardware videos are in the broader AI/technology collection so no public source entries are omitted.
+The private entry is deliberately excluded from public pages and this upload package.
+The AI certification video is included because the CSV marks it Public, although its publication timestamp is blank. Confirm its availability on YouTube before promoting it.
+Titles and video IDs come from the CSV. Leading spaces in three IDs were trimmed. Video URLs and thumbnails were formed from those IDs. Card descriptions are shortened extracts, not independent fact checks. Complete original descriptions are retained in originalDescription. Published dates are preserved; missing dates are not invented. External video/thumbnail availability was not verified.
+
+FIRST UPLOAD
+1. Back up your current GitHub repository.
+2. Extract this ZIP. Do not upload the ZIP itself.
+3. Upload/replace each supplied file at the SAME relative path in the repository. For example, videos-ai.json goes inside data/, not at the repository root. Do not create an extra wrapper folder.
+4. Commit all changes together. The build now requires BOTH category JSON files.
+5. Keep the existing package.json, wrangler.jsonc, assets and all other website files. Do not delete or overwrite data/content.json; it still holds your workbook/resource listings.
+6. Your existing deployment should run npm run build. This rebuilds the public video page. The supplied dist files are already built for the current list, but future JSON changes require the build.
+7. Check /videos/ after deployment. The category selector has All topics, AI/Copilot/Technology and Excel. The AI and Excel resources pages include direct links to their respective filtered collections.
+
+FILES TO MAINTAIN
+AI videos: data/videos-ai.json
+Excel videos: data/videos-excel.json
+Workbook download and paid-product listings: data/content.json (unchanged).
+Do not maintain videos in content.json anymore; the build reads the two category files instead. Do not edit dist/videos/index.html by hand; the build recreates it.
+
+EASIEST WAY TO ADD A VIDEO (NO JSON EDITING)
+1. Keep the creator/ and public/ folders together locally, then open creator/index.html in a browser.
+2. Import the current data/videos-ai.json and data/videos-excel.json, one at a time. Importing one category preserves the other. Do not export an empty category over your existing file.
+3. Choose YouTube video, enter the title, description, category (AI or Excel), and the individual YouTube video URL.
+4. Click Add entry, or Edit and Save changes for an existing video.
+5. Click Download videos-ai.json if you changed AI, or Download videos-excel.json if you changed Excel.
+6. Replace ONLY that matching file inside GitHub's data folder and commit.
+7. If you moved an entry from one category to another, export and replace BOTH files in the same commit.
+8. Wait for the configured deployment to finish, then check the website.
+The editor is local and does not publish directly, upload workbooks, or request credentials. Browser drafts are not a backup. Import the current repository files before starting on a new device.
+
+DIRECT JSON EDITING (OPTIONAL)
+Each file contains an array of entries. Keep commas between entries, double quotes around text, and a unique lowercase id using letters, numbers and hyphens. Required fields: id, title (max 120 characters), description (max 5000 characters), category (AI or Excel), url (HTTPS individual YouTube video link). Optional metadata may be retained. Only add public videos. The build rejects entries explicitly marked non-public.
+
+VALIDATION
+Passed: Node syntax checks; 165 build-rendered video cards; exact 93/72 category counts; private-video exclusion; category URL preselection; filtering; title search; 320px horizontal overflow check; editor import of both category files without losing either; separate AI/Excel JSON exports; no browser JavaScript errors in tested flows.
+Not performed: GitHub upload, production deployment or external-link availability checks.
