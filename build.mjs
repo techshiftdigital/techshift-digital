@@ -22,14 +22,25 @@ function organize(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true
  let text=fs.readFileSync(file,'utf8');
  text=text.replace(/href="\/videos\/\?category=Excel"/g,'href="/videos/excel/"').replace(/href="\/videos\/\?category=AI"/g,'href="/videos/ai/"');
  const rel=path.relative(out,file).split(path.sep).join('/');
- const excelPage=rel.startsWith('excel/')||rel.startsWith('videos/excel/')||rel.startsWith('resources/')||rel.startsWith('tools/')||rel==='insights/excel-percentage-change/index.html';
+ const excelPage=rel.startsWith('excel/')||rel.startsWith('videos/excel/')||rel.startsWith('resources/')||rel==='insights/excel-percentage-change/index.html';
  text=text.replace(/<nav\b[^>]*id="navigation"[^>]*>[\s\S]*?<\/nav>/,nav=>{
   nav=nav.replace(/ aria-current="page"/g,'');
   nav=nav.replace(/<a href="\/resources\/">Excel resources<\/a>/,'<a href="/excel/">Excel</a>');
   nav=nav.replace('<a href="/videos/">Videos</a>','<a href="/videos/excel/">Excel Videos</a><a href="/videos/ai/">AI Videos</a>');
-  const current=rel.startsWith('videos/excel/')?'/videos/excel/':rel.startsWith('videos/ai/')?'/videos/ai/':excelPage?'/excel/':rel.startsWith('ai/')||rel.startsWith('videos/ai/')?'/ai/':rel.startsWith('videos/')?'/videos/':rel.startsWith('insights/')?'/insights/':rel.startsWith('about/')?'/about/':null;
+  const current=rel.startsWith('tools/')?'/tools/':rel.startsWith('videos/excel/')?'/videos/excel/':rel.startsWith('videos/ai/')?'/videos/ai/':excelPage?'/excel/':rel.startsWith('ai/')||rel.startsWith('videos/ai/')?'/ai/':rel.startsWith('videos/')?'/videos/':rel.startsWith('insights/')?'/insights/':rel.startsWith('about/')?'/about/':null;
   if(current)nav=nav.replace('href="'+current+'"','href="'+current+'" aria-current="page"');
   return nav;
+ });
+ // Link each card heading to the same destination as its existing action link.
+ // This applies to all tool cards and both video collections without changing source JSON.
+ text=text.replace(/<article class="card"[\s\S]*?<\/article>/g,card=>{
+  const action=card.match(/<a\b[^>]*class="textlink"[^>]*href="([^"]+)"[^>]*>/)
+    ||card.match(/<a\b[^>]*href="([^"]+)"[^>]*class="textlink"[^>]*>/);
+  if(!action)return card;
+  const href=action[1];
+  const external=/^https?:\/\//i.test(href);
+  const attributes=external?' target="_blank" rel="noopener noreferrer"':'';
+  return card.replace(/<h3>([\s\S]*?)<\/h3>/,(_,heading)=>'<h3><a href="'+href+'"'+attributes+'>'+heading+'</a></h3>');
  });
  text=text.replace('<strong>Explore</strong>','<strong>Explore</strong><a href="/excel/">Excel hub</a><a href="/videos/excel/">Excel videos</a><a href="/videos/ai/">AI videos</a>');
  if(rel==='index.html')text=text.replace(/<a class="btn primary" href="\/videos\/">Explore video library[^<]*<\/a>/,'<a class="btn primary" href="/videos/excel/">Excel Videos</a><a class="btn" href="/videos/ai/">AI Videos</a>');
