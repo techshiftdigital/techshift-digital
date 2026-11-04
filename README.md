@@ -31,3 +31,5 @@ Browser tools do not transmit inputs. Hosting may process technical request info
 
 ## Visual credits
 Three original editorial images generated with Microsoft Copilot for this redesign. No people, fabricated testimonials or implied enterprise customers.
+
+Website rebuild triggered: 04 November 2026
