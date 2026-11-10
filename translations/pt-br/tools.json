@@ -1,0 +1,402 @@
+[
+  {
+    "slug": "percentage-change",
+    "name": "Calculadora de variação percentual",
+    "description": "Compare um valor inicial com um novo valor e calcule o aumento ou a redução percentual.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "(novo − inicial) ÷ inicial × 100"
+  },
+  {
+    "slug": "date-difference",
+    "name": "Calculadora de diferença entre datas",
+    "description": "Calcule o tempo entre duas datas em dias, semanas, meses e anos.",
+    "category": "date",
+    "categoryLabel": "Datas e hora",
+    "formula": "data final − data inicial"
+  },
+  {
+    "slug": "working-days",
+    "name": "Calculadora de dias úteis",
+    "description": "Conte os dias úteis entre duas datas, excluindo fins de semana.",
+    "category": "date",
+    "categoryLabel": "Datas e hora",
+    "formula": "dias totais − fins de semana"
+  },
+  {
+    "slug": "discount-calculator",
+    "name": "Calculadora de descontos",
+    "description": "Calcule o preço final, a economia e o percentual de desconto.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "preço × (1 − desconto ÷ 100)"
+  },
+  {
+    "slug": "word-character-counter",
+    "name": "Contador de palavras e caracteres",
+    "description": "Conte palavras, caracteres, frases, linhas e tempo estimado de leitura.",
+    "category": "text",
+    "categoryLabel": "Texto",
+    "formula": "contagem direta do texto"
+  },
+  {
+    "slug": "text-cleaner",
+    "name": "Limpador de texto",
+    "description": "Remova espaços duplicados e linhas vazias e normalize o texto colado.",
+    "category": "text",
+    "categoryLabel": "Texto",
+    "formula": "normalização de espaços e quebras de linha"
+  },
+  {
+    "slug": "age-calculator",
+    "name": "Calculadora de idade",
+    "description": "Calcule a idade exata a partir da data de nascimento.",
+    "category": "date",
+    "categoryLabel": "Datas e hora",
+    "formula": "data atual − data de nascimento"
+  },
+  {
+    "slug": "percentage-calculator",
+    "name": "Calculadora de porcentagem",
+    "description": "Calcule qual percentual um valor representa de outro.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "parte ÷ total × 100"
+  },
+  {
+    "slug": "loan-calculator",
+    "name": "Calculadora de empréstimo e parcela",
+    "description": "Estime a parcela mensal, os juros totais e o custo de um empréstimo.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "P × r(1+r)ⁿ ÷ ((1+r)ⁿ−1)"
+  },
+  {
+    "slug": "compound-interest-calculator",
+    "name": "Calculadora de juros compostos",
+    "description": "Projete o crescimento de um investimento com aportes periódicos.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "P(1+r)ⁿ + aportes"
+  },
+  {
+    "slug": "qr-code-generator",
+    "name": "Gerador de código QR",
+    "description": "Gere um código QR no navegador a partir de texto ou URL.",
+    "category": "developer",
+    "categoryLabel": "Desenvolvimento",
+    "formula": "codificação QR local"
+  },
+  {
+    "slug": "cagr-calculator",
+    "name": "Calculadora de CAGR",
+    "description": "Calcule a taxa de crescimento anual composta entre dois valores.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "(final ÷ inicial)^(1 ÷ anos) − 1"
+  },
+  {
+    "slug": "margin-markup-calculator",
+    "name": "Calculadora de margem e markup",
+    "description": "Compare a margem de lucro com o markup sobre o custo.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "margem = lucro ÷ preço; markup = lucro ÷ custo"
+  },
+  {
+    "slug": "salary-calculator",
+    "name": "Calculadora de salário",
+    "description": "Converta salário entre valores anuais, mensais, semanais e por hora.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "salario anual ÷ períodos"
+  },
+  {
+    "slug": "roi-calculator",
+    "name": "Calculadora de ROI",
+    "description": "Calcule o lucro líquido e o retorno percentual de um investimento.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "(ganho − investimento) ÷ investimento × 100"
+  },
+  {
+    "slug": "break-even-calculator",
+    "name": "Calculadora de ponto de equilíbrio",
+    "description": "Calcule quantas unidades precisam ser vendidas para cobrir os custos.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "custos fixos ÷ (preço − custo variável)"
+  },
+  {
+    "slug": "password-generator",
+    "name": "Gerador de senhas",
+    "description": "Crie senhas aleatórias configuráveis usando geração segura do navegador.",
+    "category": "security",
+    "categoryLabel": "Segurança",
+    "formula": "seleção aleatória criptograficamente segura"
+  },
+  {
+    "slug": "password-strength-checker",
+    "name": "Verificador de força de senha",
+    "description": "Avalie localmente o comprimento e a variedade de caracteres de uma senha.",
+    "category": "security",
+    "categoryLabel": "Segurança",
+    "formula": "pontuação por comprimento e variedade"
+  },
+  {
+    "slug": "random-number-generator",
+    "name": "Gerador de números aleatórios",
+    "description": "Gere números aleatórios dentro de um intervalo escolhido.",
+    "category": "developer",
+    "categoryLabel": "Desenvolvimento",
+    "formula": "inteiro aleatório entre mínimo e máximo"
+  },
+  {
+    "slug": "uuid-generator",
+    "name": "Gerador de UUID",
+    "description": "Gere identificadores UUID v4 diretamente no navegador.",
+    "category": "developer",
+    "categoryLabel": "Desenvolvimento",
+    "formula": "UUID v4 con crypto.randomUUID"
+  },
+  {
+    "slug": "base64-encoder-decoder",
+    "name": "Codificador e decodificador Base64",
+    "description": "Converta texto UTF-8 em Base64 e faça a decodificação local.",
+    "category": "developer",
+    "categoryLabel": "Desenvolvimento",
+    "formula": "codificação Base64 de UTF-8"
+  },
+  {
+    "slug": "json-formatter-validator",
+    "name": "Formatador e validador JSON",
+    "description": "Valide JSON e formate com indentação legível.",
+    "category": "developer",
+    "categoryLabel": "Desenvolvimento",
+    "formula": "JSON.parse y JSON.stringify"
+  },
+  {
+    "slug": "text-case-converter",
+    "name": "Conversor de maiúsculas e minúsculas",
+    "description": "Converta texto para maiúsculas, minúsculas, título ou formato de frase.",
+    "category": "text",
+    "categoryLabel": "Texto",
+    "formula": "transformação de capitalização"
+  },
+  {
+    "slug": "unix-timestamp-converter",
+    "name": "Conversor de timestamp Unix",
+    "description": "Converta timestamps Unix em datas legíveis e vice-versa.",
+    "category": "developer",
+    "categoryLabel": "Desenvolvimento",
+    "formula": "segundos desde 1 de janeiro de 1970 UTC"
+  },
+  {
+    "slug": "time-zone-converter",
+    "name": "Conversor de fusos horários",
+    "description": "Converta data e hora entre fusos horários internacionais.",
+    "category": "date",
+    "categoryLabel": "Datas e hora",
+    "formula": "conversão mediante Intl.DateTimeFormat"
+  },
+  {
+    "slug": "roman-numeral-converter",
+    "name": "Conversor de números romanos",
+    "description": "Converta inteiros em algarismos romanos e vice-versa.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "decomposição por símbolos romanos"
+  },
+  {
+    "slug": "vat-calculator",
+    "name": "Calculadora de IVA / imposto",
+    "description": "Adicione ou remova um percentual de imposto de um preço.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "imposto = base × taxa ÷ 100"
+  },
+  {
+    "slug": "tip-calculator",
+    "name": "Calculadora de gorjeta",
+    "description": "Calcule a gorjeta e divida a conta entre várias pessoas.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "total = conta × (1 + gorjeta ÷ 100)"
+  },
+  {
+    "slug": "inflation-calculator",
+    "name": "Calculadora de inflação",
+    "description": "Estime o valor futuro de uma quantia com inflação constante.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "valor × (1 + inflação)ⁿ"
+  },
+  {
+    "slug": "simple-interest-calculator",
+    "name": "Calculadora de juros simples",
+    "description": "Calcule os juros simples e o montante total.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "principal × taxa × tempo"
+  },
+  {
+    "slug": "unit-price-calculator",
+    "name": "Calculadora de preço unitário",
+    "description": "Compare o custo por unidade de dois produtos.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "preço ÷ quantidade"
+  },
+  {
+    "slug": "fuel-cost-calculator",
+    "name": "Calculadora de custo de combustível",
+    "description": "Estime o combustível necessário e o custo de uma viagem.",
+    "category": "everyday",
+    "categoryLabel": "Dia a dia",
+    "formula": "distância ÷ consumo × preço"
+  },
+  {
+    "slug": "pace-calculator",
+    "name": "Calculadora de ritmo",
+    "description": "Calcule o ritmo por quilômetro com base em distância e tempo.",
+    "category": "everyday",
+    "categoryLabel": "Dia a dia",
+    "formula": "tempo ÷ distância"
+  },
+  {
+    "slug": "bmi-calculator",
+    "name": "Calculadora de IMC",
+    "description": "Calcule o índice de massa corporal a partir de peso e altura.",
+    "category": "health",
+    "categoryLabel": "Saúde",
+    "formula": "peso ÷ altura²"
+  },
+  {
+    "slug": "calorie-bmr-calculator",
+    "name": "Calculadora de calorias e TMB",
+    "description": "Estime a taxa metabólica basal com a equação Mifflin-St Jeor.",
+    "category": "health",
+    "categoryLabel": "Saúde",
+    "formula": "10×peso + 6,25×altura − 5×edad ± constante"
+  },
+  {
+    "slug": "aspect-ratio-calculator",
+    "name": "Calculadora de proporção de tela",
+    "description": "Calcule uma dimensão mantendo a proporção.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "largura ÷ altura = largura novo ÷ altura novo"
+  },
+  {
+    "slug": "average-median-mode-calculator",
+    "name": "Calculadora de média, mediana e moda",
+    "description": "Calcule estatísticas descritivas básicas de uma lista de números.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "media = soma ÷ quantidade"
+  },
+  {
+    "slug": "standard-deviation-calculator",
+    "name": "Calculadora de desvio padrão",
+    "description": "Calcule variância e desvio padrão populacional e amostral.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "raiz de la variância"
+  },
+  {
+    "slug": "percentage-difference-calculator",
+    "name": "Calculadora de diferença percentual",
+    "description": "Compare dois valores sem definir um deles como inicial.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "|a−b| ÷ ((a+b)÷2) × 100"
+  },
+  {
+    "slug": "countdown-calculator",
+    "name": "Calculadora de contagem regressiva",
+    "description": "Calcule quanto tempo falta até uma data futura.",
+    "category": "date",
+    "categoryLabel": "Datas e hora",
+    "formula": "data-alvo − data atual"
+  },
+  {
+    "slug": "weighted-average-calculator",
+    "name": "Calculadora de média ponderada",
+    "description": "Calcule uma média usando valores e pesos correspondentes.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "Σ(valor×peso) ÷ Σ(peso)"
+  },
+  {
+    "slug": "ratio-calculator",
+    "name": "Calculadora de razão",
+    "description": "Simplifique uma razão entre dois números inteiros.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "a÷mcd : b÷mcd"
+  },
+  {
+    "slug": "fraction-calculator",
+    "name": "Calculadora de frações",
+    "description": "Some, subtraia, multiplique ou divida duas frações.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "operaciones con numeradores y denominadores"
+  },
+  {
+    "slug": "number-base-converter",
+    "name": "Conversor de bases numéricas",
+    "description": "Converta números entre binário, octal, decimal e hexadecimal.",
+    "category": "developer",
+    "categoryLabel": "Desenvolvimento",
+    "formula": "parseInt y toString(base)"
+  },
+  {
+    "slug": "scientific-notation-calculator",
+    "name": "Calculadora de notação científica",
+    "description": "Converta números decimais em notação científica e vice-versa.",
+    "category": "math",
+    "categoryLabel": "Matemática",
+    "formula": "coeficiente × 10^exponente"
+  },
+  {
+    "slug": "meeting-cost-calculator",
+    "name": "Calculadora de custo de reuniões",
+    "description": "Estime o custo de uma reunião por participantes, duração e valor por hora.",
+    "category": "productivity",
+    "categoryLabel": "Produtividade",
+    "formula": "personas × horas × tarifa"
+  },
+  {
+    "slug": "productivity-improvement-calculator",
+    "name": "Calculadora de melhoria de produtividade",
+    "description": "Estime tempo e custo economizados após uma melhoria de produtividade.",
+    "category": "productivity",
+    "categoryLabel": "Produtividade",
+    "formula": "economia de tempo × tarifa × frecuencia"
+  },
+  {
+    "slug": "sip-calculator",
+    "name": "Calculadora de investimento mensal",
+    "description": "Projete o valor futuro de aportes mensais com retorno estimado.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "aporte × [((1+r)ⁿ−1)÷r] × (1+r)"
+  },
+  {
+    "slug": "retirement-savings-calculator",
+    "name": "Calculadora de aposentadoria",
+    "description": "Projete a reserva para aposentadoria com aportes e crescimento composto.",
+    "category": "finance",
+    "categoryLabel": "Finanças",
+    "formula": "saldo compuesto + valor futuro de aportes"
+  },
+  {
+    "slug": "electricity-cost-calculator",
+    "name": "Calculadora de custo de energia",
+    "description": "Calcule consumo de energia e custo por potência, uso e tarifa.",
+    "category": "everyday",
+    "categoryLabel": "Dia a dia",
+    "formula": "kWh = watts ÷ 1000 × horas × dias"
+  }
+]
