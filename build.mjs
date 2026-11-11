@@ -50,4 +50,4 @@ function organize(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true
 }}
 organize(out);
 const urls=[];function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())walk(f);else if(e.name==='index.html')urls.push(base+'/'+path.relative(out,f).split(path.sep).join('/').replace(/index\.html$/,''))}}walk(out);fs.writeFileSync(path.join(out,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(u=>'<url><loc>'+esc(u)+'</loc></url>').join('')+'</urlset>');console.log('Built '+urls.length+' pages; '+d.resources.length+' resources; '+d.videos.length+' videos.');
-await import('./language-selector-build.mjs');
+await import('./multilingual-build.mjs');
