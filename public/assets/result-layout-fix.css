@@ -1,62 +1,65 @@
-/*
- * TechShift Digital result-layout fix v5.0.1
- *
- * Loaded only on tool detail routes by build.mjs. These rules correct layout
- * containment and normal document flow without changing colours, typography,
- * calculations, content, routes, navigation or video components.
- */
-
-:where(.toolbox, .calculator-card, .tool-card, .tool-panel) {
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
+/* TechShift Digital: shared result-box flow correction (EN, ES, pt-BR). */
+.tool-actions,
+.calculator-actions,
+.form-actions,
+.action-row,
+.button-row,
+.actions {
+  position: relative !important;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1rem !important;
 }
 
-:where(form, .tool-form, .calculator-form) {
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
-}
-
-:where(form, .tool-form, .calculator-form) > :where(.actions, .tool-actions, .form-actions) {
-  position: static !important;
+.result-box,
+.calculator-result,
+.tool-result,
+.result-output,
+.output-box,
+[data-result],
+#result {
+  position: relative !important;
   inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
   transform: none !important;
-}
-
-:where(#result, .result, .tool-result, .result-box, [data-result]):not([hidden]) {
-  position: static !important;
-  inset: auto !important;
-  float: none !important;
+  z-index: 0 !important;
   clear: both;
-  transform: none !important;
-  z-index: auto !important;
-  box-sizing: border-box;
   display: block;
-  flex: 1 0 100% !important;
-  grid-column: 1 / -1;
-  align-self: stretch;
   width: 100%;
-  max-width: 100%;
+  min-width: 0;
   height: auto !important;
+  min-height: 3.5rem;
   max-height: none !important;
-  min-height: 3.25rem;
-  margin-block: 1rem 0 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1.25rem !important;
+  overflow: visible !important;
   overflow-wrap: anywhere;
-  white-space: pre-wrap;
+  white-space: normal;
 }
 
-:where(#result, .result, .tool-result, .result-box, [data-result]):empty {
-  display: none;
+.result-box:empty,
+.calculator-result:empty,
+.tool-result:empty,
+.result-output:empty,
+.output-box:empty,
+[data-result]:empty,
+#result:empty {
+  min-height: 3.5rem;
 }
 
-:where(#result, .result, .tool-result, .result-box, [data-result]) + * {
+.result-box + *,
+.calculator-result + *,
+.tool-result + *,
+.result-output + *,
+.output-box + *,
+[data-result] + *,
+#result + * {
+  position: relative;
   clear: both;
-}
-
-@media (max-width: 640px) {
-  :where(#result, .result, .tool-result, .result-box, [data-result]):not([hidden]) {
-    min-height: 3rem;
-    margin-block-start: 0.875rem !important;
-  }
 }

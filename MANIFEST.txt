@@ -1,0 +1,10 @@
+MANIFEST.txt
+README-UPLOAD.md
+build.mjs
+public/assets/original-videos.css
+public/assets/original-videos.js
+public/assets/result-layout-fix.css
+public/data/videos-ai.json
+public/data/videos-excel.json
+qa/verify-site-fixes.mjs
+scripts/apply-site-fixes.mjs
