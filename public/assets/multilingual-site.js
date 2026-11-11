@@ -1,63 +1,284 @@
+/* TechShift Digital compact language selector (English / Spanish / Portuguese). */
 (() => {
   'use strict';
-  const payloadNode = document.getElementById('tsd-i18n-page');
-  if (!payloadNode) return;
-  let page; try { page = JSON.parse(payloadNode.textContent); } catch { return; }
-  const locale = page.locale || 'en';
-  const labels = {
-    en:{current:'English',choose:'Choose language',home:'Home',tools:'Tools',resources:'Resources',calculate:'Calculate',reset:'Reset',search:'Search tools',all:'All categories',open:'Open tool'},
-    es:{current:'Español',choose:'Elegir idioma',home:'Inicio',tools:'Herramientas',resources:'Recursos',calculate:'Calcular',reset:'Restablecer',search:'Buscar herramientas',all:'Todas las categorías',open:'Abrir herramienta'},
-    'pt-br':{current:'Português',choose:'Escolher idioma',home:'Início',tools:'Ferramentas',resources:'Recursos',calculate:'Calcular',reset:'Redefinir',search:'Pesquisar ferramentas',all:'Todas as categorias',open:'Abrir ferramenta'}
-  };
-  const pathFor = lang => lang === 'en' ? page.basePath : `/${lang}${page.basePath === '/' ? '/' : page.basePath}`;
-  const picker = document.createElement('details');
-  picker.className = 'tsd-language-picker';
-  picker.innerHTML = `<summary aria-label="${labels[locale].choose}"><span aria-hidden="true">🌐</span><span>${labels[locale].current}</span></summary><ul class="tsd-language-menu"><li><a href="${pathFor('en')}" lang="en"${locale==='en'?' aria-current="page"':''}>English</a></li><li><a href="${pathFor('es')}" lang="es"${locale==='es'?' aria-current="page"':''}>Español</a></li><li><a href="${pathFor('pt-br')}" lang="pt-BR"${locale==='pt-br'?' aria-current="page"':''}>Português (Brasil)</a></li></ul>`;
-  const old = document.querySelectorAll('.language-links,.all-languages-link,[data-language-list],[data-language-selector]');
-  old.forEach(el => { if (!el.classList.contains('tsd-language-picker')) el.hidden = true; });
-  [...document.querySelectorAll('a')].filter(a => /all languages|todos los idiomas|todos os idiomas/i.test(a.textContent.trim())).forEach(a => a.hidden=true);
-  const host = document.querySelector('[data-header-actions], .header-actions, header nav, .site-header nav, header, .site-header') || document.body;
-  host.appendChild(picker);
-  document.addEventListener('click', e => { if (picker.open && !picker.contains(e.target)) picker.open=false; });
-  document.addEventListener('keydown', e => { if (e.key==='Escape') { picker.open=false; picker.querySelector('summary')?.focus(); } });
 
-  if (locale !== 'en') {
-    document.documentElement.lang = locale === 'pt-br' ? 'pt-BR' : 'es';
-    const dict = {
-      es:{Home:'Inicio',Tools:'Herramientas',Resources:'Recursos',Calculate:'Calcular',Reset:'Restablecer','Search tools':'Buscar herramientas','All categories':'Todas las categorías','Open tool':'Abrir herramienta','Related tools':'Herramientas relacionadas','How it works':'Cómo funciona',Formula:'Fórmula',Example:'Ejemplo','Frequently asked questions':'Preguntas frecuentes','Original value':'Valor inicial','New value':'Nuevo valor','Start date':'Fecha inicial','End date':'Fecha final','Amount':'Importe','Interest rate':'Tasa de interés','Years':'Años','Months':'Meses','Result':'Resultado','Copy':'Copiar','Clear':'Limpiar'},
-      'pt-br':{Home:'Início',Tools:'Ferramentas',Resources:'Recursos',Calculate:'Calcular',Reset:'Redefinir','Search tools':'Pesquisar ferramentas','All categories':'Todas as categorias','Open tool':'Abrir ferramenta','Related tools':'Ferramentas relacionadas','How it works':'Como funciona',Formula:'Fórmula',Example:'Exemplo','Frequently asked questions':'Perguntas frequentes','Original value':'Valor inicial','New value':'Novo valor','Start date':'Data inicial','End date':'Data final','Amount':'Valor','Interest rate':'Taxa de juros','Years':'Anos','Months':'Meses','Result':'Resultado','Copy':'Copiar','Clear':'Limpar'}
-    }[locale];
-    const translateText = root => {
-      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode:n => /^(SCRIPT|STYLE|CODE|PRE)$/.test(n.parentElement?.tagName||'') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT});
-      const nodes=[]; while (walker.nextNode()) nodes.push(walker.currentNode);
-      nodes.forEach(n => { const raw=n.nodeValue, trim=raw.trim(); if (dict[trim]) n.nodeValue=raw.replace(trim,dict[trim]); });
-      root.querySelectorAll?.('input[placeholder],textarea[placeholder]').forEach(el => { if (dict[el.placeholder]) el.placeholder=dict[el.placeholder]; });
+  const LANGUAGES = Object.freeze([
+    { code: 'en', prefix: '', label: 'English', htmlLang: 'en' },
+    { code: 'es', prefix: '/es', label: 'Español', htmlLang: 'es' },
+    { code: 'pt-BR', prefix: '/pt-br', label: 'Português', htmlLang: 'pt-BR' },
+  ]);
+
+  const SELECTOR_CLASS = 'tsd-language-selector';
+  const HOST_CLASS = 'tsd-language-host';
+  const SLOT_CLASS = 'tsd-language-slot';
+  const STYLE_ID = 'tsd-language-selector-styles';
+
+  function normalizePath(pathname) {
+    let value = String(pathname || '/').split('?')[0].split('#')[0];
+    if (!value.startsWith('/')) value = `/${value}`;
+    value = value.replace(/\/{2,}/g, '/');
+    if (value !== '/' && !/\.[a-z0-9]+$/i.test(value) && !value.endsWith('/')) value += '/';
+    return value;
+  }
+
+  function pathInfo(pathname) {
+    const path = normalizePath(pathname);
+    const match = path.match(/^\/(es|pt-br)(?=\/|$)/i);
+    const prefix = match ? match[1].toLowerCase() : '';
+    let basePath = match ? path.slice(match[0].length) : path;
+    basePath = normalizePath(basePath || '/');
+
+    return {
+      path,
+      basePath,
+      language: prefix === 'es' ? 'es' : prefix === 'pt-br' ? 'pt-BR' : 'en',
     };
-    translateText(document.body);
-    new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => { if (n.nodeType===1) translateText(n); }))).observe(document.body,{subtree:true,childList:true});
   }
 
-  const tool = page.tool;
-  if (locale !== 'en' && tool) {
-    const h1 = document.querySelector('main h1, h1'); if (h1) h1.textContent = tool.title;
-    const intro = document.querySelector('[data-tool-description], .tool-intro, main h1 + p'); if (intro) intro.textContent = tool.intro;
-    const inventory = new Map((page.inventory||[]).map(x=>[x.slug,x]));
-    const related = (tool.related||[]).map(slug => { const item=inventory.get(slug); if(!item) return ''; const name=item[locale]||slug; return `<li><a href="/${locale}/tools/${slug}/">${name}</a></li>`; }).join('');
-    const section = document.createElement('section');
-    section.className='tsd-localized-details'; section.dataset.localizedToolDetails='';
-    section.innerHTML = `<h2>${tool.howTitle}</h2><ol>${tool.how.map(x=>`<li>${x}</li>`).join('')}</ol><div class="tsd-info-grid"><article class="tsd-info-card"><h3>${tool.methodTitle}</h3><p><code>${tool.method}</code></p></article><article class="tsd-info-card"><h3>${tool.exampleTitle}</h3><p>${tool.example}</p></article></div><h2>${tool.mistakesTitle}</h2><ul>${tool.mistakes.map(x=>`<li>${x}</li>`).join('')}</ul><h2>${tool.faqTitle}</h2>${tool.faqs.map(x=>`<details><summary>${x.q}</summary><p>${x.a}</p></details>`).join('')}<h2>${tool.relatedTitle}</h2><ul>${related}</ul>`;
-    const existing = document.querySelector('[data-tool-details],.tool-details,.seo-content,.tool-explanation');
-    if (existing) { existing.replaceWith(section); } else {
-      const main=document.querySelector('main')||document.body; const footer=main.querySelector('footer'); footer ? main.insertBefore(section,footer) : main.appendChild(section);
-    }
-    document.title = `${tool.title} | TechShift Digital`;
+  function pathForLanguage(pathname, languageCode) {
+    const { basePath } = pathInfo(pathname);
+    const language = LANGUAGES.find((item) => item.code === languageCode) || LANGUAGES[0];
+    if (!language.prefix) return basePath;
+    return normalizePath(`${language.prefix}${basePath === '/' ? '/' : basePath}`);
   }
 
-  if (locale !== 'en') {
-    document.querySelectorAll('a[href^="/"]').forEach(a => {
-      const href=a.getAttribute('href');
-      if (a.closest('.tsd-language-picker') || !href || href.startsWith('/assets/') || href.startsWith('/es/') || href.startsWith('/pt-br/') || href==='/favicon.ico') return;
-      a.href=`/${locale}${href==='/'?'/':href}`;
+  function removeLegacySelectors() {
+    const selectors = [
+      '[data-language-selector]',
+      '[data-lang-switcher]',
+      '#language-selector',
+      '#language-switcher',
+      '.language-selector',
+      '.language-switcher',
+      '.lang-selector',
+      '.all-languages-link',
+      '[data-all-languages]',
+    ];
+
+    document.querySelectorAll(selectors.join(',')).forEach((node) => {
+      if (!node.classList.contains(SELECTOR_CLASS) && !node.closest(`.${SELECTOR_CLASS}`)) node.remove();
     });
+  }
+
+  function injectStyles() {
+    if (document.getElementById(STYLE_ID)) return;
+    const style = document.createElement('style');
+    style.id = STYLE_ID;
+    style.textContent = `
+      .${HOST_CLASS} {
+        position: relative !important;
+        box-sizing: border-box !important;
+        padding-inline-end: 9.25rem !important;
+      }
+      .${SELECTOR_CLASS} {
+        position: absolute !important;
+        inset-inline-end: .75rem !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 1001 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: .35rem !important;
+        width: 8.15rem !important;
+        min-width: 0 !important;
+        max-width: 8.15rem !important;
+        height: 2rem !important;
+        margin: 0 !important;
+        padding: 0 .4rem !important;
+        border: 1px solid rgba(148, 163, 184, .38) !important;
+        border-radius: .45rem !important;
+        background: rgba(15, 29, 46, .92) !important;
+        color: #eaf4ff !important;
+        box-shadow: none !important;
+        white-space: nowrap !important;
+        font: 600 .75rem/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      }
+      .${SLOT_CLASS} {
+        display: inline-flex !important;
+        align-items: center !important;
+      }
+      .${SLOT_CLASS} > .${SELECTOR_CLASS} {
+        position: static !important;
+        inset: auto !important;
+        transform: none !important;
+      }
+      .${SELECTOR_CLASS}:focus-within {
+        border-color: #67e8f9 !important;
+        box-shadow: 0 0 0 2px rgba(103, 232, 249, .22) !important;
+      }
+      .${SELECTOR_CLASS}__icon {
+        flex: 0 0 auto !important;
+        width: .85rem !important;
+        height: .85rem !important;
+        color: #67e8f9 !important;
+      }
+      .${SELECTOR_CLASS}__select {
+        appearance: auto !important;
+        -webkit-appearance: menulist !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        height: 1.6rem !important;
+        margin: 0 !important;
+        padding: 0 .1rem !important;
+        border: 0 !important;
+        outline: 0 !important;
+        background: transparent !important;
+        color: inherit !important;
+        box-shadow: none !important;
+        font: inherit !important;
+        cursor: pointer !important;
+      }
+      .${SELECTOR_CLASS}__select option {
+        background: #0b1422 !important;
+        color: #f8fafc !important;
+      }
+      .${SELECTOR_CLASS}__sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+      @media (max-width: 760px) {
+        .${HOST_CLASS} { padding-inline-end: 7.55rem !important; }
+        .${SELECTOR_CLASS} {
+          inset-inline-end: 3rem !important;
+          width: 6.65rem !important;
+          max-width: 6.65rem !important;
+          height: 1.9rem !important;
+          padding-inline: .3rem !important;
+        }
+        .${SELECTOR_CLASS}__select { font-size: .7rem !important; }
+      }
+      @media (max-width: 390px) {
+        .${HOST_CLASS} { padding-inline-end: 6.8rem !important; }
+        .${SELECTOR_CLASS} {
+          inset-inline-end: 2.65rem !important;
+          width: 6rem !important;
+          max-width: 6rem !important;
+        }
+        .${SELECTOR_CLASS}__icon { display: none !important; }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function locateHeader() {
+    return (
+      document.querySelector('[data-site-header]') ||
+      document.querySelector('.site-header') ||
+      document.querySelector('.main-header') ||
+      document.querySelector('body > header') ||
+      document.querySelector('header')
+    );
+  }
+
+  function locateHost(header) {
+    const explicitSlot = header.querySelector('[data-language-selector-slot], .language-selector-slot');
+    if (explicitSlot) return { host: explicitSlot, isSlot: true };
+
+    const candidates = [
+      '.header-inner',
+      '.nav-inner',
+      '.navbar-inner',
+      '.topbar-inner',
+      '.nav-container',
+      '.header-container',
+      '.topbar',
+      ':scope > .container',
+      ':scope > div',
+      ':scope > nav',
+    ];
+
+    for (const selector of candidates) {
+      try {
+        const element = header.querySelector(selector);
+        if (element) return { host: element, isSlot: false };
+      } catch {
+        // Older browsers can reject :scope; continue with the header fallback.
+      }
+    }
+    return { host: header, isSlot: false };
+  }
+
+  function createSelector(currentLanguage) {
+    const wrapper = document.createElement('div');
+    wrapper.className = SELECTOR_CLASS;
+    wrapper.setAttribute('data-tsd-language-selector', '');
+
+    const label = document.createElement('label');
+    label.className = `${SELECTOR_CLASS}__sr-only`;
+    label.htmlFor = 'tsd-language-select';
+    label.textContent = 'Choose language';
+
+    const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.setAttribute('class', `${SELECTOR_CLASS}__icon`);
+    icon.setAttribute('viewBox', '0 0 24 24');
+    icon.setAttribute('aria-hidden', 'true');
+    icon.innerHTML =
+      '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>' +
+      '<path d="M3.5 12h17M12 3c2.5 2.7 3.7 5.7 3.7 9S14.5 18.3 12 21M12 3C9.5 5.7 8.3 8.7 8.3 12S9.5 18.3 12 21" fill="none" stroke="currentColor" stroke-width="1.5"/>';
+
+    const select = document.createElement('select');
+    select.id = 'tsd-language-select';
+    select.className = `${SELECTOR_CLASS}__select`;
+    select.setAttribute('aria-label', 'Choose language');
+
+    LANGUAGES.forEach((language) => {
+      const option = document.createElement('option');
+      option.value = language.code;
+      option.textContent = language.label;
+      option.selected = language.code === currentLanguage;
+      select.appendChild(option);
+    });
+
+    select.addEventListener('change', () => {
+      const destination = pathForLanguage(window.location.pathname, select.value);
+      const nextUrl = `${destination}${window.location.search}${window.location.hash}`;
+      if (nextUrl !== `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+        window.location.assign(nextUrl);
+      }
+    });
+
+    wrapper.append(label, icon, select);
+    return wrapper;
+  }
+
+  function mount() {
+    if (!document.body || document.querySelector(`.${SELECTOR_CLASS}`)) return;
+
+    removeLegacySelectors();
+    injectStyles();
+
+    const header = locateHeader();
+    if (!header) {
+      // Never recreate the former full-width body bar. Pages without a header
+      // simply omit the selector rather than altering their content layout.
+      return;
+    }
+
+    const { host, isSlot } = locateHost(header);
+    const currentLanguage = pathInfo(window.location.pathname).language;
+    document.documentElement.lang = LANGUAGES.find((item) => item.code === currentLanguage)?.htmlLang || 'en';
+
+    host.classList.add(isSlot ? SLOT_CLASS : HOST_CLASS);
+    host.appendChild(createSelector(currentLanguage));
+  }
+
+  const api = Object.freeze({ normalizePath, pathInfo, pathForLanguage });
+  if (typeof document === 'undefined') {
+    globalThis.__TSD_MULTILINGUAL_TEST__ = api;
+    return;
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount, { once: true });
+  } else {
+    mount();
   }
 })();
