@@ -1,307 +1,50 @@
 #!/usr/bin/env node
-import { access, copyFile, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
+// TechShift Digital: post-build visual unification. Run after BOTH build scripts.
+import {access,copyFile,mkdir,readFile,readdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
-import process from 'node:process';
-import { fileURLToPath } from 'node:url';
-
-const packageRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const outputRoot = path.resolve(process.argv[2] || process.env.TECHSHIFT_OUTPUT_DIR || 'dist');
-const VERSION = '20261111.1';
-const STYLE_HREF = `/assets/multilingual-unified.css?v=${VERSION}`;
-const SCRIPT_SRC = `/assets/multilingual-unified.js?v=${VERSION}`;
-const LOCALES = ['en', 'es', 'pt-br'];
-
-async function exists(file) {
-  try { await access(file); return true; } catch { return false; }
-}
-
-async function listHtml(dir) {
-  const out = [];
-  for (const entry of await readdir(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) out.push(...await listHtml(full));
-    else if (entry.isFile() && entry.name.toLowerCase().endsWith('.html')) out.push(full);
-  }
-  return out;
-}
-
-function normalizeRel(file) {
-  return path.relative(outputRoot, file).split(path.sep).join('/');
-}
-
-function localeFor(rel) {
-  if (rel === 'es/index.html' || rel.startsWith('es/')) return 'es';
-  if (rel === 'pt-br/index.html' || rel.startsWith('pt-br/')) return 'pt-br';
-  return 'en';
-}
-
-function englishRel(rel) {
-  if (rel.startsWith('es/')) return rel.slice(3);
-  if (rel.startsWith('pt-br/')) return rel.slice(6);
-  return rel;
-}
-
-function localizedRel(english, locale) {
-  return locale === 'en' ? english : `${locale}/${english}`;
-}
-
-function urlForRel(rel) {
-  const normalized = rel.replace(/\\/g, '/');
-  if (normalized === 'index.html') return '/';
-  if (normalized.endsWith('/index.html')) return `/${normalized.slice(0, -10)}`;
-  return `/${normalized}`;
-}
-
-function getBlock(html, tag) {
-  const match = html.match(new RegExp(`<${tag}\\b[^>]*>[\\s\\S]*?<\\/${tag}>`, 'i'));
-  return match?.[0] || '';
-}
-
-function replaceBlock(html, tag, replacement) {
-  const pattern = new RegExp(`<${tag}\\b[^>]*>[\\s\\S]*?<\\/${tag}>`, 'i');
-  return pattern.test(html) ? html.replace(pattern, replacement) : html;
-}
-
-function getBodyClass(html) {
-  return html.match(/<body\b[^>]*\bclass=(['"])(.*?)\1/i)?.[2] || '';
-}
-
-function setBodyClass(html, value) {
-  return html.replace(/<body\b([^>]*)>/i, (whole, attrs) => {
-    const clean = attrs.replace(/\sclass=(['"])[\s\S]*?\1/i, '');
-    return `<body${clean} class="${value}">`;
-  });
-}
-
-function stripTags(value) {
-  return value.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-}
-
-function tagInner(block, tag, index = 0) {
-  const matches = [...block.matchAll(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'gi'))];
-  return matches[index]?.[1] ?? null;
-}
-
-function replaceTagInner(block, tag, index, replacement) {
-  let seen = -1;
-  return block.replace(new RegExp(`(<${tag}\\b[^>]*>)([\\s\\S]*?)(<\\/${tag}>)`, 'gi'), (whole, open, inner, close) => {
-    seen += 1;
-    return seen === index ? `${open}${replacement}${close}` : whole;
-  });
-}
-
-function firstSection(main) {
-  return main.match(/<section\b[^>]*>[\s\S]*?<\/section>/i)?.[0] || '';
-}
-
-function localizedHero(englishMain, localeMain) {
-  const source = firstSection(englishMain);
-  const translated = firstSection(localeMain);
-  if (!source || !translated) return localeMain;
-
-  let merged = source;
-  for (const tag of ['h1', 'h2']) {
-    const value = tagInner(translated, tag);
-    if (value !== null && stripTags(value)) merged = replaceTagInner(merged, tag, 0, value);
-  }
-
-  const translatedParagraphs = [...translated.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)].map(match => match[1]);
-  translatedParagraphs.forEach((value, index) => {
-    if (stripTags(value)) merged = replaceTagInner(merged, 'p', index, value);
-  });
-
-  const translatedActions = [...translated.matchAll(/<(a|button)\b[^>]*>([\s\S]*?)<\/\1>/gi)]
-    .map(match => ({ tag: match[1].toLowerCase(), inner: match[2] }));
-  const counters = { a: 0, button: 0 };
-  for (const action of translatedActions) {
-    if (!stripTags(action.inner)) continue;
-    merged = replaceTagInner(merged, action.tag, counters[action.tag], action.inner);
-    counters[action.tag] += 1;
-  }
-
-  return localeMain.replace(firstSection(localeMain), merged);
-}
-
-function cleanLegacyLanguageUi(html) {
-  let result = html;
-  result = result.replace(/(<\/header>)\s*(<(div|section|aside|form)\b[^>]*>[\s\S]{0,20000}?<\/\3>)\s*(?=<main\b)/gi, (whole, closeHeader, container) => {
-    const hasSelect = /<select\b/i.test(container);
-    const languageHits = ['English', 'Español', 'Português'].filter(name => container.includes(name)).length;
-    return hasSelect && languageHits >= 2 ? closeHeader : whole;
-  });
-  result = result.replace(/<div\b[^>]*data-tsd-language-menu[^>]*>[\s\S]*?<\/div>/gi, '');
-  const namedContainer = /<(div|section|aside|nav|form|li|span)\b(?=[^>]*(?:id|class)=(['"])[^'"]*(?:language-(?:selector|switcher|picker|bar)|locale-(?:selector|switcher|picker)|lang-(?:selector|switcher|picker))[^'"]*\2)[^>]*>[\s\S]*?<\/\1>/gi;
-  result = result.replace(namedContainer, '');
-
-  const oldCustom = /<(section|aside|form)\b(?![^>]*data-tsd-language-menu)[^>]*>[\s\S]{0,6000}?<select\b[^>]*>[\s\S]{0,3000}?(?:English)[\s\S]{0,3000}?(?:Espa(?:ñ|&ntilde;)ol)[\s\S]{0,3000}?(?:Portugu(?:ê|&ecirc;|e)s)[\s\S]{0,3000}?<\/select>[\s\S]{0,1000}?<\/\1>/gi;
-  result = result.replace(oldCustom, '');
-
-  result = result.replace(/<a\b[^>]*>\s*(?:English|Espa(?:ñ|&ntilde;)ol|Portugu(?:ê|&ecirc;|e)s|Spanish|Portuguese)\s*<\/a>/gi, '');
-  result = result.replace(/<(div|span|svg)\b(?=[^>]*(?:id|class)=(['"])[^'"]*(?:big-)?globe[^'"]*\2)[^>]*>[\s\S]*?<\/\1>/gi, '');
-  result = result.replace(/<svg\b[^>]*(?:aria-label|title)=(['"])(?:Choose language|Language|Globe)\1[^>]*>[\s\S]*?<\/svg>/gi, '');
-  result = result.replace(/<(p|span|label)\b[^>]*>\s*(?:Choose language|Seleccionar idioma|Escolher idioma)\s*<\/\1>/gi, '');
-  return result;
-}
-
-const NAV_TRANSLATIONS = {
-  es: new Map([
-    ['Tools', 'Herramientas'], ['Excel resources', 'Recursos de Excel'], ['AI & Copilot', 'IA y Copilot'],
-    ['Insights', 'Artículos'], ['Excel Videos', 'Videos de Excel'], ['AI Videos', 'Videos de IA'],
-    ['Videos', 'Videos'], ['About', 'Acerca de'], ['YouTube', 'YouTube']
-  ]),
-  'pt-br': new Map([
-    ['Tools', 'Ferramentas'], ['Excel resources', 'Recursos de Excel'], ['AI & Copilot', 'IA e Copilot'],
-    ['Insights', 'Artigos'], ['Excel Videos', 'Vídeos de Excel'], ['AI Videos', 'Vídeos de IA'],
-    ['Videos', 'Vídeos'], ['About', 'Sobre'], ['YouTube', 'YouTube']
-  ])
-};
-
-function translateHeader(header, locale) {
-  if (locale === 'en') return header;
-  const dictionary = NAV_TRANSLATIONS[locale];
-  return header.replace(/>([^<>]+)</g, (whole, text) => {
-    const trimmed = text.trim();
-    const replacement = dictionary.get(trimmed);
-    return replacement ? `>${text.replace(trimmed, replacement)}<` : whole;
-  });
-}
-
-function splitUrl(value) {
-  const match = value.match(/^([^?#]*)([?#][\s\S]*)?$/);
-  return { pathname: match?.[1] || value, suffix: match?.[2] || '' };
-}
-
-function relFromPathname(pathname) {
-  let clean = pathname.replace(/^https?:\/\/(?:www\.)?techshiftdigital\.com/i, '');
-  if (!clean.startsWith('/')) return null;
-  clean = clean.replace(/^\/+/, '');
-  if (!clean || clean.endsWith('/')) return `${clean}index.html`;
-  return clean;
-}
-
-function localizeInternalLinks(fragment, locale, relSet) {
-  return fragment.replace(/\b(href|action)=(['"])([^'"]+)\2/gi, (whole, attribute, quote, raw) => {
-    if (/^(?:#|mailto:|tel:|javascript:|data:)/i.test(raw)) return whole;
-    const { pathname, suffix } = splitUrl(raw);
-    const rel = relFromPathname(pathname);
-    if (!rel || rel.startsWith('assets/')) return whole;
-    const base = englishRel(rel);
-    const candidate = localizedRel(base, locale);
-    if (!relSet.has(candidate)) return whole;
-    return `${attribute}=${quote}${urlForRel(candidate)}${suffix}${quote}`;
-  });
-}
-
-function routesFor(english, relSet) {
-  const routes = {};
-  for (const locale of LOCALES) {
-    const candidate = localizedRel(english, locale);
-    routes[locale] = relSet.has(candidate) ? urlForRel(candidate) : urlForRel(localizedRel('index.html', locale));
-  }
-  return routes;
-}
-
-function languageMenu(locale, routes) {
-  const labels = { en: 'English', es: 'Español', 'pt-br': 'Português' };
-  const accessible = locale === 'es' ? 'Idioma' : locale === 'pt-br' ? 'Idioma' : 'Language';
-  const options = LOCALES.map(code => `<option value="${routes[code]}"${code === locale ? ' selected' : ''}>${labels[code]}</option>`).join('');
-  return `<div class="tsd-language-menu" data-tsd-language-menu><label class="tsd-visually-hidden" for="tsd-language-select">${accessible}</label><select id="tsd-language-select" data-tsd-language-select aria-label="${accessible}">${options}</select></div>`;
-}
-
-function insertLanguageMenu(header, menu) {
-  if (/<\/nav>/i.test(header)) return header.replace(/<\/nav>/i, `${menu}</nav>`);
-  return header.replace(/<\/header>/i, `${menu}</header>`);
-}
-
-function sharedStyleLinks(english) {
-  return [...english.matchAll(/<link\b[^>]*\brel=(['"])[^'"]*stylesheet[^'"]*\1[^>]*>/gi)]
-    .map(match => match[0])
-    .filter(tag => !/multilingual-(?:localized|unified)/i.test(tag));
-}
-
-function ensureHeadAssets(html, english) {
-  let result = html.replace(/<link\b[^>]*\bhref=(['"])[^'"]*(?:localized-site|language-selector-header-fix)\.css[^'"]*\1[^>]*>\s*/gi, '');
-  for (const tag of sharedStyleLinks(english)) {
-    const href = tag.match(/\bhref=(['"])(.*?)\1/i)?.[2];
-    if (href && !result.includes(href)) result = result.replace(/<\/head>/i, `${tag}\n</head>`);
-  }
-  if (!result.includes('/assets/multilingual-unified.css')) {
-    result = result.replace(/<\/head>/i, `<link rel="stylesheet" href="${STYLE_HREF}">\n</head>`);
-  }
-  result = result.replace(/<script\b[^>]*\bsrc=(['"])[^'"]*(?:language-selector-header-fix|language-selector)\.js[^'"]*\1[^>]*><\/script>\s*/gi, '');
-  if (!result.includes('/assets/multilingual-unified.js')) {
-    result = result.replace(/<\/body>/i, `<script src="${SCRIPT_SRC}" defer></script>\n</body>`);
-  }
-  return result;
-}
-
-function harmonizePage(html, english, rel, relSet) {
-  const locale = localeFor(rel);
-  const englishPath = englishRel(rel);
-  let result = cleanLegacyLanguageUi(html);
-
-  let header = getBlock(english, 'header') || getBlock(result, 'header');
-  if (header) {
-    header = cleanLegacyLanguageUi(header);
-    header = translateHeader(header, locale);
-    header = localizeInternalLinks(header, locale, relSet);
-    header = insertLanguageMenu(header, languageMenu(locale, routesFor(englishPath, relSet)));
-    result = replaceBlock(result, 'header', header);
-  }
-
-  const classes = [...new Set(`${getBodyClass(english)} tsd-unified-dark`.split(/\s+/).filter(Boolean))].join(' ');
-  result = setBodyClass(result, classes);
-
-  if (locale !== 'en') {
-    const englishMain = getBlock(english, 'main');
-    let localMain = getBlock(result, 'main');
-    const englishLead = firstSection(englishMain);
-    const localLead = firstSection(localMain);
-    const englishImages = [...englishLead.matchAll(/<img\b[^>]*\bsrc=(['"])(.*?)\1/gi)].map(match => match[2]);
-    const localImages = new Set([...localLead.matchAll(/<img\b[^>]*\bsrc=(['"])(.*?)\1/gi)].map(match => match[2]));
-    const needsEnglishVisual = englishImages.length > 0 && englishImages.some(source => !localImages.has(source));
-    if (englishMain && localMain && (englishPath === 'index.html' || needsEnglishVisual)) {
-      localMain = localizedHero(englishMain, localMain);
-      localMain = localizeInternalLinks(localMain, locale, relSet);
-      result = replaceBlock(result, 'main', localMain);
-    }
-  }
-
-  result = ensureHeadAssets(result, english);
-  return result;
-}
-
-if (!await exists(outputRoot)) {
-  console.error(`[TechShift UI] Build output not found: ${outputRoot}`);
-  process.exit(1);
-}
-
-const outputAssets = path.join(outputRoot, 'assets');
-await mkdir(outputAssets, { recursive: true });
-for (const asset of ['multilingual-unified.css', 'multilingual-unified.js']) {
-  const source = path.join(packageRoot, 'public', 'assets', asset);
-  if (!await exists(source)) {
-    console.error(`[TechShift UI] Required source asset is missing: ${source}`);
-    process.exit(1);
-  }
-  await copyFile(source, path.join(outputAssets, asset));
-}
-
-const files = await listHtml(outputRoot);
-const relSet = new Set(files.map(normalizeRel));
-let changed = 0;
-let skipped = 0;
-
-for (const file of files) {
-  const rel = normalizeRel(file);
-  const englishPath = path.join(outputRoot, ...englishRel(rel).split('/'));
-  if (!await exists(englishPath)) { skipped += 1; continue; }
-  const [html, english] = await Promise.all([readFile(file, 'utf8'), readFile(englishPath, 'utf8')]);
-  const updated = harmonizePage(html, english, rel, relSet);
-  if (updated !== html) {
-    await writeFile(file, updated, 'utf8');
-    changed += 1;
-  }
-}
-
-console.log(`[TechShift UI] Unified ${changed} page(s); skipped ${skipped} page(s) without an English counterpart.`);
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const dist=path.resolve(process.argv[2]||process.env.TECHSHIFT_OUTPUT_DIR||'dist');
+const VERSION='20261111.2';
+const languages=['en','es','pt-br'];
+const exists=async p=>access(p).then(()=>true,()=>false);
+async function files(dir){let out=[];for(const x of await readdir(dir,{withFileTypes:true})){const f=path.join(dir,x.name);if(x.isDirectory())out.push(...await files(f));else if(x.isFile()&&f.endsWith('.html'))out.push(f)}return out}
+const rel=f=>path.relative(dist,f).split(path.sep).join('/');
+const locale=r=>r.startsWith('es/')?'es':r.startsWith('pt-br/')?'pt-br':'en';
+const englishRel=r=>r.replace(/^(es|pt-br)\//,'');
+const localizedRel=(r,l)=>l==='en'?r:l+'/'+r;
+const url=r=>r==='index.html'?'/':'/'+r.replace(/index\.html$/,'');
+const block=(h,t)=>h.match(new RegExp('<'+t+'\\b[^>]*>[\\s\\S]*?<\\/'+t+'>','i'))?.[0]||'';
+const replaceBlock=(h,t,v)=>h.replace(new RegExp('<'+t+'\\b[^>]*>[\\s\\S]*?<\\/'+t+'>','i'),v);
+const firstSection=h=>h.match(/<section\b[^>]*>[\s\S]*?<\/section>/i)?.[0]||'';
+const strip=s=>s.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+function tagInner(h,t){return h.match(new RegExp('<'+t+'\\b[^>]*>([\\s\\S]*?)<\\/'+t+'>','i'))?.[1]||''}
+function setFirst(h,t,value){return h.replace(new RegExp('(<'+t+'\\b[^>]*>)[\\s\\S]*?(<\\/'+t+'>)','i'),(_,a,b)=>a+value+b)}
+function localizeLinks(h,l,set){return h.replace(/\b(href|action)=(['"])([^'"]+)\2/gi,(all,attr,q,target)=>{if(!target.startsWith('/')||target.startsWith('//')||target.startsWith('/assets/'))return all;const [pathname,...suffix]=target.split(/(?=[?#])/);let r=pathname.replace(/^\//,'');r=r.endsWith('/')||!r?r+'index.html':r;const en=englishRel(r);const dest=localizedRel(en,l);return set.has(dest)?`${attr}=${q}${url(dest)}${suffix.join('')}${q}`:all})}
+function removeOldUi(h){return h.replace(/<div\b[^>]*data-tsd-language-menu[^>]*>[\s\S]*?<\/div>/gi,'').replace(/<(?:div|nav|aside)\b[^>]*class=(['"])[^'"]*\b(?:language|lang-switcher|locale-switcher)\b[^'"]*\1[^>]*>[\s\S]*?<\/(?:div|nav|aside)>/gi,'').replace(/<a\b[^>]*>\s*(?:English|Español|Português)\s*<\/a>/gi,'').replace(/<(?:svg|span|div)\b[^>]*class=(['"])[^'"]*\bglobe\b[^'"]*\1[^>]*>[\s\S]*?<\/(?:svg|span|div)>/gi,'')}
+const navTranslations={es:{Tools:'Herramientas','Excel resources':'Recursos de Excel','AI & Copilot':'IA y Copilot',Insights:'Artículos','Excel Videos':'Vídeos de Excel','AI Videos':'Vídeos de IA',Videos:'Vídeos',About:'Acerca de'},'pt-br':{Tools:'Ferramentas','Excel resources':'Recursos de Excel','AI & Copilot':'IA e Copilot',Insights:'Artigos','Excel Videos':'Vídeos de Excel','AI Videos':'Vídeos de IA',Videos:'Vídeos',About:'Sobre'}};
+function navTranslate(h,l){const dict=navTranslations[l]||{};return h.replace(/>([^<>]+)</g,(all,text)=>{const x=text.trim();return dict[x]?'> '+dict[x]+' <':all})}
+function selector(l,r,set){const options=languages.map(code=>{const candidate=localizedRel(englishRel(r),code);const dest=set.has(candidate)?url(candidate):url(localizedRel('index.html',code));return `<option value="${dest}"${code===l?' selected':''}>${{en:'English',es:'Español','pt-br':'Português'}[code]}</option>`}).join('');return `<div class="tsd-language-menu" data-tsd-language-menu><label class="tsd-visually-hidden" for="tsd-language-select">${l==='en'?'Language':'Idioma'}</label><select id="tsd-language-select" data-tsd-language-select aria-label="${l==='en'?'Language':'Idioma'}">${options}</select></div>`}
+function headerFor(english,l,r,set){let h=removeOldUi(block(english,'header'));h=navTranslate(h,l);h=localizeLinks(h,l,set);return h.replace(/<\/nav>/i,selector(l,r,set)+'</nav>')}
+function sharedAssets(h,en){h=h.replace(/<link\b[^>]*href=(['"])[^'"]*(?:localized-site|language-selector-header-fix)\.css[^'"]*\1[^>]*>\s*/gi,'');const sheets=[...en.matchAll(/<link\b[^>]*rel=(['"])stylesheet\1[^>]*>/gi)].map(m=>m[0]);for(const s of sheets){const href=s.match(/href=(['"])(.*?)\1/)?.[2];if(href&&!h.includes(href))h=h.replace('</head>',s+'</head>')}if(!h.includes('/assets/multilingual-unified.css'))h=h.replace('</head>',`<link rel="stylesheet" href="/assets/multilingual-unified.css?v=${VERSION}"></head>`);h=h.replace(/<script\b[^>]*src=(['"])[^'"]*(?:language-selector-header-fix|language-selector)\.js[^'"]*\1[^>]*><\/script>/gi,'');if(!h.includes('/assets/multilingual-unified.js'))h=h.replace('</body>',`<script src="/assets/multilingual-unified.js?v=${VERSION}" defer></script></body>`);return h}
+const homepageCopy={
+ es:{eyebrow:'IA. Excel. Tecnología para el trabajo.',heading:'Convierte la complejidad en <span>decisiones más claras.</span>',lead:'Orientación práctica sobre IA, herramientas de Excel y recursos de aprendizaje para trabajar con mayor claridad.',primary:'Explorar herramientas gratuitas →',secondary:'Leer los artículos',micro:'Útil por diseño. Claro en la práctica.',proof:['Comprende la tecnología','Explicaciones claras para su uso práctico.','Aplícala al trabajo real','Herramientas y procesos repetibles.','Mantén tu criterio','Revisa los resultados y conoce sus límites.'],sectionHead:'De la comprensión<br>a la aplicación.',sectionIntro:'Elige el recurso que se adapte a tu tarea: un cálculo, una hoja de cálculo o una decisión sobre IA.',cards:[['IA y Copilot','Haz que la IA sea útil.','Explora procesos prácticos y criterios claros para aplicar IA.','Explorar IA →'],['Recursos de Excel','Trabaja con mejor estructura.','Encuentra recursos de Excel, plantillas y herramientas.','Explorar recursos →'],['Herramientas gratuitas','Resuelve tareas cotidianas.','Realiza cálculos y trabaja con texto directamente en el navegador.','Abrir herramientas →']],smallHead:'Herramientas pequeñas. Resultados útiles.',bandHead:'Tecnología explicada<br>para el trabajo.',bandIntro:'Descubre vídeos de TechShift sobre IA, Copilot, Excel y tecnología.'},
+ 'pt-br':{eyebrow:'IA. Excel. Tecnologia para o trabalho.',heading:'Transforme a complexidade em <span>decisões mais claras.</span>',lead:'Orientações práticas sobre IA, ferramentas de Excel e recursos de aprendizagem para trabalhar com mais clareza.',primary:'Explorar ferramentas gratuitas →',secondary:'Ler os artigos',micro:'Útil por natureza. Claro na prática.',proof:['Entenda a tecnologia','Explicações claras para uso prático.','Aplique ao trabalho real','Ferramentas e processos reproduzíveis.','Mantenha seu julgamento','Revise os resultados e conheça os limites.'],sectionHead:'Da compreensão<br>à aplicação.',sectionIntro:'Escolha o recurso adequado à tarefa: um cálculo, uma planilha ou uma decisão sobre IA.',cards:[['IA e Copilot','Torne a IA útil.','Explore processos práticos e critérios claros para aplicar IA.','Explorar IA →'],['Recursos de Excel','Trabalhe com mais estrutura.','Encontre recursos de Excel, modelos e ferramentas.','Explorar recursos →'],['Ferramentas gratuitas','Resolva tarefas do dia a dia.','Faça cálculos e trabalhe com texto diretamente no navegador.','Abrir ferramentas →']],smallHead:'Ferramentas simples. Resultados úteis.',bandHead:'Tecnologia explicada<br>para o trabalho.',bandIntro:'Explore vídeos da TechShift sobre IA, Copilot, Excel e tecnologia.'}}
+function homepage(english,l,set){const c=homepageCopy[l];let main=block(english,'main');if(!main)throw Error('English homepage has no <main>');const hero=firstSection(main);if(!hero||!hero.includes('/assets/hero.webp'))throw Error('English homepage hero image missing');let newHero=hero;newHero=newHero.replace(/(<p class="eyebrow">)[\s\S]*?(<\/p>)/,'$1'+c.eyebrow+'$2');newHero=setFirst(newHero,'h1',c.heading);newHero=newHero.replace(/(<p class="lead">)[\s\S]*?(<\/p>)/,'$1'+c.lead+'$2');newHero=newHero.replace(/(<div class="actions">[\s\S]*?<a\b[^>]*>)[\s\S]*?(<\/a>)/,'$1'+c.primary+'$2');newHero=newHero.replace(/(<div class="actions">[\s\S]*?<\/a>\s*<a\b[^>]*>)[\s\S]*?(<\/a>)/,'$1'+c.secondary+'$2');newHero=newHero.replace(/(<p class="micro">)[\s\S]*?(<\/p>)/,'$1'+c.micro+'$2');main=main.replace(hero,newHero);
+ let i=0;main=main.replace(/(<div class="proof">)([\s\S]*?)(<\/div>\s*<section)/,(all,start,body,end)=>{let j=0;const translated=body.replace(/<(strong|span)>([\s\S]*?)<\/\1>/g,(m,tag)=>`<${tag}>${c.proof[j++]||strip(m)}</${tag}>`);return start+translated+end});
+ const sections=[...main.matchAll(/<section class="section">[\s\S]*?<\/section>/g)];if(sections[0]){let sec=sections[0][0];sec=sec.replace(/<h2>[\s\S]*?<\/h2>/,`<h2>${c.sectionHead}</h2>`);sec=sec.replace(/(<div class="sectionhead">[\s\S]*?<\/div>\s*<p>)[\s\S]*?(<\/p>)/,'$1'+c.sectionIntro+'$2');let j=0;sec=sec.replace(/<article class="card">[\s\S]*?<\/article>/g,card=>{const copy=c.cards[j++];if(!copy)return card;card=card.replace(/<span class="tag">[\s\S]*?<\/span>/,`<span class="tag">${copy[0]}</span>`).replace(/<h3>[\s\S]*?<\/h3>/,`<h3>${copy[1]}</h3>`).replace(/(<div class="card-body">[\s\S]*?<\/h3>\s*<p>)[\s\S]*?(<\/p>)/,'$1'+copy[2]+'$2').replace(/(<a class="textlink"[^>]*>)[\s\S]*?(<\/a>)/,'$1'+copy[3]+'$2');return card});main=main.replace(sections[0][0],sec)}
+ if(sections[1])main=main.replace(sections[1][0],sections[1][0].replace(/<h2>[\s\S]*?<\/h2>/,`<h2>${c.smallHead}</h2>`));
+ main=main.replace(/(<div class="band">[\s\S]*?<h2>)[\s\S]*?(<\/h2>)/,'$1'+c.bandHead+'$2').replace(/(<div class="band">[\s\S]*?<\/h2>\s*<p>)[\s\S]*?(<\/p>)/,'$1'+c.bandIntro+'$2');return localizeLinks(main,l,set)}
+async function harmonize(h,en,r,set){const l=locale(r);let result=removeOldUi(h);const head=headerFor(en,l,r,set);if(head)result=replaceBlock(result,'header',head);if(l!=='en'&&englishRel(r)==='index.html'){
+ // Use the complete English main layout, preserving its hero, images, sections and cards.
+ // Localized text is applied to the shared layout, not the old text-only localized template.
+ const main=homepage(en,l,set);const oldMain=block(result,'main');if(!oldMain)throw Error(r+' has no <main>');result=result.replace(oldMain,main);
+ // The old localized hero sits outside <main>; remove it to avoid a duplicate hero.
+ result=result.replace(/(<\/header>\s*)<section\b[^>]*class=(['"])[^'"]*\bhero\b[^'"]*\2[^>]*>[\s\S]*?<\/section>/i,'$1');
+ }
+ const englishBody=en.match(/<body\b[^>]*class=(['"])(.*?)\1/i)?.[2]||'';result=result.replace(/<body\b([^>]*)>/i,(whole,attrs)=>`<body${attrs.replace(/\sclass=(['"])[\s\S]*?\1/i,'')} class="${[...new Set((englishBody+' tsd-unified-dark').split(/\s+/).filter(Boolean))].join(' ')}">`);
+ return sharedAssets(result,en)}
+if(!await exists(dist))throw Error('Build output does not exist: '+dist);
+await mkdir(path.join(dist,'assets'),{recursive:true});for(const name of ['multilingual-unified.css','multilingual-unified.js']){const src=path.join(root,'public','assets',name);if(!await exists(src))throw Error('Missing required asset '+src);await copyFile(src,path.join(dist,'assets',name))}
+const all=await files(dist),set=new Set(all.map(rel));let changed=0,skipped=0;for(const file of all){const r=rel(file),enPath=path.join(dist,englishRel(r));if(!await exists(enPath)){skipped++;continue}const [h,en]=await Promise.all([readFile(file,'utf8'),readFile(enPath,'utf8')]);const updated=await harmonize(h,en,r,set);if(updated!==h){await writeFile(file,updated);changed++}}
+console.log(`[TechShift UI] Updated ${changed} pages; skipped ${skipped} without English counterparts.`);
