@@ -1,0 +1,62 @@
+/*
+ * TechShift Digital result-layout fix v5.0.1
+ *
+ * Loaded only on tool detail routes by build.mjs. These rules correct layout
+ * containment and normal document flow without changing colours, typography,
+ * calculations, content, routes, navigation or video components.
+ */
+
+:where(.toolbox, .calculator-card, .tool-card, .tool-panel) {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+:where(form, .tool-form, .calculator-form) {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+:where(form, .tool-form, .calculator-form) > :where(.actions, .tool-actions, .form-actions) {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+}
+
+:where(#result, .result, .tool-result, .result-box, [data-result]):not([hidden]) {
+  position: static !important;
+  inset: auto !important;
+  float: none !important;
+  clear: both;
+  transform: none !important;
+  z-index: auto !important;
+  box-sizing: border-box;
+  display: block;
+  flex: 1 0 100% !important;
+  grid-column: 1 / -1;
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 3.25rem;
+  margin-block: 1rem 0 !important;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+:where(#result, .result, .tool-result, .result-box, [data-result]):empty {
+  display: none;
+}
+
+:where(#result, .result, .tool-result, .result-box, [data-result]) + * {
+  clear: both;
+}
+
+@media (max-width: 640px) {
+  :where(#result, .result, .tool-result, .result-box, [data-result]):not([hidden]) {
+    min-height: 3rem;
+    margin-block-start: 0.875rem !important;
+  }
+}
