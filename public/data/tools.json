@@ -1,0 +1,853 @@
+[
+  {
+    "slug": "percentage-change",
+    "name": {
+      "en": "Percentage change calculator",
+      "es": "Calculadora de variación porcentual",
+      "pt-br": "Calculadora de variação percentual"
+    },
+    "category": "Math",
+    "operation": "percentageChange",
+    "fields": [
+      "original",
+      "new"
+    ],
+    "formula": "((new − original) ÷ |original|) × 100",
+    "example": "Original 80, new 100 → 25% increase",
+    "excel": "=IF(A2=0,\"N/A\",(B2-A2)/ABS(A2))"
+  },
+  {
+    "slug": "percentage-calculator",
+    "name": {
+      "en": "Percentage calculator",
+      "es": "Calculadora de porcentajes",
+      "pt-br": "Calculadora de porcentagem"
+    },
+    "category": "Math",
+    "operation": "percentageOf",
+    "fields": [
+      "percent",
+      "number"
+    ],
+    "formula": "(percentage ÷ 100) × number",
+    "example": "15% of 240 → 36",
+    "excel": "=A2*B2"
+  },
+  {
+    "slug": "average-calculator",
+    "name": {
+      "en": "Average calculator",
+      "es": "Calculadora de promedio",
+      "pt-br": "Calculadora de média"
+    },
+    "category": "Math",
+    "operation": "average",
+    "fields": [
+      "numbers"
+    ],
+    "formula": "sum of values ÷ number of values",
+    "example": "10, 20, 30 → average 20",
+    "excel": "=AVERAGE(A2:A4)"
+  },
+  {
+    "slug": "ratio-calculator",
+    "name": {
+      "en": "Ratio simplifier",
+      "es": "Simplificador de razones",
+      "pt-br": "Simplificador de proporções"
+    },
+    "category": "Math",
+    "operation": "ratio",
+    "fields": [
+      "valueA",
+      "valueB"
+    ],
+    "formula": "A : B divided by the greatest common divisor",
+    "example": "24:36 → 2:3",
+    "excel": "=A2/GCD(A2,B2)&\":\"&B2/GCD(A2,B2)"
+  },
+  {
+    "slug": "fraction-to-percentage",
+    "name": {
+      "en": "Fraction to percentage",
+      "es": "Fracción a porcentaje",
+      "pt-br": "Fração para porcentagem"
+    },
+    "category": "Math",
+    "operation": "fractionPercent",
+    "fields": [
+      "numerator",
+      "denominator"
+    ],
+    "formula": "(numerator ÷ denominator) × 100",
+    "example": "3/8 → 37.5%",
+    "excel": "=A2/B2"
+  },
+  {
+    "slug": "percentage-to-fraction",
+    "name": {
+      "en": "Percentage to fraction",
+      "es": "Porcentaje a fracción",
+      "pt-br": "Porcentagem para fração"
+    },
+    "category": "Math",
+    "operation": "percentFraction",
+    "fields": [
+      "percent"
+    ],
+    "formula": "percentage ÷ 100, then simplify",
+    "example": "12.5% → 1/8",
+    "excel": "=A2/100"
+  },
+  {
+    "slug": "cagr-calculator",
+    "name": {
+      "en": "CAGR calculator",
+      "es": "Calculadora de CAGR",
+      "pt-br": "Calculadora de CAGR"
+    },
+    "category": "Finance",
+    "operation": "cagr",
+    "fields": [
+      "startValue",
+      "endValue",
+      "years"
+    ],
+    "formula": "(ending ÷ beginning)^(1 ÷ years) − 1",
+    "example": "10,000 to 14,641 over 4 years → 10% CAGR",
+    "excel": "=(B2/A2)^(1/C2)-1"
+  },
+  {
+    "slug": "simple-interest",
+    "name": {
+      "en": "Simple interest calculator",
+      "es": "Calculadora de interés simple",
+      "pt-br": "Calculadora de juros simples"
+    },
+    "category": "Finance",
+    "operation": "simpleInterest",
+    "fields": [
+      "principal",
+      "rate",
+      "years"
+    ],
+    "formula": "principal × annual rate × years",
+    "example": "1,000 at 5% for 3 years → 150 interest",
+    "excel": "=A2*B2*C2"
+  },
+  {
+    "slug": "compound-interest",
+    "name": {
+      "en": "Compound interest calculator",
+      "es": "Calculadora de interés compuesto",
+      "pt-br": "Calculadora de juros compostos"
+    },
+    "category": "Finance",
+    "operation": "compoundInterest",
+    "fields": [
+      "principal",
+      "rate",
+      "years",
+      "compounds"
+    ],
+    "formula": "principal × (1 + rate ÷ n)^(n × years)",
+    "example": "1,000 at 5% for 3 years monthly → 1,161.47",
+    "excel": "=FV(B2/C2,C2*D2,0,-A2)"
+  },
+  {
+    "slug": "loan-payment",
+    "name": {
+      "en": "Loan payment calculator",
+      "es": "Calculadora de cuota de préstamo",
+      "pt-br": "Calculadora de parcela de empréstimo"
+    },
+    "category": "Finance",
+    "operation": "loanPayment",
+    "fields": [
+      "principal",
+      "rate",
+      "years"
+    ],
+    "formula": "P × r(1+r)^n ÷ ((1+r)^n−1)",
+    "example": "20,000 at 6% for 5 years → about 386.66/month",
+    "excel": "=PMT(B2/12,C2*12,-A2)"
+  },
+  {
+    "slug": "savings-goal",
+    "name": {
+      "en": "Savings goal calculator",
+      "es": "Calculadora de meta de ahorro",
+      "pt-br": "Calculadora de meta de poupança"
+    },
+    "category": "Finance",
+    "operation": "savingsGoal",
+    "fields": [
+      "target",
+      "initial",
+      "rate",
+      "years"
+    ],
+    "formula": "monthly deposit needed to reach the target with compound growth",
+    "example": "Target 10,000 from 1,000 at 4% in 3 years → monthly contribution",
+    "excel": "=PMT(C2/12,D2*12,-B2,A2)"
+  },
+  {
+    "slug": "roi-calculator",
+    "name": {
+      "en": "ROI calculator",
+      "es": "Calculadora de ROI",
+      "pt-br": "Calculadora de ROI"
+    },
+    "category": "Finance",
+    "operation": "roi",
+    "fields": [
+      "gain",
+      "cost"
+    ],
+    "formula": "(gain − cost) ÷ cost × 100",
+    "example": "Return 1,300 on cost 1,000 → 30% ROI",
+    "excel": "=(A2-B2)/B2"
+  },
+  {
+    "slug": "profit-margin",
+    "name": {
+      "en": "Profit margin calculator",
+      "es": "Calculadora de margen de beneficio",
+      "pt-br": "Calculadora de margem de lucro"
+    },
+    "category": "Finance",
+    "operation": "profitMargin",
+    "fields": [
+      "revenue",
+      "cost"
+    ],
+    "formula": "(revenue − cost) ÷ revenue × 100",
+    "example": "Revenue 500, cost 350 → 30% margin",
+    "excel": "=(A2-B2)/A2"
+  },
+  {
+    "slug": "markup-calculator",
+    "name": {
+      "en": "Markup calculator",
+      "es": "Calculadora de recargo",
+      "pt-br": "Calculadora de markup"
+    },
+    "category": "Finance",
+    "operation": "markup",
+    "fields": [
+      "cost",
+      "price"
+    ],
+    "formula": "(selling price − cost) ÷ cost × 100",
+    "example": "Cost 80, price 100 → 25% markup",
+    "excel": "=(B2-A2)/A2"
+  },
+  {
+    "slug": "break-even",
+    "name": {
+      "en": "Break-even calculator",
+      "es": "Calculadora del punto de equilibrio",
+      "pt-br": "Calculadora de ponto de equilíbrio"
+    },
+    "category": "Finance",
+    "operation": "breakEven",
+    "fields": [
+      "fixedCost",
+      "price",
+      "variableCost"
+    ],
+    "formula": "fixed costs ÷ (price − variable cost)",
+    "example": "Fixed 5,000; price 50; variable 30 → 250 units",
+    "excel": "=A2/(B2-C2)"
+  },
+  {
+    "slug": "discount-calculator",
+    "name": {
+      "en": "Discount calculator",
+      "es": "Calculadora de descuentos",
+      "pt-br": "Calculadora de descontos"
+    },
+    "category": "Finance",
+    "operation": "discount",
+    "fields": [
+      "price",
+      "discountRate"
+    ],
+    "formula": "price × (1 − discount rate)",
+    "example": "Price 120 with 25% off → 90",
+    "excel": "=A2*(1-B2)"
+  },
+  {
+    "slug": "vat-calculator",
+    "name": {
+      "en": "VAT / sales tax calculator",
+      "es": "Calculadora de IVA / impuesto",
+      "pt-br": "Calculadora de IVA / imposto"
+    },
+    "category": "Finance",
+    "operation": "vat",
+    "fields": [
+      "amount",
+      "taxRate"
+    ],
+    "formula": "amount × tax rate; total = amount + tax",
+    "example": "100 at 20% → tax 20, total 120",
+    "excel": "=A2*(1+B2)"
+  },
+  {
+    "slug": "tip-calculator",
+    "name": {
+      "en": "Tip and bill split calculator",
+      "es": "Calculadora de propina y reparto",
+      "pt-br": "Calculadora de gorjeta e divisão"
+    },
+    "category": "Finance",
+    "operation": "tip",
+    "fields": [
+      "bill",
+      "tipRate",
+      "people"
+    ],
+    "formula": "bill × tip rate; total ÷ people",
+    "example": "Bill 100, 15% tip, 2 people → 57.50 each",
+    "excel": "=(A2*(1+B2))/C2"
+  },
+  {
+    "slug": "salary-increase",
+    "name": {
+      "en": "Salary increase calculator",
+      "es": "Calculadora de aumento salarial",
+      "pt-br": "Calculadora de aumento salarial"
+    },
+    "category": "Finance",
+    "operation": "salaryIncrease",
+    "fields": [
+      "salary",
+      "increaseRate"
+    ],
+    "formula": "salary × (1 + increase rate)",
+    "example": "50,000 with 6% increase → 53,000",
+    "excel": "=A2*(1+B2)"
+  },
+  {
+    "slug": "monthly-savings",
+    "name": {
+      "en": "Monthly savings target",
+      "es": "Meta de ahorro mensual",
+      "pt-br": "Meta de poupança mensal"
+    },
+    "category": "Finance",
+    "operation": "monthlySavings",
+    "fields": [
+      "target",
+      "current",
+      "months"
+    ],
+    "formula": "(target − current savings) ÷ months",
+    "example": "Target 6,000, current 1,200, 12 months → 400/month",
+    "excel": "=(A2-B2)/C2"
+  },
+  {
+    "slug": "date-difference",
+    "name": {
+      "en": "Date difference calculator",
+      "es": "Calculadora de diferencia entre fechas",
+      "pt-br": "Calculadora de diferença entre datas"
+    },
+    "category": "Date & time",
+    "operation": "dateDifference",
+    "fields": [
+      "startDate",
+      "endDate"
+    ],
+    "formula": "end date − start date",
+    "example": "1 Jan to 31 Jan → 30 elapsed days",
+    "excel": "=B2-A2"
+  },
+  {
+    "slug": "working-days",
+    "name": {
+      "en": "Working days calculator",
+      "es": "Calculadora de días laborables",
+      "pt-br": "Calculadora de dias úteis"
+    },
+    "category": "Date & time",
+    "operation": "workingDays",
+    "fields": [
+      "startDate",
+      "endDate",
+      "holidays"
+    ],
+    "formula": "weekdays between dates, less listed holidays",
+    "example": "Monday to Friday → 5 working days",
+    "excel": "=NETWORKDAYS(A2,B2,D2:D10)"
+  },
+  {
+    "slug": "age-calculator",
+    "name": {
+      "en": "Age calculator",
+      "es": "Calculadora de edad",
+      "pt-br": "Calculadora de idade"
+    },
+    "category": "Date & time",
+    "operation": "age",
+    "fields": [
+      "birthDate",
+      "targetDate"
+    ],
+    "formula": "completed years plus remaining months and days",
+    "example": "Born 15 May 1990; target 15 May 2025 → 35 years",
+    "excel": "=DATEDIF(A2,B2,\"Y\")"
+  },
+  {
+    "slug": "add-subtract-days",
+    "name": {
+      "en": "Add or subtract days",
+      "es": "Sumar o restar días",
+      "pt-br": "Adicionar ou subtrair dias"
+    },
+    "category": "Date & time",
+    "operation": "addDays",
+    "fields": [
+      "baseDate",
+      "days"
+    ],
+    "formula": "base date + signed number of days",
+    "example": "10 March + 21 days → 31 March",
+    "excel": "=A2+B2"
+  },
+  {
+    "slug": "time-duration",
+    "name": {
+      "en": "Time duration calculator",
+      "es": "Calculadora de duración",
+      "pt-br": "Calculadora de duração"
+    },
+    "category": "Date & time",
+    "operation": "timeDuration",
+    "fields": [
+      "startTime",
+      "endTime"
+    ],
+    "formula": "end date/time − start date/time",
+    "example": "09:00 to 17:30 → 8 hours 30 minutes",
+    "excel": "=B2-A2"
+  },
+  {
+    "slug": "unix-timestamp",
+    "name": {
+      "en": "Unix timestamp converter",
+      "es": "Conversor de marca Unix",
+      "pt-br": "Conversor de timestamp Unix"
+    },
+    "category": "Date & time",
+    "operation": "unixTimestamp",
+    "fields": [
+      "dateTime"
+    ],
+    "formula": "seconds since 1 January 1970 UTC",
+    "example": "1 Jan 1970 UTC → 0",
+    "excel": "=(A2-DATE(1970,1,1))*86400"
+  },
+  {
+    "slug": "week-number",
+    "name": {
+      "en": "Week number calculator",
+      "es": "Calculadora de número de semana",
+      "pt-br": "Calculadora de número da semana"
+    },
+    "category": "Date & time",
+    "operation": "weekNumber",
+    "fields": [
+      "baseDate"
+    ],
+    "formula": "ISO week number for the selected date",
+    "example": "1 January 2026 → ISO week 1",
+    "excel": "=ISOWEEKNUM(A2)"
+  },
+  {
+    "slug": "day-of-year",
+    "name": {
+      "en": "Day of year calculator",
+      "es": "Calculadora de día del año",
+      "pt-br": "Calculadora de dia do ano"
+    },
+    "category": "Date & time",
+    "operation": "dayOfYear",
+    "fields": [
+      "baseDate"
+    ],
+    "formula": "date − first day of year + 1",
+    "example": "1 February in a non-leap year → day 32",
+    "excel": "=A2-DATE(YEAR(A2),1,0)"
+  },
+  {
+    "slug": "case-converter",
+    "name": {
+      "en": "Case converter",
+      "es": "Conversor de mayúsculas y minúsculas",
+      "pt-br": "Conversor de maiúsculas e minúsculas"
+    },
+    "category": "Text",
+    "operation": "caseConverter",
+    "fields": [
+      "text",
+      "caseMode"
+    ],
+    "formula": "apply the selected capitalization rule",
+    "example": "hello world → HELLO WORLD",
+    "excel": "=UPPER(A2)"
+  },
+  {
+    "slug": "word-character-counter",
+    "name": {
+      "en": "Word and character counter",
+      "es": "Contador de palabras y caracteres",
+      "pt-br": "Contador de palavras e caracteres"
+    },
+    "category": "Text",
+    "operation": "wordCount",
+    "fields": [
+      "text"
+    ],
+    "formula": "count words, characters, lines and estimated reading time",
+    "example": "“Clear work matters” → 3 words, 18 characters",
+    "excel": "=LEN(A2)-LEN(SUBSTITUTE(A2,\" \",\"\"))+1"
+  },
+  {
+    "slug": "text-cleaner",
+    "name": {
+      "en": "Text cleaner",
+      "es": "Limpiador de texto",
+      "pt-br": "Limpador de texto"
+    },
+    "category": "Text",
+    "operation": "textCleaner",
+    "fields": [
+      "text"
+    ],
+    "formula": "trim edges, collapse repeated spaces and blank lines",
+    "example": "“  clear   text ” → “clear text”",
+    "excel": "=TRIM(CLEAN(A2))"
+  },
+  {
+    "slug": "remove-duplicate-lines",
+    "name": {
+      "en": "Remove duplicate lines",
+      "es": "Eliminar líneas duplicadas",
+      "pt-br": "Remover linhas duplicadas"
+    },
+    "category": "Text",
+    "operation": "dedupeLines",
+    "fields": [
+      "text"
+    ],
+    "formula": "keep the first occurrence of each line",
+    "example": "A, B, A → A, B",
+    "excel": "=TEXTJOIN(CHAR(10),TRUE,UNIQUE(TEXTSPLIT(A2,CHAR(10))))"
+  },
+  {
+    "slug": "sort-lines",
+    "name": {
+      "en": "Sort lines",
+      "es": "Ordenar líneas",
+      "pt-br": "Ordenar linhas"
+    },
+    "category": "Text",
+    "operation": "sortLines",
+    "fields": [
+      "text",
+      "sortOrder"
+    ],
+    "formula": "sort non-empty lines ascending or descending",
+    "example": "C, A, B → A, B, C",
+    "excel": "=TEXTJOIN(CHAR(10),TRUE,SORT(TEXTSPLIT(A2,CHAR(10))))"
+  },
+  {
+    "slug": "slug-generator",
+    "name": {
+      "en": "URL slug generator",
+      "es": "Generador de slug URL",
+      "pt-br": "Gerador de slug URL"
+    },
+    "category": "Text",
+    "operation": "slug",
+    "fields": [
+      "text"
+    ],
+    "formula": "lowercase words joined with hyphens after punctuation removal",
+    "example": "Clearer Decisions → clearer-decisions",
+    "excel": "=LOWER(SUBSTITUTE(TRIM(A2),\" \",\"-\"))"
+  },
+  {
+    "slug": "find-replace",
+    "name": {
+      "en": "Find and replace",
+      "es": "Buscar y reemplazar",
+      "pt-br": "Localizar e substituir"
+    },
+    "category": "Text",
+    "operation": "findReplace",
+    "fields": [
+      "text",
+      "findText",
+      "replaceText"
+    ],
+    "formula": "replace every exact occurrence",
+    "example": "red blue red; replace red with green → green blue green",
+    "excel": "=SUBSTITUTE(A2,B2,C2)"
+  },
+  {
+    "slug": "word-frequency",
+    "name": {
+      "en": "Word frequency counter",
+      "es": "Contador de frecuencia de palabras",
+      "pt-br": "Contador de frequência de palavras"
+    },
+    "category": "Text",
+    "operation": "wordFrequency",
+    "fields": [
+      "text"
+    ],
+    "formula": "count normalized occurrences of each word",
+    "example": "data data insight → data: 2; insight: 1",
+    "excel": "=LET(w,TEXTSPLIT(LOWER(A2),\" \"),u,UNIQUE(w),HSTACK(u,COUNTIF(w,u)))"
+  },
+  {
+    "slug": "reading-time",
+    "name": {
+      "en": "Reading time estimator",
+      "es": "Estimador de tiempo de lectura",
+      "pt-br": "Estimador de tempo de leitura"
+    },
+    "category": "Text",
+    "operation": "readingTime",
+    "fields": [
+      "text",
+      "readingSpeed"
+    ],
+    "formula": "word count ÷ words per minute",
+    "example": "450 words at 225 wpm → 2 minutes",
+    "excel": "=COUNTA(TEXTSPLIT(A2,\" \"))/B2"
+  },
+  {
+    "slug": "list-deduplicator",
+    "name": {
+      "en": "List deduplicator",
+      "es": "Eliminador de duplicados",
+      "pt-br": "Removedor de duplicados"
+    },
+    "category": "Text",
+    "operation": "listDedupe",
+    "fields": [
+      "text"
+    ],
+    "formula": "split by commas or lines and keep unique values",
+    "example": "A, B, A → A, B",
+    "excel": "=TEXTJOIN(\", \",TRUE,UNIQUE(TEXTSPLIT(A2,\",\")))"
+  },
+  {
+    "slug": "json-formatter",
+    "name": {
+      "en": "JSON formatter and validator",
+      "es": "Formateador y validador JSON",
+      "pt-br": "Formatador e validador JSON"
+    },
+    "category": "Developer",
+    "operation": "jsonFormatter",
+    "fields": [
+      "text"
+    ],
+    "formula": "parse JSON and print it with consistent indentation",
+    "example": "{\"a\":1} → formatted two-line object",
+    "excel": "Use Power Query: Data → Get Data → From JSON"
+  },
+  {
+    "slug": "base64-encoder-decoder",
+    "name": {
+      "en": "Base64 encoder / decoder",
+      "es": "Codificador / decodificador Base64",
+      "pt-br": "Codificador / decodificador Base64"
+    },
+    "category": "Developer",
+    "operation": "base64",
+    "fields": [
+      "text",
+      "encodeMode"
+    ],
+    "formula": "encode UTF-8 text as Base64 or decode it",
+    "example": "hello → aGVsbG8=",
+    "excel": "Use Power Query Binary.ToText / Binary.FromText"
+  },
+  {
+    "slug": "url-encoder-decoder",
+    "name": {
+      "en": "URL encoder / decoder",
+      "es": "Codificador / decodificador URL",
+      "pt-br": "Codificador / decodificador URL"
+    },
+    "category": "Developer",
+    "operation": "urlCodec",
+    "fields": [
+      "text",
+      "encodeMode"
+    ],
+    "formula": "percent-encode reserved URL characters or decode them",
+    "example": "clear work → clear%20work",
+    "excel": "Use ENCODEURL(A2) where available"
+  },
+  {
+    "slug": "uuid-generator",
+    "name": {
+      "en": "UUID generator",
+      "es": "Generador de UUID",
+      "pt-br": "Gerador de UUID"
+    },
+    "category": "Developer",
+    "operation": "uuid",
+    "fields": [
+      "count"
+    ],
+    "formula": "cryptographically random UUID v4 values",
+    "example": "Generate 3 unique identifiers",
+    "excel": "Use a controlled VBA or Power Query function"
+  },
+  {
+    "slug": "hash-generator",
+    "name": {
+      "en": "SHA hash generator",
+      "es": "Generador de hash SHA",
+      "pt-br": "Gerador de hash SHA"
+    },
+    "category": "Developer",
+    "operation": "hash",
+    "fields": [
+      "text",
+      "hashAlgorithm"
+    ],
+    "formula": "cryptographic digest of UTF-8 input",
+    "example": "hello → SHA-256 digest",
+    "excel": "Use Power Query Binary.Hash where supported"
+  },
+  {
+    "slug": "color-converter",
+    "name": {
+      "en": "HEX / RGB color converter",
+      "es": "Conversor de color HEX / RGB",
+      "pt-br": "Conversor de cor HEX / RGB"
+    },
+    "category": "Developer",
+    "operation": "color",
+    "fields": [
+      "hexColor"
+    ],
+    "formula": "convert six-digit hexadecimal color to red, green and blue",
+    "example": "00D4E8 → rgb(0, 212, 232)",
+    "excel": "=HEX2DEC(MID(A2,2,2)) for each channel"
+  },
+  {
+    "slug": "px-rem-converter",
+    "name": {
+      "en": "PX / REM converter",
+      "es": "Conversor PX / REM",
+      "pt-br": "Conversor PX / REM"
+    },
+    "category": "Developer",
+    "operation": "pxRem",
+    "fields": [
+      "pixels",
+      "baseSize"
+    ],
+    "formula": "rem = pixels ÷ root font size",
+    "example": "24px at 16px base → 1.5rem",
+    "excel": "=A2/B2"
+  },
+  {
+    "slug": "aspect-ratio",
+    "name": {
+      "en": "Aspect ratio calculator",
+      "es": "Calculadora de relación de aspecto",
+      "pt-br": "Calculadora de proporção"
+    },
+    "category": "Developer",
+    "operation": "aspectRatio",
+    "fields": [
+      "width",
+      "height"
+    ],
+    "formula": "width : height simplified by their greatest common divisor",
+    "example": "1920 × 1080 → 16:9",
+    "excel": "=A2/GCD(A2,B2)&\":\"&B2/GCD(A2,B2)"
+  },
+  {
+    "slug": "password-generator",
+    "name": {
+      "en": "Password generator",
+      "es": "Generador de contraseñas",
+      "pt-br": "Gerador de senhas"
+    },
+    "category": "Developer",
+    "operation": "password",
+    "fields": [
+      "passwordLength",
+      "passwordOptions"
+    ],
+    "formula": "random characters selected from enabled sets",
+    "example": "16 characters using upper, lower, numbers and symbols",
+    "excel": "Do not generate production passwords in a workbook"
+  },
+  {
+    "slug": "unit-converter",
+    "name": {
+      "en": "Length unit converter",
+      "es": "Conversor de unidades de longitud",
+      "pt-br": "Conversor de unidades de comprimento"
+    },
+    "category": "Conversion",
+    "operation": "unitConvert",
+    "fields": [
+      "convertValue",
+      "fromUnit",
+      "toUnit"
+    ],
+    "formula": "value × source factor ÷ target factor",
+    "example": "1 kilometre → 1,000 metres",
+    "excel": "=CONVERT(A2,B2,C2)"
+  },
+  {
+    "slug": "temperature-converter",
+    "name": {
+      "en": "Temperature converter",
+      "es": "Conversor de temperatura",
+      "pt-br": "Conversor de temperatura"
+    },
+    "category": "Conversion",
+    "operation": "temperature",
+    "fields": [
+      "convertValue",
+      "fromTemp",
+      "toTemp"
+    ],
+    "formula": "°F = °C × 9/5 + 32; K = °C + 273.15",
+    "example": "25°C → 77°F",
+    "excel": "=CONVERT(A2,B2,C2)"
+  },
+  {
+    "slug": "data-storage-converter",
+    "name": {
+      "en": "Data storage converter",
+      "es": "Conversor de almacenamiento de datos",
+      "pt-br": "Conversor de armazenamento de dados"
+    },
+    "category": "Conversion",
+    "operation": "storage",
+    "fields": [
+      "convertValue",
+      "fromStorage",
+      "toStorage"
+    ],
+    "formula": "value × source byte factor ÷ target byte factor",
+    "example": "1 GB → 1,024 MB using binary units",
+    "excel": "=CONVERT(A2,B2,C2)"
+  }
+]

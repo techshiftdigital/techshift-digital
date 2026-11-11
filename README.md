@@ -1,44 +1,26 @@
-# TechShift Digital — Focused Multilingual UI Update
+# TechShift Digital — complete replacement repository
 
-This update fixes the multilingual interface without replacing the existing site generator, translations, tools, videos, SEO data, GitHub workflow, Wrangler configuration, or Cloudflare settings.
+A zero-dependency, multilingual static website for **techshiftdigital.com**. The same dark visual system, supplied hero image, page structure and compact top-navigation language dropdown are used in English, Spanish and Brazilian Portuguese.
 
-## What it changes
+## Included
 
-- Removes the oversized globe and detached/full-width language bar.
-- Removes duplicate standalone language links.
-- Adds one compact native language dropdown inside the existing top navigation.
-- Uses the same control on English, Spanish, and Brazilian Portuguese pages.
-- Reuses the English header, dark theme, shared styles, and homepage hero media for localized pages.
-- Retains localized page content, metadata, canonical links, `hreflang`, calculator markup, and scripts.
-- Preserves query strings and URL fragments when switching languages.
-- Falls back to a language homepage only when an equivalent localized route does not exist.
+- 50 functioning browser tools in each language (150 detailed tool pages).
+- Formula, worked example, Excel guidance, four FAQs, related links and SEO on every tool page.
+- Shared `public/data/tools.json` metadata.
+- Shared `public/data/videos.json` with 165 AI and Excel learning records.
+- English, Spanish and Brazilian Portuguese home, tools, resources, AI, insights, video, about, contact, privacy and terms routes.
+- Canonical URLs, hreflang, Open Graph, JSON-LD, robots.txt and multilingual sitemap.
+- GitHub validation workflow and Cloudflare Pages configuration.
+- No package dependencies and no installer or manual script step.
 
-## Files added
+## Important video-data note
 
-```text
-scripts/apply-focused-multilingual-ui-fix.mjs
-scripts/unify-multilingual-ui.mjs
-public/assets/multilingual-unified.css
-public/assets/multilingual-unified.js
-qa/verify-focused-multilingual-ui.mjs
-```
+The prior private repository and its historical video JSON were not supplied with this request. To avoid fabricating YouTube video IDs, records whose exact public watch URL was recoverable use that watch URL; the remaining learning records use a functional YouTube topic-search URL. The structure is deliberately centralized in `public/data/videos.json`, so a recovered historical list can be substituted without changing any page template.
 
-The installer makes one guarded change to `package.json`: it appends the UI normalizer to the existing build command and adds a verification script. It backs up `package.json` first.
+## Cloudflare Pages settings
 
-## Deploy
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Node.js: 20 or newer
 
-From the repository root:
-
-```bash
-node scripts/apply-focused-multilingual-ui-fix.mjs
-npm run build
-npm run verify:multilingual-ui
-```
-
-Then inspect the representative routes listed in `DEPLOYMENT-CHECKLIST.md`, commit, and push to the Cloudflare-connected branch.
-
-Suggested commit message:
-
-```text
-Unify multilingual theme and compact language menu
-```
+See `UPLOAD-TO-GITHUB.md` for click-by-click instructions.

@@ -1,0 +1,9 @@
+{
+  "name": "TechShift Digital",
+  "short_name": "TechShift",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080f1c",
+  "theme_color": "#080f1c",
+  "icons": []
+}

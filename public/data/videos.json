@@ -1,0 +1,2807 @@
+[
+  {
+    "id": 1,
+    "category": "Excel",
+    "title": {
+      "en": "Excel’s Magic Shortcut: 5 Flash Fill Tricks with Ctrl + E",
+      "es": "Excel’s Magic Shortcut: 5 Flash Fill Tricks with Ctrl + E",
+      "pt-br": "Excel’s Magic Shortcut: 5 Flash Fill Tricks with Ctrl + E"
+    },
+    "description": {
+      "en": "Practical learning resource about Excel basics. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Excel basics. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Excel basics. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "TechShift",
+    "url": "https://www.youtube.com/watch?v=HfTUWzUMJi0",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 2,
+    "category": "Excel",
+    "title": {
+      "en": "How to Use XLOOKUP in Excel",
+      "es": "How to Use XLOOKUP in Excel",
+      "pt-br": "How to Use XLOOKUP in Excel"
+    },
+    "description": {
+      "en": "Practical learning resource about Workbook navigation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Workbook navigation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Workbook navigation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Microsoft Excel",
+    "url": "https://www.youtube.com/watch?v=y5H6Yi3V4cw",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 3,
+    "category": "Excel",
+    "title": {
+      "en": "Pivot Table Excel Step-by-Step",
+      "es": "Pivot Table Excel Step-by-Step",
+      "pt-br": "Pivot Table Excel Step-by-Step"
+    },
+    "description": {
+      "en": "Practical learning resource about Data entry. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Data entry. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Data entry. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Excel learning",
+    "url": "https://www.youtube.com/watch?v=dvbLrwD2SpA",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 4,
+    "category": "Excel",
+    "title": {
+      "en": "Excel Pivot Table Tutorial",
+      "es": "Excel Pivot Table Tutorial",
+      "pt-br": "Excel Pivot Table Tutorial"
+    },
+    "description": {
+      "en": "Practical learning resource about Cell formatting. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Cell formatting. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Cell formatting. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Excel learning",
+    "url": "https://www.youtube.com/watch/Vx-Fuw46VbY",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 5,
+    "category": "Excel",
+    "title": {
+      "en": "Excel Pivot Tables for Beginners",
+      "es": "Excel Pivot Tables for Beginners",
+      "pt-br": "Excel Pivot Tables for Beginners"
+    },
+    "description": {
+      "en": "Practical learning resource about Number formats. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Number formats. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Number formats. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Excel learning",
+    "url": "https://www.youtube.com/watch/?v=peNTp5fuKFg",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 6,
+    "category": "Excel",
+    "title": {
+      "en": "Create the Perfect Dashboard in Excel",
+      "es": "Create the Perfect Dashboard in Excel",
+      "pt-br": "Create the Perfect Dashboard in Excel"
+    },
+    "description": {
+      "en": "Practical learning resource about Tables. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Tables. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Tables. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Learning MsOffice",
+    "url": "https://www.youtube.com/watch?v=tU4m-vB5J6c",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 7,
+    "category": "Excel",
+    "title": {
+      "en": "Power Query in Microsoft Excel",
+      "es": "Power Query in Microsoft Excel",
+      "pt-br": "Power Query in Microsoft Excel"
+    },
+    "description": {
+      "en": "Practical learning resource about Sorting. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Sorting. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Sorting. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Excel learning",
+    "url": "https://www.youtube.com/watch?v=MHIV0bYryiw",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 8,
+    "category": "Excel",
+    "title": {
+      "en": "Conditional Formatting in Excel",
+      "es": "Conditional Formatting in Excel",
+      "pt-br": "Conditional Formatting in Excel"
+    },
+    "description": {
+      "en": "Practical learning resource about Filtering. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Filtering. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Filtering. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Kevin Stratvert",
+    "url": "https://www.youtube.com/watch?v=Jp29JYGq5Hw",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 9,
+    "category": "Excel",
+    "title": {
+      "en": "Excel Charts and Graphs Tutorial",
+      "es": "Excel Charts and Graphs Tutorial",
+      "pt-br": "Excel Charts and Graphs Tutorial"
+    },
+    "description": {
+      "en": "Practical learning resource about Freeze panes. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Freeze panes. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Freeze panes. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Excel learning",
+    "url": "https://www.youtube.com/watch?v=eHtZrIb0oWY",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 10,
+    "category": "Excel",
+    "title": {
+      "en": "SUMIFS and COUNTIFS in Excel",
+      "es": "SUMIFS and COUNTIFS in Excel",
+      "pt-br": "SUMIFS and COUNTIFS in Excel"
+    },
+    "description": {
+      "en": "Practical learning resource about Named ranges. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Named ranges. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Named ranges. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Excel learning",
+    "url": "https://www.youtube.com/watch/NpaKChVzFVM",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 11,
+    "category": "Excel",
+    "title": {
+      "en": "COUNTIF and COUNTIFS Tutorial",
+      "es": "COUNTIF and COUNTIFS Tutorial",
+      "pt-br": "COUNTIF and COUNTIFS Tutorial"
+    },
+    "description": {
+      "en": "Practical learning resource about Relative references. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Relative references. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Relative references. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Excel learning",
+    "url": "https://www.youtube.com/watch/X-xZ3eKvkzo",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 12,
+    "category": "Excel",
+    "title": {
+      "en": "INDEX MATCH Excel Tutorial",
+      "es": "INDEX MATCH Excel Tutorial",
+      "pt-br": "INDEX MATCH Excel Tutorial"
+    },
+    "description": {
+      "en": "Practical learning resource about Absolute references. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Absolute references. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Absolute references. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Kevin Stratvert",
+    "url": "https://www.youtube.com/watch?v=6JhbY8Mku1A",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 13,
+    "category": "Excel",
+    "title": {
+      "en": "Create Macros in Excel",
+      "es": "Create Macros in Excel",
+      "pt-br": "Create Macros in Excel"
+    },
+    "description": {
+      "en": "Practical learning resource about SUM. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre SUM. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre SUM. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Kevin Stratvert",
+    "url": "https://www.youtube.com/watch?v=uyj_OljPlcU",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 14,
+    "category": "AI",
+    "title": {
+      "en": "Microsoft 365 Copilot Complete Tutorial",
+      "es": "Microsoft 365 Copilot Complete Tutorial",
+      "pt-br": "Microsoft 365 Copilot Complete Tutorial"
+    },
+    "description": {
+      "en": "Practical learning resource about AVERAGE. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AVERAGE. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AVERAGE. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Lisa Crosbie",
+    "url": "https://www.youtube.com/watch?v=0_mqsU7yh5Q",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 15,
+    "category": "AI",
+    "title": {
+      "en": "Prompt Copilot to Make PowerPoint Presentations",
+      "es": "Prompt Copilot to Make PowerPoint Presentations",
+      "pt-br": "Prompt Copilot to Make PowerPoint Presentations"
+    },
+    "description": {
+      "en": "Practical learning resource about MIN and MAX. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre MIN and MAX. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre MIN and MAX. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Microsoft Copilot",
+    "url": "https://www.youtube.com/watch?v=Zofdeofpj1w",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 16,
+    "category": "AI",
+    "title": {
+      "en": "Google Gemini Full Tutorial",
+      "es": "Google Gemini Full Tutorial",
+      "pt-br": "Google Gemini Full Tutorial"
+    },
+    "description": {
+      "en": "Practical learning resource about COUNT and COUNTA. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre COUNT and COUNTA. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre COUNT and COUNTA. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "AI Tool Journey",
+    "url": "https://www.youtube.com/watch?v=cfR-7cizDkc",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 17,
+    "category": "AI",
+    "title": {
+      "en": "Claude Skills Tutorial for Beginners",
+      "es": "Claude Skills Tutorial for Beginners",
+      "pt-br": "Claude Skills Tutorial for Beginners"
+    },
+    "description": {
+      "en": "Practical learning resource about IF. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre IF. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre IF. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "The Cutting Edge School",
+    "url": "https://www.youtube.com/watch?v=2prubd1IZ7U",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 18,
+    "category": "Excel",
+    "title": {
+      "en": "Microsoft Power BI Tutorial for Beginners",
+      "es": "Microsoft Power BI Tutorial for Beginners",
+      "pt-br": "Microsoft Power BI Tutorial for Beginners"
+    },
+    "description": {
+      "en": "Practical learning resource about IFS. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre IFS. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre IFS. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Kevin Stratvert",
+    "url": "https://www.youtube.com/watch?v=TmhQCQr_DCA",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 19,
+    "category": "Excel",
+    "title": {
+      "en": "Power BI Dashboard Project Tutorial",
+      "es": "Power BI Dashboard Project Tutorial",
+      "pt-br": "Power BI Dashboard Project Tutorial"
+    },
+    "description": {
+      "en": "Practical learning resource about AND and OR. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AND and OR. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AND and OR. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "The Developer",
+    "url": "https://www.youtube.com/watch?v=UqrsTIiOnO4",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 20,
+    "category": "AI",
+    "title": {
+      "en": "Cloud Computing Explained",
+      "es": "Cloud Computing Explained",
+      "pt-br": "Cloud Computing Explained"
+    },
+    "description": {
+      "en": "Practical learning resource about SUMIF. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre SUMIF. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre SUMIF. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "Technology learning",
+    "url": "https://www.youtube.com/watch/_a6us8kaq0g",
+    "exactWatchUrl": true
+  },
+  {
+    "id": 21,
+    "category": "Excel",
+    "title": {
+      "en": "SUMIFS: practical tutorial",
+      "es": "SUMIFS: tutorial práctico",
+      "pt-br": "SUMIFS: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about SUMIFS. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre SUMIFS. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre SUMIFS. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=SUMIFS+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 22,
+    "category": "Excel",
+    "title": {
+      "en": "COUNTIF: practical tutorial",
+      "es": "COUNTIF: tutorial práctico",
+      "pt-br": "COUNTIF: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about COUNTIF. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre COUNTIF. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre COUNTIF. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=COUNTIF+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 23,
+    "category": "Excel",
+    "title": {
+      "en": "COUNTIFS: practical tutorial",
+      "es": "COUNTIFS: tutorial práctico",
+      "pt-br": "COUNTIFS: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about COUNTIFS. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre COUNTIFS. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre COUNTIFS. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=COUNTIFS+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 24,
+    "category": "Excel",
+    "title": {
+      "en": "XLOOKUP: practical tutorial",
+      "es": "XLOOKUP: tutorial práctico",
+      "pt-br": "XLOOKUP: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about XLOOKUP. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre XLOOKUP. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre XLOOKUP. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=XLOOKUP+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 25,
+    "category": "Excel",
+    "title": {
+      "en": "VLOOKUP: practical tutorial",
+      "es": "VLOOKUP: tutorial práctico",
+      "pt-br": "VLOOKUP: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about VLOOKUP. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre VLOOKUP. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre VLOOKUP. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=VLOOKUP+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 26,
+    "category": "Excel",
+    "title": {
+      "en": "INDEX and MATCH: practical tutorial",
+      "es": "INDEX and MATCH: tutorial práctico",
+      "pt-br": "INDEX and MATCH: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about INDEX and MATCH. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre INDEX and MATCH. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre INDEX and MATCH. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=INDEX+and+MATCH+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 27,
+    "category": "Excel",
+    "title": {
+      "en": "FILTER: practical tutorial",
+      "es": "FILTER: tutorial práctico",
+      "pt-br": "FILTER: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about FILTER. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre FILTER. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre FILTER. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=FILTER+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 28,
+    "category": "Excel",
+    "title": {
+      "en": "SORT and UNIQUE: practical tutorial",
+      "es": "SORT and UNIQUE: tutorial práctico",
+      "pt-br": "SORT and UNIQUE: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about SORT and UNIQUE. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre SORT and UNIQUE. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre SORT and UNIQUE. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=SORT+and+UNIQUE+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 29,
+    "category": "Excel",
+    "title": {
+      "en": "TEXT functions: practical tutorial",
+      "es": "TEXT functions: tutorial práctico",
+      "pt-br": "TEXT functions: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about TEXT functions. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre TEXT functions. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre TEXT functions. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=TEXT+functions+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 30,
+    "category": "Excel",
+    "title": {
+      "en": "LEFT RIGHT MID: practical tutorial",
+      "es": "LEFT RIGHT MID: tutorial práctico",
+      "pt-br": "LEFT RIGHT MID: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about LEFT RIGHT MID. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre LEFT RIGHT MID. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre LEFT RIGHT MID. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=LEFT+RIGHT+MID+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 31,
+    "category": "Excel",
+    "title": {
+      "en": "TEXTSPLIT: practical tutorial",
+      "es": "TEXTSPLIT: tutorial práctico",
+      "pt-br": "TEXTSPLIT: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about TEXTSPLIT. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre TEXTSPLIT. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre TEXTSPLIT. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=TEXTSPLIT+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 32,
+    "category": "Excel",
+    "title": {
+      "en": "Date functions: practical tutorial",
+      "es": "Date functions: tutorial práctico",
+      "pt-br": "Date functions: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Date functions. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Date functions. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Date functions. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Date+functions+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 33,
+    "category": "Excel",
+    "title": {
+      "en": "NETWORKDAYS: practical tutorial",
+      "es": "NETWORKDAYS: tutorial práctico",
+      "pt-br": "NETWORKDAYS: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about NETWORKDAYS. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre NETWORKDAYS. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre NETWORKDAYS. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=NETWORKDAYS+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 34,
+    "category": "Excel",
+    "title": {
+      "en": "Conditional formatting: practical tutorial",
+      "es": "Conditional formatting: tutorial práctico",
+      "pt-br": "Conditional formatting: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Conditional formatting. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Conditional formatting. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Conditional formatting. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Conditional+formatting+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 35,
+    "category": "Excel",
+    "title": {
+      "en": "Data validation: practical tutorial",
+      "es": "Data validation: tutorial práctico",
+      "pt-br": "Data validation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Data validation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Data validation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Data validation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Data+validation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 36,
+    "category": "Excel",
+    "title": {
+      "en": "Drop-down lists: practical tutorial",
+      "es": "Drop-down lists: tutorial práctico",
+      "pt-br": "Drop-down lists: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Drop-down lists. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Drop-down lists. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Drop-down lists. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Drop-down+lists+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 37,
+    "category": "Excel",
+    "title": {
+      "en": "Charts: practical tutorial",
+      "es": "Charts: tutorial práctico",
+      "pt-br": "Charts: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Charts. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Charts. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Charts. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Charts+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 38,
+    "category": "Excel",
+    "title": {
+      "en": "PivotTables: practical tutorial",
+      "es": "PivotTables: tutorial práctico",
+      "pt-br": "PivotTables: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about PivotTables. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre PivotTables. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre PivotTables. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=PivotTables+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 39,
+    "category": "Excel",
+    "title": {
+      "en": "PivotCharts: practical tutorial",
+      "es": "PivotCharts: tutorial práctico",
+      "pt-br": "PivotCharts: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about PivotCharts. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre PivotCharts. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre PivotCharts. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=PivotCharts+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 40,
+    "category": "Excel",
+    "title": {
+      "en": "Slicers: practical tutorial",
+      "es": "Slicers: tutorial práctico",
+      "pt-br": "Slicers: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Slicers. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Slicers. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Slicers. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Slicers+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 41,
+    "category": "Excel",
+    "title": {
+      "en": "Power Query: practical tutorial",
+      "es": "Power Query: tutorial práctico",
+      "pt-br": "Power Query: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Power Query. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Power Query. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Power Query. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Power+Query+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 42,
+    "category": "Excel",
+    "title": {
+      "en": "Merge queries: practical tutorial",
+      "es": "Merge queries: tutorial práctico",
+      "pt-br": "Merge queries: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Merge queries. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Merge queries. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Merge queries. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Merge+queries+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 43,
+    "category": "Excel",
+    "title": {
+      "en": "Append queries: practical tutorial",
+      "es": "Append queries: tutorial práctico",
+      "pt-br": "Append queries: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Append queries. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Append queries. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Append queries. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Append+queries+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 44,
+    "category": "Excel",
+    "title": {
+      "en": "Power Pivot: practical tutorial",
+      "es": "Power Pivot: tutorial práctico",
+      "pt-br": "Power Pivot: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Power Pivot. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Power Pivot. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Power Pivot. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Power+Pivot+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 45,
+    "category": "Excel",
+    "title": {
+      "en": "DAX basics: practical tutorial",
+      "es": "DAX basics: tutorial práctico",
+      "pt-br": "DAX basics: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about DAX basics. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre DAX basics. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre DAX basics. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=DAX+basics+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 46,
+    "category": "Excel",
+    "title": {
+      "en": "Dashboards: practical tutorial",
+      "es": "Dashboards: tutorial práctico",
+      "pt-br": "Dashboards: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Dashboards. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Dashboards. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Dashboards. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Dashboards+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 47,
+    "category": "Excel",
+    "title": {
+      "en": "What-if analysis: practical tutorial",
+      "es": "What-if analysis: tutorial práctico",
+      "pt-br": "What-if analysis: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about What-if analysis. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre What-if analysis. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre What-if analysis. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=What-if+analysis+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 48,
+    "category": "Excel",
+    "title": {
+      "en": "Goal Seek: practical tutorial",
+      "es": "Goal Seek: tutorial práctico",
+      "pt-br": "Goal Seek: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Goal Seek. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Goal Seek. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Goal Seek. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Goal+Seek+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 49,
+    "category": "Excel",
+    "title": {
+      "en": "Solver: practical tutorial",
+      "es": "Solver: tutorial práctico",
+      "pt-br": "Solver: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Solver. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Solver. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Solver. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Solver+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 50,
+    "category": "Excel",
+    "title": {
+      "en": "Flash Fill: practical tutorial",
+      "es": "Flash Fill: tutorial práctico",
+      "pt-br": "Flash Fill: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Flash Fill. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Flash Fill. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Flash Fill. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Flash+Fill+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 51,
+    "category": "Excel",
+    "title": {
+      "en": "Remove duplicates: practical tutorial",
+      "es": "Remove duplicates: tutorial práctico",
+      "pt-br": "Remove duplicates: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Remove duplicates. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Remove duplicates. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Remove duplicates. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Remove+duplicates+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 52,
+    "category": "Excel",
+    "title": {
+      "en": "Text to Columns: practical tutorial",
+      "es": "Text to Columns: tutorial práctico",
+      "pt-br": "Text to Columns: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Text to Columns. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Text to Columns. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Text to Columns. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Text+to+Columns+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 53,
+    "category": "Excel",
+    "title": {
+      "en": "Protect sheets: practical tutorial",
+      "es": "Protect sheets: tutorial práctico",
+      "pt-br": "Protect sheets: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Protect sheets. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Protect sheets. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Protect sheets. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Protect+sheets+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 54,
+    "category": "Excel",
+    "title": {
+      "en": "Print settings: practical tutorial",
+      "es": "Print settings: tutorial práctico",
+      "pt-br": "Print settings: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Print settings. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Print settings. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Print settings. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Print+settings+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 55,
+    "category": "Excel",
+    "title": {
+      "en": "Templates: practical tutorial",
+      "es": "Templates: tutorial práctico",
+      "pt-br": "Templates: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Templates. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Templates. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Templates. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Templates+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 56,
+    "category": "Excel",
+    "title": {
+      "en": "Financial models: practical tutorial",
+      "es": "Financial models: tutorial práctico",
+      "pt-br": "Financial models: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Financial models. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Financial models. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Financial models. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Financial+models+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 57,
+    "category": "Excel",
+    "title": {
+      "en": "Budget tracker: practical tutorial",
+      "es": "Budget tracker: tutorial práctico",
+      "pt-br": "Budget tracker: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Budget tracker. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Budget tracker. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Budget tracker. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Budget+tracker+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 58,
+    "category": "Excel",
+    "title": {
+      "en": "Project tracker: practical tutorial",
+      "es": "Project tracker: tutorial práctico",
+      "pt-br": "Project tracker: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Project tracker. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Project tracker. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Project tracker. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Project+tracker+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 59,
+    "category": "Excel",
+    "title": {
+      "en": "Inventory tracker: practical tutorial",
+      "es": "Inventory tracker: tutorial práctico",
+      "pt-br": "Inventory tracker: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Inventory tracker. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Inventory tracker. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Inventory tracker. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Inventory+tracker+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 60,
+    "category": "Excel",
+    "title": {
+      "en": "KPI reporting: practical tutorial",
+      "es": "KPI reporting: tutorial práctico",
+      "pt-br": "KPI reporting: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about KPI reporting. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre KPI reporting. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre KPI reporting. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=KPI+reporting+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 61,
+    "category": "Excel",
+    "title": {
+      "en": "Dynamic arrays: practical tutorial",
+      "es": "Dynamic arrays: tutorial práctico",
+      "pt-br": "Dynamic arrays: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Dynamic arrays. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Dynamic arrays. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Dynamic arrays. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Dynamic+arrays+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 62,
+    "category": "Excel",
+    "title": {
+      "en": "LET function: practical tutorial",
+      "es": "LET function: tutorial práctico",
+      "pt-br": "LET function: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about LET function. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre LET function. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre LET function. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=LET+function+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 63,
+    "category": "Excel",
+    "title": {
+      "en": "LAMBDA function: practical tutorial",
+      "es": "LAMBDA function: tutorial práctico",
+      "pt-br": "LAMBDA function: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about LAMBDA function. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre LAMBDA function. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre LAMBDA function. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=LAMBDA+function+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 64,
+    "category": "Excel",
+    "title": {
+      "en": "Error handling: practical tutorial",
+      "es": "Error handling: tutorial práctico",
+      "pt-br": "Error handling: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Error handling. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Error handling. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Error handling. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Error+handling+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 65,
+    "category": "Excel",
+    "title": {
+      "en": "Formula auditing: practical tutorial",
+      "es": "Formula auditing: tutorial práctico",
+      "pt-br": "Formula auditing: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Formula auditing. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Formula auditing. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Formula auditing. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Formula+auditing+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 66,
+    "category": "Excel",
+    "title": {
+      "en": "Keyboard shortcuts: practical tutorial",
+      "es": "Keyboard shortcuts: tutorial práctico",
+      "pt-br": "Keyboard shortcuts: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Keyboard shortcuts. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Keyboard shortcuts. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Keyboard shortcuts. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Keyboard+shortcuts+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 67,
+    "category": "Excel",
+    "title": {
+      "en": "Macros: practical tutorial",
+      "es": "Macros: tutorial práctico",
+      "pt-br": "Macros: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Macros. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Macros. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Macros. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Macros+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 68,
+    "category": "Excel",
+    "title": {
+      "en": "VBA basics: practical tutorial",
+      "es": "VBA basics: tutorial práctico",
+      "pt-br": "VBA basics: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about VBA basics. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre VBA basics. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre VBA basics. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=VBA+basics+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 69,
+    "category": "Excel",
+    "title": {
+      "en": "Office Scripts: practical tutorial",
+      "es": "Office Scripts: tutorial práctico",
+      "pt-br": "Office Scripts: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Office Scripts. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Office Scripts. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Office Scripts. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Office+Scripts+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 70,
+    "category": "Excel",
+    "title": {
+      "en": "Excel with Copilot: practical tutorial",
+      "es": "Excel with Copilot: tutorial práctico",
+      "pt-br": "Excel with Copilot: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Excel with Copilot. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Excel with Copilot. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Excel with Copilot. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Excel+with+Copilot+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 71,
+    "category": "Excel",
+    "title": {
+      "en": "Excel with ChatGPT: practical tutorial",
+      "es": "Excel with ChatGPT: tutorial práctico",
+      "pt-br": "Excel with ChatGPT: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Excel with ChatGPT. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Excel with ChatGPT. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Excel with ChatGPT. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Excel+with+ChatGPT+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 72,
+    "category": "Excel",
+    "title": {
+      "en": "CSV cleanup: practical tutorial",
+      "es": "CSV cleanup: tutorial práctico",
+      "pt-br": "CSV cleanup: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about CSV cleanup. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre CSV cleanup. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre CSV cleanup. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=CSV+cleanup+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 73,
+    "category": "Excel",
+    "title": {
+      "en": "Import web data: practical tutorial",
+      "es": "Import web data: tutorial práctico",
+      "pt-br": "Import web data: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Import web data. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Import web data. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Import web data. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Import+web+data+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 74,
+    "category": "Excel",
+    "title": {
+      "en": "Data model relationships: practical tutorial",
+      "es": "Data model relationships: tutorial práctico",
+      "pt-br": "Data model relationships: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Data model relationships. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Data model relationships. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Data model relationships. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Data+model+relationships+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 75,
+    "category": "Excel",
+    "title": {
+      "en": "Forecasting: practical tutorial",
+      "es": "Forecasting: tutorial práctico",
+      "pt-br": "Forecasting: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Forecasting. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Forecasting. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Forecasting. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Forecasting+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 76,
+    "category": "Excel",
+    "title": {
+      "en": "Sparklines: practical tutorial",
+      "es": "Sparklines: tutorial práctico",
+      "pt-br": "Sparklines: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Sparklines. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Sparklines. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Sparklines. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Sparklines+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 77,
+    "category": "Excel",
+    "title": {
+      "en": "Advanced charts: practical tutorial",
+      "es": "Advanced charts: tutorial práctico",
+      "pt-br": "Advanced charts: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Advanced charts. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Advanced charts. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Advanced charts. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Advanced+charts+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 78,
+    "category": "Excel",
+    "title": {
+      "en": "Lookup troubleshooting: practical tutorial",
+      "es": "Lookup troubleshooting: tutorial práctico",
+      "pt-br": "Lookup troubleshooting: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Lookup troubleshooting. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Lookup troubleshooting. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Lookup troubleshooting. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Lookup+troubleshooting+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 79,
+    "category": "Excel",
+    "title": {
+      "en": "Date troubleshooting: practical tutorial",
+      "es": "Date troubleshooting: tutorial práctico",
+      "pt-br": "Date troubleshooting: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Date troubleshooting. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Date troubleshooting. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Date troubleshooting. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Date+troubleshooting+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 80,
+    "category": "Excel",
+    "title": {
+      "en": "Performance optimization: practical tutorial",
+      "es": "Performance optimization: tutorial práctico",
+      "pt-br": "Performance optimization: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Performance optimization. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Performance optimization. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Performance optimization. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Performance+optimization+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 81,
+    "category": "Excel",
+    "title": {
+      "en": "Accessible spreadsheets: practical tutorial",
+      "es": "Accessible spreadsheets: tutorial práctico",
+      "pt-br": "Accessible spreadsheets: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Accessible spreadsheets. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Accessible spreadsheets. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Accessible spreadsheets. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Accessible+spreadsheets+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 82,
+    "category": "Excel",
+    "title": {
+      "en": "Executive reports: practical tutorial",
+      "es": "Executive reports: tutorial práctico",
+      "pt-br": "Executive reports: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Executive reports. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Executive reports. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Executive reports. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Executive+reports+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 83,
+    "category": "Excel",
+    "title": {
+      "en": "Formula documentation: practical tutorial",
+      "es": "Formula documentation: tutorial práctico",
+      "pt-br": "Formula documentation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Formula documentation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Formula documentation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Formula documentation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Formula+documentation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 84,
+    "category": "AI",
+    "title": {
+      "en": "AI basics: practical tutorial",
+      "es": "AI basics: tutorial práctico",
+      "pt-br": "AI basics: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI basics. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI basics. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI basics. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+basics+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 85,
+    "category": "AI",
+    "title": {
+      "en": "Generative AI: practical tutorial",
+      "es": "Generative AI: tutorial práctico",
+      "pt-br": "Generative AI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Generative AI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Generative AI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Generative AI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Generative+AI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 86,
+    "category": "AI",
+    "title": {
+      "en": "Large language models: practical tutorial",
+      "es": "Large language models: tutorial práctico",
+      "pt-br": "Large language models: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Large language models. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Large language models. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Large language models. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Large+language+models+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 87,
+    "category": "AI",
+    "title": {
+      "en": "Prompt engineering: practical tutorial",
+      "es": "Prompt engineering: tutorial práctico",
+      "pt-br": "Prompt engineering: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Prompt engineering. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Prompt engineering. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Prompt engineering. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Prompt+engineering+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 88,
+    "category": "AI",
+    "title": {
+      "en": "Responsible AI: practical tutorial",
+      "es": "Responsible AI: tutorial práctico",
+      "pt-br": "Responsible AI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Responsible AI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Responsible AI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Responsible AI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Responsible+AI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 89,
+    "category": "AI",
+    "title": {
+      "en": "AI privacy: practical tutorial",
+      "es": "AI privacy: tutorial práctico",
+      "pt-br": "AI privacy: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI privacy. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI privacy. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI privacy. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+privacy+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 90,
+    "category": "AI",
+    "title": {
+      "en": "AI security: practical tutorial",
+      "es": "AI security: tutorial práctico",
+      "pt-br": "AI security: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI security. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI security. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI security. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+security+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 91,
+    "category": "AI",
+    "title": {
+      "en": "Hallucination checks: practical tutorial",
+      "es": "Hallucination checks: tutorial práctico",
+      "pt-br": "Hallucination checks: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Hallucination checks. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Hallucination checks. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Hallucination checks. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Hallucination+checks+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 92,
+    "category": "AI",
+    "title": {
+      "en": "Source verification: practical tutorial",
+      "es": "Source verification: tutorial práctico",
+      "pt-br": "Source verification: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Source verification. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Source verification. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Source verification. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Source+verification+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 93,
+    "category": "AI",
+    "title": {
+      "en": "Microsoft Copilot: practical tutorial",
+      "es": "Microsoft Copilot: tutorial práctico",
+      "pt-br": "Microsoft Copilot: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Microsoft Copilot. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Microsoft Copilot. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Microsoft Copilot. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Microsoft+Copilot+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 94,
+    "category": "AI",
+    "title": {
+      "en": "Copilot Chat: practical tutorial",
+      "es": "Copilot Chat: tutorial práctico",
+      "pt-br": "Copilot Chat: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot Chat. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot Chat. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot Chat. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+Chat+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 95,
+    "category": "AI",
+    "title": {
+      "en": "Copilot in Word: practical tutorial",
+      "es": "Copilot in Word: tutorial práctico",
+      "pt-br": "Copilot in Word: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot in Word. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot in Word. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot in Word. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+in+Word+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 96,
+    "category": "AI",
+    "title": {
+      "en": "Copilot in Excel: practical tutorial",
+      "es": "Copilot in Excel: tutorial práctico",
+      "pt-br": "Copilot in Excel: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot in Excel. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot in Excel. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot in Excel. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+in+Excel+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 97,
+    "category": "AI",
+    "title": {
+      "en": "Copilot in PowerPoint: practical tutorial",
+      "es": "Copilot in PowerPoint: tutorial práctico",
+      "pt-br": "Copilot in PowerPoint: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot in PowerPoint. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot in PowerPoint. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot in PowerPoint. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+in+PowerPoint+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 98,
+    "category": "AI",
+    "title": {
+      "en": "Copilot in Outlook: practical tutorial",
+      "es": "Copilot in Outlook: tutorial práctico",
+      "pt-br": "Copilot in Outlook: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot in Outlook. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot in Outlook. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot in Outlook. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+in+Outlook+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 99,
+    "category": "AI",
+    "title": {
+      "en": "Copilot in Teams: practical tutorial",
+      "es": "Copilot in Teams: tutorial práctico",
+      "pt-br": "Copilot in Teams: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot in Teams. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot in Teams. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot in Teams. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+in+Teams+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 100,
+    "category": "AI",
+    "title": {
+      "en": "Copilot agents: practical tutorial",
+      "es": "Copilot agents: tutorial práctico",
+      "pt-br": "Copilot agents: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot agents. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot agents. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot agents. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+agents+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 101,
+    "category": "AI",
+    "title": {
+      "en": "Copilot Studio: practical tutorial",
+      "es": "Copilot Studio: tutorial práctico",
+      "pt-br": "Copilot Studio: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copilot Studio. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copilot Studio. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copilot Studio. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copilot+Studio+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 102,
+    "category": "AI",
+    "title": {
+      "en": "ChatGPT basics: practical tutorial",
+      "es": "ChatGPT basics: tutorial práctico",
+      "pt-br": "ChatGPT basics: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about ChatGPT basics. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre ChatGPT basics. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre ChatGPT basics. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=ChatGPT+basics+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 103,
+    "category": "AI",
+    "title": {
+      "en": "ChatGPT data analysis: practical tutorial",
+      "es": "ChatGPT data analysis: tutorial práctico",
+      "pt-br": "ChatGPT data analysis: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about ChatGPT data analysis. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre ChatGPT data analysis. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre ChatGPT data analysis. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=ChatGPT+data+analysis+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 104,
+    "category": "AI",
+    "title": {
+      "en": "ChatGPT writing: practical tutorial",
+      "es": "ChatGPT writing: tutorial práctico",
+      "pt-br": "ChatGPT writing: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about ChatGPT writing. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre ChatGPT writing. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre ChatGPT writing. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=ChatGPT+writing+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 105,
+    "category": "AI",
+    "title": {
+      "en": "ChatGPT research: practical tutorial",
+      "es": "ChatGPT research: tutorial práctico",
+      "pt-br": "ChatGPT research: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about ChatGPT research. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre ChatGPT research. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre ChatGPT research. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=ChatGPT+research+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 106,
+    "category": "AI",
+    "title": {
+      "en": "Google Gemini: practical tutorial",
+      "es": "Google Gemini: tutorial práctico",
+      "pt-br": "Google Gemini: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Google Gemini. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Google Gemini. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Google Gemini. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Google+Gemini+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 107,
+    "category": "AI",
+    "title": {
+      "en": "Claude AI: practical tutorial",
+      "es": "Claude AI: tutorial práctico",
+      "pt-br": "Claude AI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Claude AI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Claude AI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Claude AI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Claude+AI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 108,
+    "category": "AI",
+    "title": {
+      "en": "Perplexity AI: practical tutorial",
+      "es": "Perplexity AI: tutorial práctico",
+      "pt-br": "Perplexity AI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Perplexity AI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Perplexity AI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Perplexity AI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Perplexity+AI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 109,
+    "category": "AI",
+    "title": {
+      "en": "AI image generation: practical tutorial",
+      "es": "AI image generation: tutorial práctico",
+      "pt-br": "AI image generation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI image generation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI image generation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI image generation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+image+generation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 110,
+    "category": "AI",
+    "title": {
+      "en": "AI video generation: practical tutorial",
+      "es": "AI video generation: tutorial práctico",
+      "pt-br": "AI video generation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI video generation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI video generation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI video generation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+video+generation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 111,
+    "category": "AI",
+    "title": {
+      "en": "AI audio tools: practical tutorial",
+      "es": "AI audio tools: tutorial práctico",
+      "pt-br": "AI audio tools: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI audio tools. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI audio tools. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI audio tools. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+audio+tools+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 112,
+    "category": "AI",
+    "title": {
+      "en": "AI meeting notes: practical tutorial",
+      "es": "AI meeting notes: tutorial práctico",
+      "pt-br": "AI meeting notes: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI meeting notes. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI meeting notes. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI meeting notes. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+meeting+notes+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 113,
+    "category": "AI",
+    "title": {
+      "en": "AI email workflows: practical tutorial",
+      "es": "AI email workflows: tutorial práctico",
+      "pt-br": "AI email workflows: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI email workflows. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI email workflows. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI email workflows. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+email+workflows+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 114,
+    "category": "AI",
+    "title": {
+      "en": "AI document summaries: practical tutorial",
+      "es": "AI document summaries: tutorial práctico",
+      "pt-br": "AI document summaries: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI document summaries. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI document summaries. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI document summaries. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+document+summaries+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 115,
+    "category": "AI",
+    "title": {
+      "en": "AI brainstorming: practical tutorial",
+      "es": "AI brainstorming: tutorial práctico",
+      "pt-br": "AI brainstorming: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI brainstorming. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI brainstorming. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI brainstorming. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+brainstorming+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 116,
+    "category": "AI",
+    "title": {
+      "en": "AI planning: practical tutorial",
+      "es": "AI planning: tutorial práctico",
+      "pt-br": "AI planning: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI planning. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI planning. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI planning. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+planning+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 117,
+    "category": "AI",
+    "title": {
+      "en": "AI translation: practical tutorial",
+      "es": "AI translation: tutorial práctico",
+      "pt-br": "AI translation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI translation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI translation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI translation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+translation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 118,
+    "category": "AI",
+    "title": {
+      "en": "AI coding assistants: practical tutorial",
+      "es": "AI coding assistants: tutorial práctico",
+      "pt-br": "AI coding assistants: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI coding assistants. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI coding assistants. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI coding assistants. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+coding+assistants+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 119,
+    "category": "AI",
+    "title": {
+      "en": "GitHub Copilot: practical tutorial",
+      "es": "GitHub Copilot: tutorial práctico",
+      "pt-br": "GitHub Copilot: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about GitHub Copilot. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre GitHub Copilot. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre GitHub Copilot. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=GitHub+Copilot+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 120,
+    "category": "AI",
+    "title": {
+      "en": "AI for SQL: practical tutorial",
+      "es": "AI for SQL: tutorial práctico",
+      "pt-br": "AI for SQL: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for SQL. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for SQL. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for SQL. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+SQL+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 121,
+    "category": "AI",
+    "title": {
+      "en": "AI for Python: practical tutorial",
+      "es": "AI for Python: tutorial práctico",
+      "pt-br": "AI for Python: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for Python. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for Python. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for Python. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+Python+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 122,
+    "category": "AI",
+    "title": {
+      "en": "AI for Power BI: practical tutorial",
+      "es": "AI for Power BI: tutorial práctico",
+      "pt-br": "AI for Power BI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for Power BI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for Power BI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for Power BI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+Power+BI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 123,
+    "category": "AI",
+    "title": {
+      "en": "AI automation: practical tutorial",
+      "es": "AI automation: tutorial práctico",
+      "pt-br": "AI automation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI automation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI automation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI automation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+automation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 124,
+    "category": "AI",
+    "title": {
+      "en": "No-code automation: practical tutorial",
+      "es": "No-code automation: tutorial práctico",
+      "pt-br": "No-code automation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about No-code automation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre No-code automation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre No-code automation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=No-code+automation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 125,
+    "category": "AI",
+    "title": {
+      "en": "AI agents: practical tutorial",
+      "es": "AI agents: tutorial práctico",
+      "pt-br": "AI agents: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI agents. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI agents. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI agents. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+agents+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 126,
+    "category": "AI",
+    "title": {
+      "en": "Retrieval augmented generation: practical tutorial",
+      "es": "Retrieval augmented generation: tutorial práctico",
+      "pt-br": "Retrieval augmented generation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Retrieval augmented generation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Retrieval augmented generation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Retrieval augmented generation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Retrieval+augmented+generation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 127,
+    "category": "AI",
+    "title": {
+      "en": "Vector databases: practical tutorial",
+      "es": "Vector databases: tutorial práctico",
+      "pt-br": "Vector databases: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Vector databases. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Vector databases. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Vector databases. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Vector+databases+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 128,
+    "category": "AI",
+    "title": {
+      "en": "Embeddings: practical tutorial",
+      "es": "Embeddings: tutorial práctico",
+      "pt-br": "Embeddings: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Embeddings. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Embeddings. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Embeddings. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Embeddings+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 129,
+    "category": "AI",
+    "title": {
+      "en": "Fine-tuning: practical tutorial",
+      "es": "Fine-tuning: tutorial práctico",
+      "pt-br": "Fine-tuning: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Fine-tuning. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Fine-tuning. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Fine-tuning. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Fine-tuning+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 130,
+    "category": "AI",
+    "title": {
+      "en": "Context windows: practical tutorial",
+      "es": "Context windows: tutorial práctico",
+      "pt-br": "Context windows: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Context windows. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Context windows. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Context windows. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Context+windows+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 131,
+    "category": "AI",
+    "title": {
+      "en": "Tokens: practical tutorial",
+      "es": "Tokens: tutorial práctico",
+      "pt-br": "Tokens: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Tokens. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Tokens. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Tokens. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Tokens+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 132,
+    "category": "AI",
+    "title": {
+      "en": "Multimodal AI: practical tutorial",
+      "es": "Multimodal AI: tutorial práctico",
+      "pt-br": "Multimodal AI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Multimodal AI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Multimodal AI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Multimodal AI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Multimodal+AI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 133,
+    "category": "AI",
+    "title": {
+      "en": "AI search: practical tutorial",
+      "es": "AI search: tutorial práctico",
+      "pt-br": "AI search: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI search. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI search. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI search. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+search+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 134,
+    "category": "AI",
+    "title": {
+      "en": "Deep research: practical tutorial",
+      "es": "Deep research: tutorial práctico",
+      "pt-br": "Deep research: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Deep research. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Deep research. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Deep research. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Deep+research+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 135,
+    "category": "AI",
+    "title": {
+      "en": "AI evaluation: practical tutorial",
+      "es": "AI evaluation: tutorial práctico",
+      "pt-br": "AI evaluation: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI evaluation. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI evaluation. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI evaluation. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+evaluation+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 136,
+    "category": "AI",
+    "title": {
+      "en": "Prompt testing: practical tutorial",
+      "es": "Prompt testing: tutorial práctico",
+      "pt-br": "Prompt testing: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Prompt testing. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Prompt testing. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Prompt testing. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Prompt+testing+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 137,
+    "category": "AI",
+    "title": {
+      "en": "Grounding: practical tutorial",
+      "es": "Grounding: tutorial práctico",
+      "pt-br": "Grounding: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Grounding. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Grounding. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Grounding. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Grounding+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 138,
+    "category": "AI",
+    "title": {
+      "en": "Human review: practical tutorial",
+      "es": "Human review: tutorial práctico",
+      "pt-br": "Human review: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Human review. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Human review. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Human review. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Human+review+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 139,
+    "category": "AI",
+    "title": {
+      "en": "AI governance: practical tutorial",
+      "es": "AI governance: tutorial práctico",
+      "pt-br": "AI governance: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI governance. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI governance. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI governance. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+governance+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 140,
+    "category": "AI",
+    "title": {
+      "en": "AI adoption: practical tutorial",
+      "es": "AI adoption: tutorial práctico",
+      "pt-br": "AI adoption: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI adoption. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI adoption. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI adoption. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+adoption+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 141,
+    "category": "AI",
+    "title": {
+      "en": "AI change management: practical tutorial",
+      "es": "AI change management: tutorial práctico",
+      "pt-br": "AI change management: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI change management. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI change management. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI change management. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+change+management+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 142,
+    "category": "AI",
+    "title": {
+      "en": "AI policy: practical tutorial",
+      "es": "AI policy: tutorial práctico",
+      "pt-br": "AI policy: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI policy. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI policy. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI policy. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+policy+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 143,
+    "category": "AI",
+    "title": {
+      "en": "AI risk assessment: practical tutorial",
+      "es": "AI risk assessment: tutorial práctico",
+      "pt-br": "AI risk assessment: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI risk assessment. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI risk assessment. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI risk assessment. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+risk+assessment+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 144,
+    "category": "AI",
+    "title": {
+      "en": "AI project selection: practical tutorial",
+      "es": "AI project selection: tutorial práctico",
+      "pt-br": "AI project selection: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI project selection. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI project selection. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI project selection. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+project+selection+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 145,
+    "category": "AI",
+    "title": {
+      "en": "AI productivity: practical tutorial",
+      "es": "AI productivity: tutorial práctico",
+      "pt-br": "AI productivity: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI productivity. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI productivity. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI productivity. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+productivity+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 146,
+    "category": "AI",
+    "title": {
+      "en": "AI for managers: practical tutorial",
+      "es": "AI for managers: tutorial práctico",
+      "pt-br": "AI for managers: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for managers. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for managers. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for managers. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+managers+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 147,
+    "category": "AI",
+    "title": {
+      "en": "AI for analysts: practical tutorial",
+      "es": "AI for analysts: tutorial práctico",
+      "pt-br": "AI for analysts: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for analysts. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for analysts. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for analysts. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+analysts+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 148,
+    "category": "AI",
+    "title": {
+      "en": "AI for finance: practical tutorial",
+      "es": "AI for finance: tutorial práctico",
+      "pt-br": "AI for finance: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for finance. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for finance. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for finance. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+finance+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 149,
+    "category": "AI",
+    "title": {
+      "en": "AI for HR: practical tutorial",
+      "es": "AI for HR: tutorial práctico",
+      "pt-br": "AI for HR: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for HR. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for HR. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for HR. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+HR+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 150,
+    "category": "AI",
+    "title": {
+      "en": "AI for marketing: practical tutorial",
+      "es": "AI for marketing: tutorial práctico",
+      "pt-br": "AI for marketing: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for marketing. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for marketing. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for marketing. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+marketing+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 151,
+    "category": "AI",
+    "title": {
+      "en": "AI for operations: practical tutorial",
+      "es": "AI for operations: tutorial práctico",
+      "pt-br": "AI for operations: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for operations. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for operations. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for operations. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+operations+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 152,
+    "category": "AI",
+    "title": {
+      "en": "AI for customer service: practical tutorial",
+      "es": "AI for customer service: tutorial práctico",
+      "pt-br": "AI for customer service: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for customer service. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for customer service. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for customer service. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+customer+service+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 153,
+    "category": "AI",
+    "title": {
+      "en": "AI for education: practical tutorial",
+      "es": "AI for education: tutorial práctico",
+      "pt-br": "AI for education: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for education. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for education. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for education. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+education+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 154,
+    "category": "AI",
+    "title": {
+      "en": "AI for presentations: practical tutorial",
+      "es": "AI for presentations: tutorial práctico",
+      "pt-br": "AI for presentations: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for presentations. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for presentations. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for presentations. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+presentations+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 155,
+    "category": "AI",
+    "title": {
+      "en": "AI for spreadsheets: practical tutorial",
+      "es": "AI for spreadsheets: tutorial práctico",
+      "pt-br": "AI for spreadsheets: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for spreadsheets. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for spreadsheets. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for spreadsheets. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+spreadsheets+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 156,
+    "category": "AI",
+    "title": {
+      "en": "AI for databases: practical tutorial",
+      "es": "AI for databases: tutorial práctico",
+      "pt-br": "AI for databases: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for databases. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for databases. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for databases. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+databases+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 157,
+    "category": "AI",
+    "title": {
+      "en": "AI for cloud: practical tutorial",
+      "es": "AI for cloud: tutorial práctico",
+      "pt-br": "AI for cloud: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about AI for cloud. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre AI for cloud. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre AI for cloud. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=AI+for+cloud+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 158,
+    "category": "AI",
+    "title": {
+      "en": "Machine learning basics: practical tutorial",
+      "es": "Machine learning basics: tutorial práctico",
+      "pt-br": "Machine learning basics: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Machine learning basics. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Machine learning basics. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Machine learning basics. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Machine+learning+basics+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 159,
+    "category": "AI",
+    "title": {
+      "en": "Neural networks: practical tutorial",
+      "es": "Neural networks: tutorial práctico",
+      "pt-br": "Neural networks: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Neural networks. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Neural networks. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Neural networks. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Neural+networks+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 160,
+    "category": "AI",
+    "title": {
+      "en": "Natural language processing: practical tutorial",
+      "es": "Natural language processing: tutorial práctico",
+      "pt-br": "Natural language processing: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Natural language processing. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Natural language processing. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Natural language processing. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Natural+language+processing+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 161,
+    "category": "AI",
+    "title": {
+      "en": "Computer vision: practical tutorial",
+      "es": "Computer vision: tutorial práctico",
+      "pt-br": "Computer vision: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Computer vision. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Computer vision. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Computer vision. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Computer+vision+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 162,
+    "category": "AI",
+    "title": {
+      "en": "Automation safeguards: practical tutorial",
+      "es": "Automation safeguards: tutorial práctico",
+      "pt-br": "Automation safeguards: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Automation safeguards. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Automation safeguards. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Automation safeguards. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Automation+safeguards+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 163,
+    "category": "AI",
+    "title": {
+      "en": "Copyright and AI: practical tutorial",
+      "es": "Copyright and AI: tutorial práctico",
+      "pt-br": "Copyright and AI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Copyright and AI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Copyright and AI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Copyright and AI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Copyright+and+AI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 164,
+    "category": "AI",
+    "title": {
+      "en": "Bias in AI: practical tutorial",
+      "es": "Bias in AI: tutorial práctico",
+      "pt-br": "Bias in AI: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Bias in AI. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Bias in AI. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Bias in AI. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Bias+in+AI+practical+tutorial",
+    "exactWatchUrl": false
+  },
+  {
+    "id": 165,
+    "category": "AI",
+    "title": {
+      "en": "Future of work: practical tutorial",
+      "es": "Future of work: tutorial práctico",
+      "pt-br": "Future of work: tutorial prático"
+    },
+    "description": {
+      "en": "Practical learning resource about Future of work. Review the creator, date and product version on YouTube before applying the guidance.",
+      "es": "Recurso práctico sobre Future of work. Revisa el creador, la fecha y la versión del producto en YouTube.",
+      "pt-br": "Recurso prático sobre Future of work. Confira o criador, a data e a versão do produto no YouTube."
+    },
+    "channel": "YouTube learning",
+    "url": "https://www.youtube.com/results?search_query=Future+of+work+practical+tutorial",
+    "exactWatchUrl": false
+  }
+]
