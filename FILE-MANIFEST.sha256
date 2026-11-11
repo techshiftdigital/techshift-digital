@@ -1,0 +1,9 @@
+fa7cbb5b8252b7b8e53dff6e7cdb485f37bd4b7c1f1bc98157cde60c94976a15  ./CHANGELOG.md
+0ff306df92783791dae88d2502a31368fa3bb9317c813966b97bc3fa9c365716  ./DEPLOYMENT-CHECKLIST.md
+b5aae5f725af1ea65d831b004ccc2051add0b4b8764fcb14896f6d57de4c2ab0  ./README.md
+6ffa2a1188831ff949222c8eca75f7598f9b9caef4b03255b8b87c0aa80c11d4  ./VALIDATION-REPORT.md
+b67bd01cac3304141a86aa689954eef8ac746666b99f6fab1c7741f7ee282f4d  ./public/assets/multilingual-unified.css
+ab113c7a80052a22184c4d818b755d74fada9c7c030db995d6bd0aa8de48bbde  ./public/assets/multilingual-unified.js
+729495fec59b1509cf617444d66dc846c41bc4f980f75c28e99dcd3f3906d191  ./qa/verify-focused-multilingual-ui.mjs
+d4449e0b01ca48149c8c502f716b8ee7d80b4548ca24666b7b929bb5f469b0ab  ./scripts/apply-focused-multilingual-ui-fix.mjs
+f185056c6db921f54c77fbac7298655400496f5fc87d46fad914ed7e744e329f  ./scripts/unify-multilingual-ui.mjs

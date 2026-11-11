@@ -1,52 +1,58 @@
 # Deployment checklist
 
-## Before commit
+## Before deployment
 
-- [ ] Package extracted at the GitHub repository root.
-- [ ] Existing `package.json`, `build.mjs` and `multilingual-build.mjs` retained.
-- [ ] `node scripts/apply-language-selector-header-fix.mjs` completed successfully.
-- [ ] `npm run build` completed successfully.
-- [ ] `node qa/verify-language-selector-header-fix.mjs dist` passed.
-- [ ] Git diff contains no tool content, video JSON, image, translation or Cloudflare configuration changes.
+- [ ] Back up or create a Git branch.
+- [ ] Extract this package at the repository root.
+- [ ] Confirm `package.json`, `build.mjs`, and the `public/` folder are in the same repository root.
 
-## Desktop review
+## Install and verify
 
-Review at 1440 px or wider:
+```bash
+node scripts/apply-focused-multilingual-ui-fix.mjs
+npm run build
+npm run verify:multilingual-ui
+```
+
+The installer preserves the existing build command and appends:
+
+```text
+node scripts/unify-multilingual-ui.mjs dist
+```
+
+If the Cloudflare output directory is not `dist`, replace `dist` in the appended command and in `verify:multilingual-ui` with the configured output directory.
+
+## Visual review
+
+Desktop:
 
 - [ ] `/`
-- [ ] `/tools/`
-- [ ] One English tool page
 - [ ] `/es/`
-- [ ] `/es/tools/`
-- [ ] One Spanish tool page
 - [ ] `/pt-br/`
+- [ ] `/tools/`
+- [ ] `/es/tools/`
 - [ ] `/pt-br/tools/`
-- [ ] One Brazilian Portuguese tool page
-- [ ] `/videos/excel/` and one localized equivalent
-- [ ] `/videos/ai/` and one localized equivalent
+- [ ] One calculator in each language
+- [ ] One resource/video page in each language
 
-For each page, confirm:
+Mobile (approximately 390 × 844):
 
-- [ ] No full-width language bar appears below the header.
-- [ ] The selector is compact and inside the dark header at the top-right.
-- [ ] The existing logo, menus and YouTube control remain aligned and clickable.
-- [ ] English, Español and Português (Brasil) remain selectable.
-- [ ] Switching language keeps the equivalent page and preserves the current route behavior.
+- [ ] Dropdown remains inside the header.
+- [ ] No horizontal overflow.
+- [ ] Menu and dropdown do not overlap.
+- [ ] No globe or detached white language bar appears.
 
-## Mobile review
+Functional/SEO:
 
-Review at 390 × 844 and 360 × 800:
+- [ ] Each language change stays on an equivalent page when available.
+- [ ] Calculator inputs and results still work.
+- [ ] Videos and external YouTube links still work.
+- [ ] Canonical and `hreflang` elements remain present.
+- [ ] `robots.txt` and sitemap output are unchanged.
+- [ ] Cloudflare build output remains `dist` (or the repository’s existing configured directory).
 
-- [ ] Selector remains inside the header and does not create horizontal scrolling.
-- [ ] Logo remains visible.
-- [ ] Menu toggle remains visible and clickable.
-- [ ] Selector and menu toggle do not overlap.
-- [ ] Dropdown options fit within the viewport.
-- [ ] Keyboard focus is visible.
+## Rollback
 
-## Cloudflare
-
-- [ ] Commit to the Cloudflare-connected branch.
-- [ ] Cloudflare runs `npm run build` successfully.
-- [ ] Deployment status is Ready.
-- [ ] Repeat the homepage, tools page and one localized tool smoke test on the production URL.
+1. Restore the backed-up `package.json` from `.techshift-backups/`.
+2. Remove the five files listed in `README.md`.
+3. Rebuild and redeploy.
