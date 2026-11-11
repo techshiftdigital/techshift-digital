@@ -1,35 +1,108 @@
-# TechShift Digital V4: Executive Redesign
+# TechShift Digital — Consolidated Multilingual Update
 
-A complete replacement build based on the prior V3 requirements and retrieved conversation. The old V3 ZIP was not available locally for a file-by-file audit. Back up your existing repository and content before replacing anything. This package has not been pushed or deployed.
+This is the **single deployment package** for the Spanish and Brazilian Portuguese improvements. It replaces the earlier separate multilingual-page and language-selector updates.
 
-## Included
-19 public content pages plus custom 404, six browser tools, three original practical guides, three new generated editorial images in optimized WebP, responsive navigation, accessibility basics, local content editor, build-time HTML listings, metadata, canonical URLs, social cards, sitemap, robots, security headers and legacy redirects.
+## What this package fixes
 
-## Deploy
-Upload the contents of this package to your repository root. Preserve the supplied folders. Cloudflare Workers build command: npm run build. Deploy command: npx wrangler deploy. The supplied wrangler.jsonc serves dist/. For Cloudflare Pages use npm run build and output directory dist. Check the preview before production. Cloudflare configuration is included, but actual deployment has not been tested against your account.
+1. **Detailed localized tools:** all 50 tools have Spanish and Brazilian Portuguese content (100 localized tool experiences), including an introduction, usage steps, method/formula, practical example, limitations, four FAQs and related tools.
+2. **Same interface in every language:** the normal English build is the visual master. Localized pages are cloned from the current English output, preserving the same HTML structure, CSS classes, images, calculator form and tool scripts.
+3. **One language dropdown everywhere:** English, Español and Português (Brasil) use the same accessible dropdown on desktop and mobile. Old “All languages” links/selectors are hidden to prevent two competing controls.
+4. **SEO support:** localized titles and descriptions for all 50 tools, canonical links, `hreflang` for all three variants and a multilingual sitemap.
 
-## Preview
-The dist/ folder is already built. From the package root, run python -m http.server 8000 --directory dist and open http://localhost:8000. Root-relative URLs mean double-clicking public/index.html is not a reliable preview.
+## Important safety model
 
-## Publish Excel resources and videos
-1. Open creator/index.html locally in a browser.
-2. Import the current repository data/content.json before editing on a new device.
-3. Add/edit entries. Excel resources have title, description, category, free/paid status, hosted download/purchase URL and optional preview image. Videos have title, description, category and an individual YouTube URL.
-4. Download content.json. Replace data/content.json in GitHub and commit.
-5. The configured build renders the entries into crawlable public HTML.
+- English pages and URLs remain the master version.
+- Existing calculator logic, video JSON, images, base stylesheet, GitHub workflow and Cloudflare configuration are not replaced.
+- The multilingual step runs **after** the existing build.
+- Existing generated `/es/` and `/pt-br/` output is cleared and regenerated from the current English build on every run; stale localized files cannot survive.
+- No paid translation service, external database or new runtime dependency is used.
 
-The editor does not upload workbooks, process payments or publish directly. Host your workbook first; paid resources link to your external store. Browser drafts are a convenience, not a backup. creator/ is outside the public deployment directory and is not a secure online CMS. Do not store credentials here.
+## Install
 
-## Content integrity
-Your YouTube channel and supplied Facebook profile are preserved. Individual video URLs, workbook files, paid product URLs and the exact Upwork service URL were not recoverable from the available history. None have been invented. The resource/video listings start empty with honest guidance and working tool/channel links. Add real entries before promoting the libraries. Older content JSON may require schema migration; do not overwrite your old data without a backup.
+1. Back up the current repository or note the last working commit.
+2. Extract this package.
+3. Copy these paths to the repository root, preserving their paths:
 
-## SEO and launch
-Unique titles/descriptions/canonicals, one H1 per page, crawlable links, sitemap regenerated on build, indexable public pages, descriptive image alt text and site/page JSON-LD. No fake reviews, client logos or metrics. No keyword stuffing or guaranteed ranking claims. Add your domain to Search Console and submit the sitemap after launch. Check live URLs, HTTPS, mobile layout and actual Core Web Vitals. No live Lighthouse score is claimed.
+```text
+multilingual-build.mjs
+translations/tool-content.json
+translations/tool-inventory.json
+public/assets/multilingual-site.css
+public/assets/multilingual-site.js
+qa/verify-content.py
+qa/verify-multilingual.mjs
+```
 
-## Privacy and terms
-Browser tools do not transmit inputs. Hosting may process technical request information. External thumbnails/images create requests to their hosts. No analytics, ads or contact-form backend is included. Review the supplied policy text for your actual business and hosting setup before launch. It is not a jurisdiction-specific legal policy. Update it before adding tracking, forms, payments or ads.
+4. Remove the earlier selector hook if it is present:
 
-## Visual credits
-Three original editorial images generated with Microsoft Copilot for this redesign. No people, fabricated testimonials or implied enterprise customers.
+```js
+await import('./language-selector-build.mjs');
+```
 
-Website rebuild triggered: 04 November 2026
+5. Add this as the **last line** of the existing root `build.mjs`:
+
+```js
+await import('./multilingual-build.mjs');
+```
+
+6. Run the normal build:
+
+```bash
+npm run build
+```
+
+The default output folder is `dist`. If the existing build uses another output folder:
+
+```bash
+TSD_BUILD_DIR=your-output-folder npm run build
+```
+
+7. Validate:
+
+```bash
+python3 qa/verify-content.py
+node qa/verify-multilingual.mjs dist
+```
+
+8. Commit to the branch connected to Cloudflare.
+
+Suggested commit message:
+
+```text
+Unify multilingual design, dropdown and detailed tool content
+```
+
+## Post-deployment checks
+
+Test all three language variants for:
+
+- Homepage and top navigation.
+- `/tools/`, `/es/tools/`, `/pt-br/tools/`.
+- Percentage Change, CAGR, JSON Formatter, Working Days, QR Code and BMI tools.
+- Calculator input, Calculate and Reset actions.
+- Desktop and mobile language dropdown.
+- Same hero/logo/tool images in all languages.
+- Correct equivalent-page switching among languages.
+- `https://techshiftdigital.com/sitemap-multilingual.xml`.
+
+## Files not to replace
+
+Do not replace the existing:
+
+```text
+build.mjs                 (add only the one-line import)
+package.json
+wrangler.jsonc
+data/videos-ai.json
+data/videos-excel.json
+public/assets/style.css
+public/assets/vendor/qr-bundle.js
+```
+
+## Rollback
+
+1. Remove the final `await import('./multilingual-build.mjs');` line from `build.mjs`.
+2. Remove the files copied from this package.
+3. Rebuild and redeploy the last known-good commit.
+
+See `docs/IMPLEMENTATION-NOTES.md` and `VALIDATION-REPORT.md` for details.

@@ -1,0 +1,302 @@
+[
+  {
+    "slug": "percentage-change-calculator",
+    "category": "math",
+    "es": "Calculadora de variación porcentual",
+    "pt-br": "Calculadora de variação percentual"
+  },
+  {
+    "slug": "date-difference-calculator",
+    "category": "date",
+    "es": "Calculadora de diferencia entre fechas",
+    "pt-br": "Calculadora de diferença entre datas"
+  },
+  {
+    "slug": "working-days-calculator",
+    "category": "date",
+    "es": "Calculadora de días laborables",
+    "pt-br": "Calculadora de dias úteis"
+  },
+  {
+    "slug": "discount-calculator",
+    "category": "finance",
+    "es": "Calculadora de descuentos",
+    "pt-br": "Calculadora de desconto"
+  },
+  {
+    "slug": "word-character-counter",
+    "category": "text",
+    "es": "Contador de palabras y caracteres",
+    "pt-br": "Contador de palavras e caracteres"
+  },
+  {
+    "slug": "text-cleaner",
+    "category": "text",
+    "es": "Limpiador de texto",
+    "pt-br": "Limpador de texto"
+  },
+  {
+    "slug": "age-calculator",
+    "category": "date",
+    "es": "Calculadora de edad",
+    "pt-br": "Calculadora de idade"
+  },
+  {
+    "slug": "percentage-calculator",
+    "category": "math",
+    "es": "Calculadora de porcentajes",
+    "pt-br": "Calculadora de porcentagem"
+  },
+  {
+    "slug": "loan-emi-calculator",
+    "category": "finance",
+    "es": "Calculadora de préstamo y cuota EMI",
+    "pt-br": "Calculadora de empréstimo e parcela EMI"
+  },
+  {
+    "slug": "compound-interest-calculator",
+    "category": "finance",
+    "es": "Calculadora de interés compuesto",
+    "pt-br": "Calculadora de juros compostos"
+  },
+  {
+    "slug": "qr-code-generator",
+    "category": "developer",
+    "es": "Generador de códigos QR",
+    "pt-br": "Gerador de código QR"
+  },
+  {
+    "slug": "cagr-calculator",
+    "category": "finance",
+    "es": "Calculadora de CAGR",
+    "pt-br": "Calculadora de CAGR"
+  },
+  {
+    "slug": "margin-markup-calculator",
+    "category": "business",
+    "es": "Calculadora de margen y recargo",
+    "pt-br": "Calculadora de margem e markup"
+  },
+  {
+    "slug": "salary-calculator",
+    "category": "business",
+    "es": "Calculadora de salario",
+    "pt-br": "Calculadora de salário"
+  },
+  {
+    "slug": "roi-calculator",
+    "category": "finance",
+    "es": "Calculadora de ROI",
+    "pt-br": "Calculadora de ROI"
+  },
+  {
+    "slug": "break-even-calculator",
+    "category": "business",
+    "es": "Calculadora del punto de equilibrio",
+    "pt-br": "Calculadora de ponto de equilíbrio"
+  },
+  {
+    "slug": "password-generator",
+    "category": "developer",
+    "es": "Generador de contraseñas",
+    "pt-br": "Gerador de senhas"
+  },
+  {
+    "slug": "password-strength-checker",
+    "category": "developer",
+    "es": "Comprobador de seguridad de contraseñas",
+    "pt-br": "Verificador de força de senha"
+  },
+  {
+    "slug": "random-number-generator",
+    "category": "developer",
+    "es": "Generador de números aleatorios",
+    "pt-br": "Gerador de números aleatórios"
+  },
+  {
+    "slug": "uuid-generator",
+    "category": "developer",
+    "es": "Generador de UUID",
+    "pt-br": "Gerador de UUID"
+  },
+  {
+    "slug": "base64-encoder-decoder",
+    "category": "developer",
+    "es": "Codificador y decodificador Base64",
+    "pt-br": "Codificador e decodificador Base64"
+  },
+  {
+    "slug": "json-formatter-validator",
+    "category": "developer",
+    "es": "Formateador y validador JSON",
+    "pt-br": "Formatador e validador JSON"
+  },
+  {
+    "slug": "text-case-converter",
+    "category": "text",
+    "es": "Conversor de mayúsculas y minúsculas",
+    "pt-br": "Conversor de maiúsculas e minúsculas"
+  },
+  {
+    "slug": "unix-timestamp-converter",
+    "category": "date",
+    "es": "Conversor de marca de tiempo Unix",
+    "pt-br": "Conversor de timestamp Unix"
+  },
+  {
+    "slug": "time-zone-converter",
+    "category": "date",
+    "es": "Conversor de zonas horarias",
+    "pt-br": "Conversor de fusos horários"
+  },
+  {
+    "slug": "roman-numeral-converter",
+    "category": "math",
+    "es": "Conversor de números romanos",
+    "pt-br": "Conversor de algarismos romanos"
+  },
+  {
+    "slug": "gst-vat-calculator",
+    "category": "finance",
+    "es": "Calculadora de GST e IVA",
+    "pt-br": "Calculadora de GST e IVA"
+  },
+  {
+    "slug": "tip-calculator",
+    "category": "everyday",
+    "es": "Calculadora de propinas",
+    "pt-br": "Calculadora de gorjeta"
+  },
+  {
+    "slug": "inflation-calculator",
+    "category": "finance",
+    "es": "Calculadora de inflación",
+    "pt-br": "Calculadora de inflação"
+  },
+  {
+    "slug": "simple-interest-calculator",
+    "category": "finance",
+    "es": "Calculadora de interés simple",
+    "pt-br": "Calculadora de juros simples"
+  },
+  {
+    "slug": "unit-price-calculator",
+    "category": "everyday",
+    "es": "Calculadora de precio unitario",
+    "pt-br": "Calculadora de preço unitário"
+  },
+  {
+    "slug": "fuel-cost-calculator",
+    "category": "everyday",
+    "es": "Calculadora de coste de combustible",
+    "pt-br": "Calculadora de custo de combustível"
+  },
+  {
+    "slug": "pace-calculator",
+    "category": "health",
+    "es": "Calculadora de ritmo",
+    "pt-br": "Calculadora de ritmo"
+  },
+  {
+    "slug": "bmi-calculator",
+    "category": "health",
+    "es": "Calculadora de IMC",
+    "pt-br": "Calculadora de IMC"
+  },
+  {
+    "slug": "calorie-bmr-calculator",
+    "category": "health",
+    "es": "Calculadora de calorías y TMB",
+    "pt-br": "Calculadora de calorias e TMB"
+  },
+  {
+    "slug": "aspect-ratio-calculator",
+    "category": "math",
+    "es": "Calculadora de relación de aspecto",
+    "pt-br": "Calculadora de proporção de tela"
+  },
+  {
+    "slug": "average-median-mode-calculator",
+    "category": "math",
+    "es": "Calculadora de media, mediana y moda",
+    "pt-br": "Calculadora de média, mediana e moda"
+  },
+  {
+    "slug": "standard-deviation-calculator",
+    "category": "math",
+    "es": "Calculadora de desviación estándar",
+    "pt-br": "Calculadora de desvio padrão"
+  },
+  {
+    "slug": "percentage-difference-calculator",
+    "category": "math",
+    "es": "Calculadora de diferencia porcentual",
+    "pt-br": "Calculadora de diferença percentual"
+  },
+  {
+    "slug": "days-until-calculator",
+    "category": "date",
+    "es": "Calculadora de días restantes",
+    "pt-br": "Calculadora de dias restantes"
+  },
+  {
+    "slug": "weighted-average-calculator",
+    "category": "math",
+    "es": "Calculadora de media ponderada",
+    "pt-br": "Calculadora de média ponderada"
+  },
+  {
+    "slug": "ratio-calculator",
+    "category": "math",
+    "es": "Calculadora de razones",
+    "pt-br": "Calculadora de razão"
+  },
+  {
+    "slug": "fraction-calculator",
+    "category": "math",
+    "es": "Calculadora de fracciones",
+    "pt-br": "Calculadora de frações"
+  },
+  {
+    "slug": "number-base-converter",
+    "category": "developer",
+    "es": "Conversor de bases numéricas",
+    "pt-br": "Conversor de bases numéricas"
+  },
+  {
+    "slug": "scientific-notation-calculator",
+    "category": "math",
+    "es": "Calculadora de notación científica",
+    "pt-br": "Calculadora de notação científica"
+  },
+  {
+    "slug": "meeting-cost-calculator",
+    "category": "business",
+    "es": "Calculadora de coste de reuniones",
+    "pt-br": "Calculadora de custo de reuniões"
+  },
+  {
+    "slug": "productivity-improvement-calculator",
+    "category": "business",
+    "es": "Calculadora de mejora de productividad",
+    "pt-br": "Calculadora de melhoria de produtividade"
+  },
+  {
+    "slug": "sip-investment-calculator",
+    "category": "finance",
+    "es": "Calculadora de inversión SIP",
+    "pt-br": "Calculadora de investimento SIP"
+  },
+  {
+    "slug": "retirement-savings-calculator",
+    "category": "finance",
+    "es": "Calculadora de ahorro para la jubilación",
+    "pt-br": "Calculadora de poupança para aposentadoria"
+  },
+  {
+    "slug": "electricity-cost-calculator",
+    "category": "everyday",
+    "es": "Calculadora de coste de electricidad",
+    "pt-br": "Calculadora de custo de eletricidade"
+  }
+]
