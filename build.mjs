@@ -1,53 +1,70 @@
-import fs from 'node:fs';import path from 'node:path';const base='https://techshiftdigital.com',out='dist';fs.rmSync(out,{recursive:true,force:true});fs.cpSync('public',out,{recursive:true});const d=JSON.parse(fs.readFileSync('data/content.json','utf8'));
-const splitFiles=[['data/videos-ai.json','AI'],['data/videos-excel.json','Excel']];
-d.videos=[];
-for(const [file,category] of splitFiles){const entries=JSON.parse(fs.readFileSync(file,'utf8'));if(!Array.isArray(entries))throw Error(file+' must contain an array');for(const entry of entries){if(entry.category!==category)throw Error(file+' contains an incorrect category');if(entry.privacy&&entry.privacy.toLowerCase()!=='public')throw Error(file+' contains a non-public video');d.videos.push(entry)}}
-d.videos.sort((a,b)=>(b.publishedAt||b.createdAt||'').localeCompare(a.publishedAt||a.createdAt||''));
-if(!Array.isArray(d.resources)||!Array.isArray(d.videos)||d.resources.length+d.videos.length>1000)throw Error('Invalid content arrays');const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const url=s=>{const u=new URL(s);if(u.protocol!=='https:'||u.username||u.password)throw Error('Use HTTPS URLs');return u.href};const vid=s=>{const u=new URL(s);const id=u.hostname==='youtu.be'?u.pathname.split('/')[1]:['youtube.com','www.youtube.com','m.youtube.com'].includes(u.hostname)?u.searchParams.get('v')||u.pathname.match(/^\/(?:shorts|embed|live)\/([^/]+)/)?.[1]:'';if(!/^[\w-]{11}$/.test(id||''))throw Error('Invalid YouTube video URL');return id};const ids=new Set();for(const k of ['resources','videos']){for(const e of d[k]){if(!e||!/^[a-z0-9-]{1,100}$/.test(e.id||'')||ids.has(e.id))throw Error('Invalid ID');ids.add(e.id);if(typeof e.title!=='string'||!e.title.trim()||e.title.length>120||typeof e.description!=='string'||!e.description.trim()||e.description.length>5000)throw Error('Invalid title or description');if(!['Excel','AI','Copilot','Technology'].includes(e.category))throw Error('Invalid category');url(e.url);if(k==='videos')vid(e.url);else{if(!['free','paid'].includes(e.type))throw Error('Invalid type');if(e.image)url(e.image)}}if(!d[k].length)continue;const cards=d[k].map(e=>{const image=k==='videos'?'https://i.ytimg.com/vi/'+vid(e.url)+'/hqdefault.jpg':e.image;return `<article class="card" data-search="${esc((e.title+' '+e.description+' '+e.category).toLowerCase())}" data-category="${esc(k==='resources'?e.type:e.category)}">${image?`<img src="${esc(image)}" alt="${esc(e.title)}" width="480" height="360" loading="lazy" referrerpolicy="no-referrer">`:''}<div class="card-body"><span class="tag">${esc(k==='videos'&&e.category==='AI'?'AI, Copilot & Technology':e.category)}${k==='resources'?' · '+(e.type==='free'?'Free download':'Paid product'):''}</span><h3>${esc(e.title)}</h3><p>${esc(e.description).replace(/\n/g,'<br>')}</p><a class="textlink" href="${esc(url(e.url))}" target="_blank" rel="noopener noreferrer">${k==='videos'?'Watch on YouTube':e.type==='free'?'Open free download':'View paid product'} ↗</a></div></article>`}).join('');const file=path.join(out,k,'index.html'),marker=k.toUpperCase();let text=fs.readFileSync(file,'utf8');text=text.replace(new RegExp(`<!-- ${marker}_START -->[\\s\\S]*?<!-- ${marker}_END -->`),`<!-- ${marker}_START --><div id="library" class="grid">${cards}</div><!-- ${marker}_END -->`);fs.writeFileSync(file,text)}
-// Dedicated category pages reuse the validated, rendered cards from the full library.
-const libraryHtml=fs.readFileSync(path.join(out,'videos/index.html'),'utf8');
-const allCards=libraryHtml.match(/<article class="card" data-search=[\s\S]*?<\/article>/g)||[];
-if(allCards.length!==d.videos.length)throw Error('Video card count does not match input data');
-for(const [slug,category] of [['excel','Excel'],['ai','AI']]){
- const file=path.join(out,'videos',slug,'index.html');
- const cards=allCards.filter(card=>card.includes('data-category="'+category+'"'));
- const expected=d.videos.filter(entry=>entry.category===category).length;
- if(cards.length!==expected)throw Error('Category count mismatch: '+category);
- let text=fs.readFileSync(file,'utf8');
- text=text.replace(/<!-- TOPIC_VIDEOS_START -->[\s\S]*?<!-- TOPIC_VIDEOS_END -->/,'<!-- TOPIC_VIDEOS_START --><p class="micro">'+cards.length+' videos in this collection.</p><div id="library" class="grid">'+cards.join('')+'</div><!-- TOPIC_VIDEOS_END -->');
- fs.writeFileSync(file,text);
+#!/usr/bin/env node
+/**
+ * TechShift Digital static build.
+ *
+ * 1. Recreates dist/ from public/ without changing the source files.
+ * 2. Runs the idempotent multilingual post-processor.
+ *
+ * Cloudflare Pages build command: node build.mjs
+ * Cloudflare Pages output directory: dist
+ */
+
+import { cp, mkdir, rm, stat } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { runMultilingualBuild } from './multilingual-build.mjs';
+
+const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const PUBLIC_DIR = path.resolve(ROOT, process.env.TECHSHIFT_PUBLIC_DIR || 'public');
+const DIST_DIR = path.resolve(ROOT, process.env.TECHSHIFT_DIST_DIR || 'dist');
+
+function isSameOrChild(candidate, parent) {
+  const relative = path.relative(parent, candidate);
+  return relative === '' || (!relative.startsWith('..') && !path.isAbsolute(relative));
 }
-function organize(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
- const file=path.join(dir,entry.name);if(entry.isDirectory()){organize(file);continue}if(!entry.name.endsWith('.html'))continue;
- let text=fs.readFileSync(file,'utf8');
- text=text.replace(/href="\/videos\/\?category=Excel"/g,'href="/videos/excel/"').replace(/href="\/videos\/\?category=AI"/g,'href="/videos/ai/"');
- const rel=path.relative(out,file).split(path.sep).join('/');
- const excelPage=rel.startsWith('excel/')||rel.startsWith('videos/excel/')||rel.startsWith('resources/')||rel==='insights/excel-percentage-change/index.html';
- text=text.replace(/<nav\b[^>]*id="navigation"[^>]*>[\s\S]*?<\/nav>/,nav=>{
-  nav=nav.replace(/ aria-current="page"/g,'');
-  nav=nav.replace(/<a href="\/resources\/">Excel resources<\/a>/,'<a href="/excel/">Excel</a>');
-  nav=nav.replace('<a href="/videos/">Videos</a>','<a href="/videos/excel/">Excel Videos</a><a href="/videos/ai/">AI Videos</a>');
-  const current=rel.startsWith('tools/')?'/tools/':rel.startsWith('videos/excel/')?'/videos/excel/':rel.startsWith('videos/ai/')?'/videos/ai/':excelPage?'/excel/':rel.startsWith('ai/')||rel.startsWith('videos/ai/')?'/ai/':rel.startsWith('videos/')?'/videos/':rel.startsWith('insights/')?'/insights/':rel.startsWith('about/')?'/about/':null;
-  if(current)nav=nav.replace('href="'+current+'"','href="'+current+'" aria-current="page"');
-  return nav;
- });
- // Link each card heading to the same destination as its existing action link.
- // This applies to all tool cards and both video collections without changing source JSON.
- text=text.replace(/<article class="card"[\s\S]*?<\/article>/g,card=>{
-  const action=card.match(/<a\b[^>]*class="textlink"[^>]*href="([^"]+)"[^>]*>/)
-    ||card.match(/<a\b[^>]*href="([^"]+)"[^>]*class="textlink"[^>]*>/);
-  if(!action)return card;
-  const href=action[1];
-  const external=/^https?:\/\//i.test(href);
-  const attributes=external?' target="_blank" rel="noopener noreferrer"':'';
-  return card.replace(/<h3>([\s\S]*?)<\/h3>/,(_,heading)=>'<h3><a href="'+href+'"'+attributes+'>'+heading+'</a></h3>');
- });
- text=text.replace('<strong>Explore</strong>','<strong>Explore</strong><a href="/excel/">Excel hub</a><a href="/videos/excel/">Excel videos</a><a href="/videos/ai/">AI videos</a>');
- if(rel==='index.html')text=text.replace(/<a class="btn primary" href="\/videos\/">Explore video library[^<]*<\/a>/,'<a class="btn primary" href="/videos/excel/">Excel Videos</a><a class="btn" href="/videos/ai/">AI Videos</a>');
- if(rel==='videos/index.html')text=text.replace('<section class="section">','<div class="actions"><a class="btn primary" href="/videos/excel/">Excel video collection →</a><a class="btn" href="/videos/ai/">AI video collection →</a></div><section class="section">');
- if(rel==='ai/index.html')text=text.replace('<section class="section">','<section class="section"><h2>Explore AI by topic.</h2><div class="grid two"><article class="card"><div class="card-body"><span class="tag">Watch</span><h3>AI Videos</h3><p>Browse AI, Copilot and technology demonstrations in one dedicated collection.</p><a class="textlink" href="/videos/ai/">Explore videos →</a></div></article><article class="card"><div class="card-body"><span class="tag">Copilot content</span><h3>Practical Copilot workflows</h3><p>Find Copilot tutorials in the AI collection using the title and description search.</p><a class="textlink" href="/videos/ai/#library-search">Search the collection →</a></div></article><article class="card"><div class="card-body"><span class="tag">Enterprise AI</span><h3>Choose the workflow first.</h3><p>Define the task, information boundary and review process before adopting an AI workflow.</p><a class="textlink" href="/insights/ai-decision-framework/">Read the framework →</a></div></article><article class="card"><div class="card-body"><span class="tag">AI Guides</span><h3>Review before you rely.</h3><p>Check sources, calculations and assumptions before turning AI output into a decision.</p><a class="textlink" href="/insights/ai-output-review/">Read the guide →</a></div></article></div></section><section class="section">');
- fs.writeFileSync(file,text);
-}}
-organize(out);
-const urls=[];function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())walk(f);else if(e.name==='index.html')urls.push(base+'/'+path.relative(out,f).split(path.sep).join('/').replace(/index\.html$/,''))}}walk(out);fs.writeFileSync(path.join(out,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(u=>'<url><loc>'+esc(u)+'</loc></url>').join('')+'</urlset>');console.log('Built '+urls.length+' pages; '+d.resources.length+' resources; '+d.videos.length+' videos.');
-await import('./multilingual-build.mjs');
+
+async function assertDirectory(directory, label) {
+  let details;
+  try {
+    details = await stat(directory);
+  } catch {
+    throw new Error(`${label} was not found: ${directory}`);
+  }
+
+  if (!details.isDirectory()) {
+    throw new Error(`${label} is not a directory: ${directory}`);
+  }
+}
+
+async function main() {
+  await assertDirectory(PUBLIC_DIR, 'Public source directory');
+
+  if (PUBLIC_DIR === DIST_DIR || isSameOrChild(PUBLIC_DIR, DIST_DIR)) {
+    throw new Error('Refusing to build because public/ is the same as, or is inside, dist/.');
+  }
+
+  await rm(DIST_DIR, { recursive: true, force: true });
+  await mkdir(DIST_DIR, { recursive: true });
+  await cp(PUBLIC_DIR, DIST_DIR, {
+    recursive: true,
+    force: true,
+    errorOnExist: false,
+    preserveTimestamps: false,
+  });
+
+  const result = await runMultilingualBuild({
+    rootDir: ROOT,
+    outDir: DIST_DIR,
+    quiet: true,
+  });
+
+  console.log(
+    `TechShift build complete: ${result.htmlFiles} HTML pages processed; ` +
+      `${result.localizedRoutes} localized route groups; output ${path.relative(ROOT, DIST_DIR) || '.'}/`,
+  );
+}
+
+main().catch((error) => {
+  console.error(`Build failed: ${error.message}`);
+  process.exitCode = 1;
+});
