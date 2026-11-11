@@ -1,17 +1,52 @@
 # Deployment checklist
 
-- [ ] Back up or tag the current working repository.
-- [ ] Copy the package files using the exact paths in `README.md`.
-- [ ] Remove the earlier `language-selector-build.mjs` import if present.
-- [ ] Add `await import('./multilingual-build.mjs');` as the last line of `build.mjs`.
-- [ ] Run `npm run build`.
-- [ ] Confirm the report says 100 detailed tool translations are available.
-- [ ] Run both QA commands from `README.md`.
-- [ ] Check English pages remain unchanged apart from the dropdown.
-- [ ] Check Spanish and Portuguese pages use the same header, images and cards as English.
-- [ ] Check the dropdown appears in all three languages; no “All languages” text link remains visible.
-- [ ] Test representative calculators and QR generation.
-- [ ] Test desktop and mobile layouts.
-- [ ] Deploy to the Cloudflare-connected branch.
-- [ ] Confirm `sitemap-multilingual.xml` is publicly reachable.
-- [ ] Monitor Cloudflare build logs and browser console for errors.
+## Before commit
+
+- [ ] Package extracted at the GitHub repository root.
+- [ ] Existing `package.json`, `build.mjs` and `multilingual-build.mjs` retained.
+- [ ] `node scripts/apply-language-selector-header-fix.mjs` completed successfully.
+- [ ] `npm run build` completed successfully.
+- [ ] `node qa/verify-language-selector-header-fix.mjs dist` passed.
+- [ ] Git diff contains no tool content, video JSON, image, translation or Cloudflare configuration changes.
+
+## Desktop review
+
+Review at 1440 px or wider:
+
+- [ ] `/`
+- [ ] `/tools/`
+- [ ] One English tool page
+- [ ] `/es/`
+- [ ] `/es/tools/`
+- [ ] One Spanish tool page
+- [ ] `/pt-br/`
+- [ ] `/pt-br/tools/`
+- [ ] One Brazilian Portuguese tool page
+- [ ] `/videos/excel/` and one localized equivalent
+- [ ] `/videos/ai/` and one localized equivalent
+
+For each page, confirm:
+
+- [ ] No full-width language bar appears below the header.
+- [ ] The selector is compact and inside the dark header at the top-right.
+- [ ] The existing logo, menus and YouTube control remain aligned and clickable.
+- [ ] English, Español and Português (Brasil) remain selectable.
+- [ ] Switching language keeps the equivalent page and preserves the current route behavior.
+
+## Mobile review
+
+Review at 390 × 844 and 360 × 800:
+
+- [ ] Selector remains inside the header and does not create horizontal scrolling.
+- [ ] Logo remains visible.
+- [ ] Menu toggle remains visible and clickable.
+- [ ] Selector and menu toggle do not overlap.
+- [ ] Dropdown options fit within the viewport.
+- [ ] Keyboard focus is visible.
+
+## Cloudflare
+
+- [ ] Commit to the Cloudflare-connected branch.
+- [ ] Cloudflare runs `npm run build` successfully.
+- [ ] Deployment status is Ready.
+- [ ] Repeat the homepage, tools page and one localized tool smoke test on the production URL.

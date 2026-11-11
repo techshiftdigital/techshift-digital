@@ -1,108 +1,102 @@
-# TechShift Digital — Consolidated Multilingual Update
-##
-This is the **single deployment package** for the Spanish and Brazilian Portuguese improvements. It replaces the earlier separate multilingual-page and language-selector updates.
+# TechShift Digital — Compact Language Selector Header Fix
 
-## What this package fixes
+This is a focused post-build update for the existing English, Spanish and Brazilian Portuguese website. It moves the current language selector out of the full-width white row and into the right side of the existing dark navigation header, then applies compact desktop and mobile styling.
 
-1. **Detailed localized tools:** all 50 tools have Spanish and Brazilian Portuguese content (100 localized tool experiences), including an introduction, usage steps, method/formula, practical example, limitations, four FAQs and related tools.
-2. **Same interface in every language:** the normal English build is the visual master. Localized pages are cloned from the current English output, preserving the same HTML structure, CSS classes, images, calculator form and tool scripts.
-3. **One language dropdown everywhere:** English, Español and Português (Brasil) use the same accessible dropdown on desktop and mobile. Old “All languages” links/selectors are hidden to prevent two competing controls.
-4. **SEO support:** localized titles and descriptions for all 50 tools, canonical links, `hreflang` for all three variants and a multilingual sitemap.
+## Scope
 
-## Important safety model
+This update changes only selector placement and presentation. It does **not** replace or regenerate:
 
-- English pages and URLs remain the master version.
-- Existing calculator logic, video JSON, images, base stylesheet, GitHub workflow and Cloudflare configuration are not replaced.
-- The multilingual step runs **after** the existing build.
-- Existing generated `/es/` and `/pt-br/` output is cleared and regenerated from the current English build on every run; stale localized files cannot survive.
-- No paid translation service, external database or new runtime dependency is used.
+- the English, Spanish or Brazilian Portuguese page content;
+- the 50 tools or their localized detail pages;
+- calculator forms or calculation logic;
+- images, menus or navigation links;
+- Excel/AI video listings or JSON data;
+- SEO metadata or multilingual route mapping;
+- `build.mjs`, `multilingual-build.mjs`, Cloudflare or Wrangler configuration.
 
-## Install
+The existing selector element and its current language-switching event handlers are preserved. At runtime, it is moved into the header without cloning it.
 
-1. Back up the current repository or note the last working commit.
-2. Extract this package.
-3. Copy these paths to the repository root, preserving their paths:
+## Files in this update
 
 ```text
-multilingual-build.mjs
-translations/tool-content.json
-translations/tool-inventory.json
-public/assets/multilingual-site.css
-public/assets/multilingual-site.js
-qa/verify-content.py
-qa/verify-multilingual.mjs
+language-selector-header-fix.mjs
+public/assets/language-selector-header-fix.css
+public/assets/language-selector-header-fix.js
+scripts/apply-language-selector-header-fix.mjs
+qa/verify-language-selector-header-fix.mjs
+README.md
+DEPLOYMENT-CHECKLIST.md
+CHANGELOG.md
+VALIDATION.md
 ```
 
-4. Remove the earlier selector hook if it is present:
+## Deploy to the GitHub repository
 
-```js
-await import('./language-selector-build.mjs');
-```
+1. Back up or create a branch from the current Cloudflare deployment branch.
+2. Extract this package at the repository root, preserving the paths above.
+3. From the repository root, run:
 
-5. Add this as the **last line** of the existing root `build.mjs`:
+   ```bash
+   node scripts/apply-language-selector-header-fix.mjs
+   ```
 
-```js
-await import('./multilingual-build.mjs');
-```
+   The installer preserves the existing `package.json` and appends the fix to its current build command. For the build command discussed in the deployment history, the result is:
 
-6. Run the normal build:
+   ```json
+   "build": "node build.mjs && node multilingual-build.mjs && node language-selector-header-fix.mjs"
+   ```
 
-```bash
-npm run build
-```
+   If `build.mjs` already runs the multilingual integration internally, the installer still appends this fix only once and does not change that integration.
 
-The default output folder is `dist`. If the existing build uses another output folder:
+4. Build and verify:
 
-```bash
-TSD_BUILD_DIR=your-output-folder npm run build
-```
+   ```bash
+   npm run build
+   node qa/verify-language-selector-header-fix.mjs dist
+   ```
 
-7. Validate:
-
-```bash
-python3 qa/verify-content.py
-node qa/verify-multilingual.mjs dist
-```
-
-8. Commit to the branch connected to Cloudflare.
+5. Review the pages in `DEPLOYMENT-CHECKLIST.md` at desktop and mobile widths.
+6. Commit the focused change to the Cloudflare-connected branch.
 
 Suggested commit message:
 
 ```text
-Unify multilingual design, dropdown and detailed tool content
+Fix multilingual selector placement in site header
 ```
 
-## Post-deployment checks
+## How it works
 
-Test all three language variants for:
+`language-selector-header-fix.mjs` runs after the existing multilingual build. It:
 
-- Homepage and top navigation.
-- `/tools/`, `/es/tools/`, `/pt-br/tools/`.
-- Percentage Change, CAGR, JSON Formatter, Working Days, QR Code and BMI tools.
-- Calculator input, Calculate and Reset actions.
-- Desktop and mobile language dropdown.
-- Same hero/logo/tool images in all languages.
-- Correct equivalent-page switching among languages.
-- `https://techshiftdigital.com/sitemap-multilingual.xml`.
+1. copies the two small selector-fix assets to `dist/assets/`;
+2. adds one stylesheet and one deferred script reference to every generated HTML page;
+3. is idempotent, so repeated builds do not duplicate either reference.
 
-## Files not to replace
+In the browser, the deferred script finds the existing selector, keeps the same DOM element and listeners, and moves it into the best matching header/navigation container. The CSS neutralizes the full-width white-bar styling and limits the control to a compact dark-header dropdown.
 
-Do not replace the existing:
+## Responsive behavior
 
-```text
-build.mjs                 (add only the one-line import)
-package.json
-wrangler.jsonc
-data/videos-ai.json
-data/videos-excel.json
-public/assets/style.css
-public/assets/vendor/qr-bundle.js
-```
+- Desktop control width: at most 144 px (the dropdown itself is approximately 126 px).
+- Mobile dropdown width: approximately 108 px; 98 px on very narrow screens.
+- The selector remains visible in the header when the primary navigation collapses.
+- A mobile menu toggle remains usable; when it is a direct header child, the selector is inserted before it.
+- Keyboard focus remains visible.
+- The dropdown list is constrained to the viewport.
+- Reduced-motion preferences are respected.
 
 ## Rollback
 
-1. Remove the final `await import('./multilingual-build.mjs');` line from `build.mjs`.
-2. Remove the files copied from this package.
-3. Rebuild and redeploy the last known-good commit.
+1. Remove `&& node language-selector-header-fix.mjs` from `scripts.build` in `package.json`.
+2. Delete the five production/update files:
 
-See `docs/IMPLEMENTATION-NOTES.md` and `VALIDATION-REPORT.md` for details.
+   ```text
+   language-selector-header-fix.mjs
+   public/assets/language-selector-header-fix.css
+   public/assets/language-selector-header-fix.js
+   scripts/apply-language-selector-header-fix.mjs
+   qa/verify-language-selector-header-fix.mjs
+   ```
+
+3. Run `npm run build` and redeploy.
+
+The rollback does not touch multilingual content or existing selector logic.

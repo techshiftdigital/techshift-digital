@@ -1,0 +1,9 @@
+c454440625a4891c489d18a16dba2030382552177fbfeb574676dc02fe56cdc9  ./CHANGELOG.md
+d720f4d57a4d09a9f03088ba71504dce9b7fd58a4982c3e1d90fa95bfe97ef9a  ./DEPLOYMENT-CHECKLIST.md
+528c3c7b4a00db66c5452dc90b3cb8448f0b6eadf6dd76c14fb94b03bafe53e2  ./README.md
+78f52a2a1cb471f3c9486e962c7ffd08bd295ae202f13e04ae97b4ee6ff1074f  ./VALIDATION.md
+2c64c8f41e36925911970872c6016feb30d35aca66134f72c044d2f26a36d06c  ./language-selector-header-fix.mjs
+0b2d43f72ee221958cd8e662038b3579815d31a1a26af7be06b27b7008b661ff  ./public/assets/language-selector-header-fix.css
+095839ed893bf863f0a381b7c4138084dbe9dd5b449d9ce06cb5b808574a7652  ./public/assets/language-selector-header-fix.js
+013e07341fe6f1cacb7273d537cce5e472ee7e9bbcd0ea3180f4aa25e5cfd183  ./qa/verify-language-selector-header-fix.mjs
+dbfccfc746026c824415054156201fdbb16debf34c4d43d1835e0013153c6067  ./scripts/apply-language-selector-header-fix.mjs

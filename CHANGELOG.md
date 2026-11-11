@@ -1,13 +1,11 @@
 # Changelog
 
-## Consolidated multilingual update
+## 1.0.0 — 2026-11-11
 
-- Added complete Spanish and Brazilian Portuguese detail content for all 50 tools.
-- Made the English build the single visual master for both localized trees.
-- Replaced separate language links with one shared dropdown in every language.
-- Added equivalent-page language switching.
-- Preserved English pages, calculator logic, images, scripts and base design.
-- Added canonical and `hreflang` links.
-- Added multilingual sitemap generation.
-- Added content and build-output QA scripts.
-- Added stale-output cleanup and repeatable post-build generation.
+- Move the existing multilingual selector into the dark navigation header.
+- Remove the full-width white-bar presentation through scoped CSS overrides.
+- Add compact desktop and mobile sizing.
+- Preserve the existing selector element, route mapping and event handlers.
+- Apply the fix to every generated English, Spanish and Brazilian Portuguese HTML page.
+- Add idempotent post-build injection and build-output verification.
+- Leave tools, translations, images, navigation content, video data and Cloudflare configuration unchanged.
