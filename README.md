@@ -1,26 +1,57 @@
-# TechShift Digital — complete replacement repository
+# TechShiftDigital.com v5.0.1 — Original Video Library Update
 
-A zero-dependency, multilingual static website for **techshiftdigital.com**. The same dark visual system, supplied hero image, page structure and compact top-navigation language dropdown are used in English, Spanish and Brazilian Portuguese.
+This is a **focused overlay update** for the existing TechShiftDigital.com v5 repository. It changes only the video data/build path and deliberately leaves the current pages, dark design, hero image, localized content, 50 tools, and Cloudflare configuration in place.
 
-## Included
+## What changes
 
-- 50 functioning browser tools in each language (150 detailed tool pages).
-- Formula, worked example, Excel guidance, four FAQs, related links and SEO on every tool page.
-- Shared `public/data/tools.json` metadata.
-- Shared `public/data/videos.json` with 165 AI and Excel learning records.
-- English, Spanish and Brazilian Portuguese home, tools, resources, AI, insights, video, about, contact, privacy and terms routes.
-- Canonical URLs, hreflang, Open Graph, JSON-LD, robots.txt and multilingual sitemap.
-- GitHub validation workflow and Cloudflare Pages configuration.
-- No package dependencies and no installer or manual script step.
+- Uses the supplied authoritative files:
+  - `public/data/videos-ai.json` — 94 AI videos
+  - `public/data/videos-excel.json` — 72 Excel videos
+- Produces 166 unique public video records with no duplicate record IDs or YouTube IDs.
+- Loads those two categorized files directly on English, Spanish, and Brazilian Portuguese video pages.
+- Uses each record's original YouTube video ID for:
+  - the clickable title;
+  - the clickable actual YouTube thumbnail;
+  - the localized “Watch on YouTube” action.
+- Keeps the existing v5 card classes (`grid`, `card`, `card-body`, `tag`, `textlink`) so the current visual design remains in control.
+- Generates `dist/data/videos.json` only as a compatibility file, entirely from the two authoritative categorized sources. The old placeholder records are never trusted.
+- Preserves the existing `public/data/tools.json` byte-for-byte and verifies it still contains 50 tools when that file is present.
 
-## Important video-data note
+## Deploy to the existing GitHub repository
 
-The prior private repository and its historical video JSON were not supplied with this request. To avoid fabricating YouTube video IDs, records whose exact public watch URL was recoverable use that watch URL; the remaining learning records use a functional YouTube topic-search URL. The structure is deliberately centralized in `public/data/videos.json`, so a recovered historical list can be substituted without changing any page template.
+1. Back up the current repository.
+2. Extract this ZIP.
+3. Upload **the contents of the extracted folder** into the root of the existing `main` branch.
+4. Replace files when GitHub asks. Do **not** delete the existing `public` folder or other website files; this update is designed to merge into them.
+5. Commit the change. The existing GitHub/Cloudflare connection should run `npm run build` automatically.
+6. In Cloudflare, keep:
+   - Build command: `npm run build`
+   - Output directory: `dist`
+   - Node.js: 20 or newer
+   - Production branch: `main`
 
-## Cloudflare Pages settings
+No separate installer or shell command is required.
 
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Node.js: 20 or newer
+## Local verification (optional)
 
-See `UPLOAD-TO-GITHUB.md` for click-by-click instructions.
+```bash
+npm run build
+npm run verify:dist
+```
+
+A successful build reports 166 original videos: 94 AI and 72 Excel. It also confirms multilingual video-page injection, correct YouTube URL/thumbnail generation, unchanged HTML page count, and unchanged 50-tool data.
+
+## Post-deployment checks
+
+Check the video library and category pages in all three language trees:
+
+- English: `/videos/`
+- Spanish: `/es/videos/`
+- Brazilian Portuguese: `/pt-br/videos/`
+
+Confirm that:
+
+- Excel and AI filters show the correct categorized records;
+- each thumbnail is a real `i.ytimg.com` image for that video ID;
+- clicking the thumbnail, title, or action opens the same original YouTube video;
+- the rest of the v5 website and its 50 tools are unchanged.

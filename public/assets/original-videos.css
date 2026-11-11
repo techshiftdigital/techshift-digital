@@ -1,0 +1,26 @@
+/* Focused v5 video update: intentionally inherits the existing TechShift card design. */
+.tsd-original-video-card .tsd-video-thumbnail {
+  display: block;
+  overflow: hidden;
+  background: #0d2034;
+}
+.tsd-original-video-card .tsd-video-thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.tsd-original-video-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.tsd-original-video-card h3 a:hover,
+.tsd-original-video-card h3 a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.tsd-original-video-card .tsd-video-thumbnail:focus-visible {
+  outline: 2px solid #74e4ef;
+  outline-offset: 3px;
+}

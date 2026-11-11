@@ -1,11 +1,11 @@
 {
   "name": "techshift-digital",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "check": "node qa/verify.mjs public",
+    "check": "node qa/verify.mjs public --source-only",
     "verify:dist": "node qa/verify.mjs dist"
   },
   "engines": {
