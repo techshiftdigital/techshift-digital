@@ -1,44 +1,35 @@
-# TechShift Digital v5.0.5 — agreed site fixes
+# TechShift Digital v5.0.6 — video thumbnail hotfix
 
-This is a focused deployment overlay for the existing TechShift Digital repository. It does not replace site content, calculations, URLs, SEO metadata, video data, or Cloudflare/GitHub configuration.
+This is a focused overlay for the working v5.0.5 repository.
 
-## Included changes
+## Change size
 
-1. Fixes the calculator result overlap by making `output.result` a full-width block in normal flow after the action buttons.
-2. Keeps the language selector accessible while removing the visible Language/Idioma label; the compact selector is placed immediately after and vertically aligned with the YouTube button on desktop, and remains usable in the mobile navigation.
-3. Makes every tool-card title open the exact same URL as that card's existing Open tool / Abrir herramienta / Abrir ferramenta link.
+Only **two production files** are replaced:
 
-The build-time patch covers exactly 50 tool detail pages in each locale: English, Spanish, and Brazilian Portuguese (150 pages total). The verification gate fails rather than deploying if those counts or invariants are not satisfied.
+1. `scripts/apply-site-fixes.mjs`
+2. `public/assets/original-videos.js`
+
+One independent verifier and deployment notes are added. The package does not replace video data, calculator code, navigation files, CSS for the working v5.0.5 fixes, or page content.
+
+## Corrections
+
+- Emits plain canonical video URLs: `https://www.youtube.com/watch?v=VIDEO_ID`.
+- Emits plain canonical thumbnail URLs: `https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg`.
+- Removes malformed embedded-link/backtick URL output.
+- Repairs the thumbnail error fallback with the alternate `img.youtube.com` host.
+- Reasserts canonical title, thumbnail and Watch-link destinations at runtime.
+- Removes text nodes and metadata attributes whose complete value is `undefined` or `null` inside original video cards.
+- Uses cache version `20261112.2` for the two video assets only; the v5.0.5 result-layout and hero asset versions remain `20261112.1`.
+- Regenerates all nine localized video listing pages from the original categorized data.
+
+## Preserved invariants
+
+- 166 original videos: 94 AI and 72 Excel.
+- Clickable thumbnail, title and Watch on YouTube link for every card.
+- English, Spanish and Brazilian Portuguese listings.
+- Existing video search and category filters.
+- v5.0.5 calculator result-layout, language-selector alignment and clickable tool-title work.
 
 ## Deploy
 
-1. Extract this ZIP at the root of the current repository and allow these overlay files to replace files with the same names.
-2. Do not delete any existing `public/` content, video data, tool scripts, QA files, Wrangler files, or GitHub workflows.
-3. Run `npm run build` (or the existing Cloudflare build command).
-4. Deploy the generated `dist/` directory using the existing Cloudflare/GitHub workflow.
-
-## Verification
-
-The build performs these steps:
-
-- copies the unchanged `public/` tree to `dist/`;
-- applies the three agreed corrections to `dist/`;
-- verifies 50 tools per locale, calculator result markup, language-menu accessibility/alignment, and tool-title/action URL equality;
-- runs the existing `qa/verify.mjs` full-site check.
-
-For a self-contained fixture test of the patcher and verifier, run:
-
-```bash
-npm run test:agreed-fixes
-```
-
-## Files in this overlay
-
-- `build.mjs`
-- `package.json`
-- `public/assets/agreed-site-fixes.css`
-- `scripts/apply-agreed-site-fixes.mjs`
-- `qa/verify-agreed-site-fixes.mjs`
-- `tests/test-agreed-site-fixes.mjs`
-
-No video JSON, calculator JavaScript, page copy, canonical URL, structured data, or deployment configuration is overwritten by this overlay.
+See `UPLOAD-TO-GITHUB.md`.

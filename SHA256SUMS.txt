@@ -1,0 +1,7 @@
+700cc81ae2d31c51b9eac18e46fc1de96571b82d7bac533004e30ca55ab7f10f  ./CHANGELOG.md
+6472f87ed2c123a875c4807b43c41e0ebf68508d05f81177e8a00394080f9999  ./README.md
+cac51ec2494a846c5a4756a24c09c1758c5f3d0d079b22bda44be9e55ce0c0fa  ./TEST-RESULTS.md
+f5c5e5dd13371143d70769a7eb3191b5c0906dd8d5c225d4fec086d7394c3ada  ./UPLOAD-TO-GITHUB.md
+492ebc0e0264eb91c51d22fa545e2b363d10bef2d3cb17283ad3afe5df1d40b8  ./public/assets/original-videos.js
+c5242500ce36fccbe6dc0e175a1279d815a8bfe170254217a95dca7d4897332e  ./qa/verify-video-thumbnail-fix.mjs
+c3822eb09598bbbb4e8d0d28c788bc94586e058e9cd772651d4cc12009bfc5ef  ./scripts/apply-site-fixes.mjs

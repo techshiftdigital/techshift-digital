@@ -1,39 +1,21 @@
-# TechShift Digital v5.0.4 — combined deployment overlay
+# Upload and deploy
 
-This single overlay combines the original-video restoration, canonical YouTube links and thumbnails, clickable titles/thumbnails/watch links, calculator result-box layout correction, and three-language homepage hero-height correction.
+1. Back up the current repository or create a branch.
+2. Extract this ZIP at the repository root.
+3. Upload everything inside the extracted folder to the repository root, preserving paths.
+4. Allow GitHub to replace the two matching production files. Do **not** delete any other repository files.
+5. Commit with: `Fix original YouTube thumbnails and video card metadata`
+6. Let Cloudflare run the existing build command (`npm run build`).
+7. After a successful build, the added verifier can be run locally or in CI:
 
-## Upload (no terminal required)
+   ```bash
+   node qa/verify-video-thumbnail-fix.mjs dist
+   ```
 
-1. Extract this ZIP.
-2. Open the `techshift-digital` repository on GitHub and select `main`.
-3. Choose **Add file → Upload files**.
-4. Drag **everything inside** the extracted folder onto the upload page. Upload the contents, not the outer folder or ZIP.
-5. Allow GitHub to replace matching files. Do **not** delete the rest of the repository.
-6. Commit directly to `main` with: `Deploy combined TechShift Digital v5.0.4 fixes`.
-7. Wait for Cloudflare to run `npm run build` and deploy `dist`.
+8. Check these pages in a private/incognito window so the previous video JavaScript is not cached:
+   - `/videos/`
+   - `/videos/ai/`
+   - `/videos/excel/`
+   - the same three paths under `/es/` and `/pt-br/`
 
-Expected build messages:
-
-- `Restored 166 original videos (94 AI, 72 Excel) on 9 localized listing pages.`
-- `Applied result layout fix to 150 tool pages (50 EN, 50 ES, 50 pt-BR).`
-- `Applied responsive hero-height fix to 3 localized homepages.`
-- `Focused site-fix verification passed...`
-- `TechShift Digital build complete: dist/`
-
-## Files intentionally replaced or added
-
-- `build.mjs`
-- `package.json`
-- `scripts/apply-site-fixes.mjs`
-- `qa/verify-site-fixes.mjs`
-- `qa/verify.mjs`
-- `public/assets/original-videos.js`
-- `public/assets/original-videos.css`
-- `public/assets/result-layout-fix.css`
-- `public/assets/homepage-hero-height-fix.css`
-- `public/data/videos-ai.json`
-- `public/data/videos-excel.json`
-- `public/data/videos.json`
-- `public/data/videos-manifest.json`
-
-The build is repeatable and does not remove or rewrite unrelated source pages.
+Expected result: all thumbnails are visible; every thumbnail, title and Watch link opens the matching YouTube video; no video card displays `undefined`; and the calculator/navigation changes from v5.0.5 remain unchanged.

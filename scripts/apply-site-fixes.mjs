@@ -4,11 +4,12 @@ import path from 'node:path';
 
 const root = path.resolve(process.argv[2] || 'dist');
 const localeRoots = ['', 'es', 'pt-br'];
-const cacheVersion = '20261112.1';
-const resultCssHref = `/assets/result-layout-fix.css?v=${cacheVersion}`;
-const heroCssHref = `/assets/homepage-hero-height-fix.css?v=${cacheVersion}`;
-const videoCssHref = `/assets/original-videos.css?v=${cacheVersion}`;
-const videoJsSrc = `/assets/original-videos.js?v=${cacheVersion}`;
+const siteCacheVersion = '20261112.1';
+const videoCacheVersion = '20261112.2';
+const resultCssHref = `/assets/result-layout-fix.css?v=${siteCacheVersion}`;
+const heroCssHref = `/assets/homepage-hero-height-fix.css?v=${siteCacheVersion}`;
+const videoCssHref = `/assets/original-videos.css?v=${videoCacheVersion}`;
+const videoJsSrc = `/assets/original-videos.js?v=${videoCacheVersion}`;
 
 const escapeHtml = (value) => String(value ?? '')
   .replaceAll('&', '&amp;')
@@ -17,28 +18,37 @@ const escapeHtml = (value) => String(value ?? '')
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#39;');
 const cleanText = (value) => String(value ?? '').replace(/\s+/g, ' ').trim();
+const cleanOptionalText = (value) => {
+  const text = cleanText(value);
+  return /^(?:undefined|null)$/i.test(text) ? '' : text;
+};
 const readJson = async (file) => JSON.parse(await readFile(file, 'utf8'));
 const exists = async (file) => { try { await access(file); return true; } catch { return false; } };
+const youtubeUrl = (videoId) => `https://www.youtube.com/watch?v=${videoId}`;
+const thumbnailUrl = (videoId) => `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
 const aiSource = await readJson(path.join(root, 'data', 'videos-ai.json'));
 const excelSource = await readJson(path.join(root, 'data', 'videos-excel.json'));
 
 const normaliseVideo = (record, category, source, index) => {
   const videoId = cleanText(record.videoId);
-  const title = cleanText(record.title);
+  const title = cleanOptionalText(record.title);
   if (!/^[A-Za-z0-9_-]{11}$/.test(videoId) || !title) {
     throw new Error(`${source}[${index}] has an invalid videoId or title`);
   }
+  const description = cleanOptionalText(record.description)
+    || cleanOptionalText(record.originalDescription)
+    || title;
   return {
     ...record,
-    id: cleanText(record.id) || `video-${videoId}`,
+    id: cleanOptionalText(record.id) || `video-${videoId}`,
     category,
     source,
     title,
-    description: cleanText(record.description || record.originalDescription || title),
-    url: `https://www.youtube.com/watch?v=${videoId}`,
+    description,
+    url: youtubeUrl(videoId),
     videoId,
-    thumbnail: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+    thumbnail: thumbnailUrl(videoId)
   };
 };
 
@@ -46,6 +56,9 @@ const ai = aiSource.map((item, index) => normaliseVideo(item, 'AI', 'videos-ai.j
 const excel = excelSource.map((item, index) => normaliseVideo(item, 'Excel', 'videos-excel.json', index));
 const all = [...ai, ...excel];
 const uniqueIds = new Set(all.map((item) => item.videoId));
+if (ai.length !== 94 || excel.length !== 72 || all.length !== 166) {
+  throw new Error(`Expected 166 original videos (94 AI, 72 Excel); found ${all.length} (${ai.length} AI, ${excel.length} Excel)`);
+}
 if (uniqueIds.size !== all.length) throw new Error('The categorized video sources contain duplicate YouTube IDs');
 
 const localized = {
@@ -68,7 +81,7 @@ const compatibility = all.map((video, index) => ({
   durationSeconds: video.durationSeconds ?? null,
   publishedAt: video.publishedAt ?? null,
   createdAt: video.createdAt ?? null,
-  privacy: video.privacy ?? 'Public'
+  privacy: cleanOptionalText(video.privacy) || 'Public'
 }));
 
 const manifest = {
@@ -92,12 +105,12 @@ const stripAsset = (html, asset) => html
   .replace(new RegExp(`<script\\b[^>]*src=["'][^"']*${asset.replace('.', '\\.')}[^"']*["'][^>]*>\\s*</script>\\s*`, 'gi'), '');
 
 const injectStyle = (html, href, asset, marker) => {
-  let next = stripAsset(removeMarked(html, marker), asset);
+  const next = stripAsset(removeMarked(html, marker), asset);
   const block = `<!-- TSD:${marker}:START --><link rel="stylesheet" href="${href}"><!-- TSD:${marker}:END -->`;
   return /<\/head>/i.test(next) ? next.replace(/<\/head>/i, `${block}</head>`) : `${block}${next}`;
 };
 const injectScript = (html, src, asset, marker) => {
-  let next = stripAsset(removeMarked(html, marker), asset);
+  const next = stripAsset(removeMarked(html, marker), asset);
   const block = `<!-- TSD:${marker}:START --><script src="${src}" defer></script><!-- TSD:${marker}:END -->`;
   return /<\/body>/i.test(next) ? next.replace(/<\/body>/i, `${block}</body>`) : `${next}${block}`;
 };
