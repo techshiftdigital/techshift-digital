@@ -1,4 +1,4 @@
-import { access, cp, rm } from 'node:fs/promises';
+import { cp, rm } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 const run = (script, args = []) => {
@@ -10,12 +10,11 @@ const run = (script, args = []) => {
 await rm('dist', { recursive: true, force: true });
 await cp('public', 'dist', { recursive: true });
 
-// Apply every focused correction after each clean public -> dist copy.
-run('scripts/apply-site-fixes.mjs', ['dist']);
-run('qa/verify-site-fixes.mjs', ['dist']);
+// Apply only the three agreed presentation/accessibility corrections to build output.
+run('scripts/apply-agreed-site-fixes.mjs', ['dist']);
+run('qa/verify-agreed-site-fixes.mjs', ['dist']);
 
-// Keep a second, independent full-build consistency check.
-await access('qa/verify.mjs');
+// Preserve the repository's existing full-site verification gate.
 run('qa/verify.mjs', ['dist']);
 
-console.log('TechShift Digital build complete: dist/');
+console.log('TechShift Digital v5.0.5 build complete: dist/');

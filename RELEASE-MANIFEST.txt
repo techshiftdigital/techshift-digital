@@ -1,0 +1,16 @@
+TechShift Digital v5.0.5 — Agreed Site Fixes
+Release date: 2026-11-12
+
+Scope:
+- calculator result boxes remain in normal flow on 150 localized tool pages
+- visible language label removed while compact selector remains accessible and aligned after YouTube
+- 150 tool-card titles link to the same URLs as their existing action links
+
+File SHA-256 values:
+7a40d25ec201e4cc96f116f613176e26d0c77b9748b40068a89949ebe53b89e3  ./README.md
+14208c3e0a6ac40435f4f9401614a7e2aeb8a786447b32f42eff521eaef45cc3  ./build.mjs
+1b0711e6afacac2805a7f3304900dbadbab2d6d734deaf2ba25a7e8f59334ef6  ./package.json
+99e104b3f0aacae88e9a642a29b6f734ef19efddf5bfb62096dee2e0322fe72c  ./public/assets/agreed-site-fixes.css
+0ceeacbf99e9bd536355a4fdfa7625f85c5687128ad529145a8916044e9f7225  ./qa/verify-agreed-site-fixes.mjs
+73986acd9684de95fe054169ec4fe9eabcf3b56b07a6e2b36cac91604c3544f0  ./scripts/apply-agreed-site-fixes.mjs
+67152791407a9bba5eef015d0e43fef4759f1b87e1e0521ee5b9260cdc7198c8  ./tests/test-agreed-site-fixes.mjs
