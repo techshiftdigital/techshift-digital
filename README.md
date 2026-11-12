@@ -1,5 +1,5 @@
 # TechShift Digital v5.0.2 — homepage hero image height fix
-
+####
 This focused overlay reduces the large image on the right side of the homepage while keeping the existing crop, border, and rounded-corner treatment.
 
 ## What changes
