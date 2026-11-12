@@ -1,65 +1,57 @@
-/* TechShift Digital: shared result-box flow correction (EN, ES, pt-BR). */
+/* TechShift Digital v5.0.4 — keep calculator actions and results in normal flow. */
 .tool-actions,
 .calculator-actions,
 .form-actions,
-.action-row,
 .button-row,
 .actions {
-  position: relative !important;
-  z-index: 1;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: .75rem;
-  margin-bottom: 1rem !important;
 }
 
-.result-box,
-.calculator-result,
 .tool-result,
-.result-output,
+.calculator-result,
+.result-box,
+.result-panel,
 .output-box,
 [data-result],
-#result {
+[role="status"].result {
   position: relative !important;
   inset: auto !important;
-  top: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  transform: none !important;
-  z-index: 0 !important;
+  float: none !important;
   clear: both;
+  z-index: auto !important;
   display: block;
+  flex: 0 0 100%;
+  grid-column: 1 / -1;
   width: 100%;
   min-width: 0;
+  max-width: 100%;
   height: auto !important;
-  min-height: 3.5rem;
-  max-height: none !important;
-  margin-top: 1rem !important;
-  margin-bottom: 1.25rem !important;
-  overflow: visible !important;
+  min-height: 0;
+  margin-block: 1rem;
+  overflow: visible;
   overflow-wrap: anywhere;
   white-space: normal;
 }
 
-.result-box:empty,
-.calculator-result:empty,
 .tool-result:empty,
-.result-output:empty,
+.calculator-result:empty,
+.result-box:empty,
+.result-panel:empty,
 .output-box:empty,
-[data-result]:empty,
-#result:empty {
-  min-height: 3.5rem;
+[data-result]:empty {
+  min-height: 0;
 }
 
-.result-box + *,
-.calculator-result + *,
-.tool-result + *,
-.result-output + *,
-.output-box + *,
-[data-result] + *,
-#result + * {
-  position: relative;
-  clear: both;
+.tool-result *,
+.calculator-result *,
+.result-box *,
+.result-panel *,
+.output-box *,
+[data-result] * {
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }

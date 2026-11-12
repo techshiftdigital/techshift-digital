@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "generatedFrom": [
+    "videos-ai.json",
+    "videos-excel.json"
+  ],
+  "sources": {
+    "ai": "videos-ai.json",
+    "excel": "videos-excel.json"
+  },
+  "counts": {
+    "ai": 94,
+    "excel": 72,
+    "total": 166,
+    "AI": 94,
+    "Excel": 72
+  },
+  "uniqueVideoCount": 166
+}

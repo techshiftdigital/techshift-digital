@@ -1,79 +1,33 @@
-/* TechShift Digital: original categorized YouTube library. */
+/* TechShift Digital v5.0.4 — original YouTube library cards. */
 .original-video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.25rem;
-  align-items: stretch;
 }
-
 .original-video-card {
   min-width: 0;
-  height: 100%;
   overflow: hidden;
 }
-
-.original-video-card[hidden] { display: none !important; }
-
 .original-video-thumbnail-link {
-  position: relative;
   display: block;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: inherit;
-  background: #101827;
 }
-
 .original-video-thumbnail {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .2s ease, filter .2s ease;
 }
-
-.original-video-thumbnail-link:hover .original-video-thumbnail,
-.original-video-thumbnail-link:focus-visible .original-video-thumbnail {
-  transform: scale(1.025);
-  filter: brightness(1.06);
+.original-video-title,
+.original-video-description {
+  overflow-wrap: anywhere;
 }
-
-.original-video-body {
-  display: flex;
-  flex-direction: column;
-  gap: .7rem;
-  min-height: 12rem;
-  padding: 1rem;
-}
-
-.original-video-title {
-  margin: 0;
-  font: inherit;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
 .original-video-title a,
 .original-video-watch {
   color: inherit;
-  text-decoration-thickness: .08em;
-  text-underline-offset: .18em;
 }
-
-.original-video-description {
-  display: -webkit-box;
-  margin: 0;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  overflow-wrap: anywhere;
-}
-
-.original-video-watch {
-  margin-top: auto;
-  font-weight: 700;
-}
-
-@media (max-width: 640px) {
-  .original-video-grid { grid-template-columns: 1fr; }
+.original-video-card[hidden] {
+  display: none !important;
 }

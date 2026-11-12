@@ -37,7 +37,7 @@
       image.addEventListener('error', () => {
         if (image.dataset.thumbnailFallbackApplied) return;
         image.dataset.thumbnailFallbackApplied = 'true';
-        image.src = `https://img.youtube.com/vi/${image.dataset.videoId}/hqdefault.jpg`;
+        image.src = `https://img.youtube.com/vi/${encodeURIComponent(image.dataset.videoId)}/hqdefault.jpg`;
       }, { once: true });
     }
     refresh();

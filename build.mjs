@@ -10,11 +10,11 @@ const run = (script, args = []) => {
 await rm('dist', { recursive: true, force: true });
 await cp('public', 'dist', { recursive: true });
 
-// Reapply both focused deployment corrections after every clean copy.
+// Apply every focused correction after each clean public -> dist copy.
 run('scripts/apply-site-fixes.mjs', ['dist']);
 run('qa/verify-site-fixes.mjs', ['dist']);
 
-// Preserve the repository's existing complete-site verification.
+// Keep a second, independent full-build consistency check.
 await access('qa/verify.mjs');
 run('qa/verify.mjs', ['dist']);
 

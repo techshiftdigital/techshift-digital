@@ -1,0 +1,15 @@
+b350618bb190bb48379d31643efab28fd34df94da4a50addb23932a5c42966c7  ./RELEASE-NOTES.md
+a0cbe4045085d34683309de3af99ad8bca364836fa60b21d891711618447d368  ./UPLOAD-TO-GITHUB.md
+c4478755fa0e1baab4142effd0c885b3790b3009f7fd90c496d91eecd29afafb  ./build.mjs
+319b69c6975c3cd504bda67f2d7debea976ba375f93f443708ca2e845881f00e  ./package.json
+55ca92a4c6440ebde6c4b2fa070b21cc2d878695d45fc9b2ea656230779e3c7a  ./public/assets/homepage-hero-height-fix.css
+1d00176af3611e77708facdab1da3edad25c06ed5c0ddd7722739425e3335639  ./public/assets/original-videos.css
+13e1cf9880eef4683930083a7cbe0039f02c172cda0dd65aa62f994dd0a2a165  ./public/assets/original-videos.js
+0bab9a7421a0430e1bbc5742b0e8c64224e4d674f28b175e5878bcb1d915d423  ./public/assets/result-layout-fix.css
+d0864874290e32c209afd87d01a0333b2699228db22e5e94bbd18f1ca936ec61  ./public/data/videos-ai.json
+a5f2164928b755cfd09d5a6b2f1e297bbe83debfa8d8c8ab2e730568d74091a9  ./public/data/videos-excel.json
+36f1d3d03ace33970bf54f96a42cd9fddac37f5a093bdb2b40175b2c0a00a4c1  ./public/data/videos-manifest.json
+6ac5d8ed51cc040c9a6b301189e9f1fa47786f00f9f93273b72c61c59b61bb1c  ./public/data/videos.json
+f54f67667724ff7e918f043b3c6fadc6883927e9523b9c3bf3c229fb0d4d9145  ./qa/verify-site-fixes.mjs
+7ff9520774d41a3910043bf587d1e7d39d4d2038f2433e380ceb72f1d0c3a813  ./qa/verify.mjs
+6d329348fe30692e64984e5d402c82d9f3496d8e9467d7a2b6e59ff8d1882edb  ./scripts/apply-site-fixes.mjs

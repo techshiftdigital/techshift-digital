@@ -1,42 +1,39 @@
-# Upload this replacement to GitHub — no terminal required
+# TechShift Digital v5.0.4 — combined deployment overlay
 
-## Before you start
+This single overlay combines the original-video restoration, canonical YouTube links and thumbnails, clickable titles/thumbnails/watch links, calculator result-box layout correction, and three-language homepage hero-height correction.
 
-1. Download and extract the ZIP on your computer.
-2. Open your existing GitHub repository and select the `main` branch.
-3. Keep a backup of the old repository ZIP until the new Cloudflare deployment is confirmed.
+## Upload (no terminal required)
 
-## Replace the repository contents in GitHub
-
-GitHub's normal web upload cannot reliably delete a large old tree and replace it in one click. The simplest no-terminal method is:
-
-1. In the repository, delete the old top-level files and folders using GitHub's web interface. If GitHub offers **Delete directory**, use it. Commit the deletion.
-2. Return to the repository root.
+1. Extract this ZIP.
+2. Open the `techshift-digital` repository on GitHub and select `main`.
 3. Choose **Add file → Upload files**.
-4. Open the extracted `techshift-digital-complete` folder on your computer.
-5. Select **everything inside the folder** — including `public`, `qa`, `.github`, `package.json`, `build.mjs`, `wrangler.toml`, `README.md` and the instruction files. Do not upload the outer folder itself.
-6. Drag the selected items into GitHub's upload area. Preserve all folder names.
-7. Enter the commit message `Replace website with complete multilingual repository`.
-8. Choose **Commit directly to the main branch**, then select **Commit changes**.
+4. Drag **everything inside** the extracted folder onto the upload page. Upload the contents, not the outer folder or ZIP.
+5. Allow GitHub to replace matching files. Do **not** delete the rest of the repository.
+6. Commit directly to `main` with: `Deploy combined TechShift Digital v5.0.4 fixes`.
+7. Wait for Cloudflare to run `npm run build` and deploy `dist`.
 
-If your browser refuses the large folder upload, use GitHub Desktop: **File → Add local repository**, choose the extracted folder, publish/commit to the existing repository, and push. This still requires no shell commands.
+Expected build messages:
 
-## Cloudflare
+- `Restored 166 original videos (94 AI, 72 Excel) on 9 localized listing pages.`
+- `Applied result layout fix to 150 tool pages (50 EN, 50 ES, 50 pt-BR).`
+- `Applied responsive hero-height fix to 3 localized homepages.`
+- `Focused site-fix verification passed...`
+- `TechShift Digital build complete: dist/`
 
-A commit to `main` should trigger Cloudflare automatically. In **Workers & Pages → techshift-digital → Settings → Builds & deployments**, confirm:
+## Files intentionally replaced or added
 
-- Production branch: `main`
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Root directory: blank / repository root
+- `build.mjs`
+- `package.json`
+- `scripts/apply-site-fixes.mjs`
+- `qa/verify-site-fixes.mjs`
+- `qa/verify.mjs`
+- `public/assets/original-videos.js`
+- `public/assets/original-videos.css`
+- `public/assets/result-layout-fix.css`
+- `public/assets/homepage-hero-height-fix.css`
+- `public/data/videos-ai.json`
+- `public/data/videos-excel.json`
+- `public/data/videos.json`
+- `public/data/videos-manifest.json`
 
-Then open **Deployments** and wait for **Ready**. Do not run an installer and do not add another build command.
-
-## Check after deployment
-
-1. Open `/`, `/es/` and `/pt-br/`.
-2. Confirm the same dark theme and hero image appear in all three.
-3. Confirm one compact language dropdown appears inside the top navigation; there is no globe and no separate language-link row.
-4. Open `/tools/percentage-change/`, switch language and calculate a result.
-5. Open `/videos/`, search, and filter Excel and AI videos.
-6. Check mobile width and confirm the selector appears inside the menu without horizontal scrolling.
+The build is repeatable and does not remove or rewrite unrelated source pages.
